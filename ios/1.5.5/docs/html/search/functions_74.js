@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['trackage_3a',['trackAge:',['../interface_spil.html#a5711b6acd90fa7b2e56e7fbb57c93505',1,'Spil::trackAge:()'],['../protocol_spil_tracker-p.html#a598b10dcee3a67b482aaff59e952658c',1,'SpilTracker-p::trackAge:()']]],
+  ['trackendtimedevent_3a',['trackEndTimedEvent:',['../interface_spil.html#a87dfef1df4a54ee1fa0d52ff4e3cfe2a',1,'Spil']]],
+  ['trackendtimedevent_3awithparams_3a',['trackEndTimedEvent:withParams:',['../interface_spil.html#a96e235ba3d2464cec00bf0f0fa2a9878',1,'Spil::trackEndTimedEvent:withParams:()'],['../protocol_spil_tracker-p.html#a910ec09b3abae2f78160a6fe5f8450f2',1,'SpilTracker-p::trackEndTimedEvent:withParams:()']]],
+  ['trackerror_3amessage_3aexception_3a',['trackError:message:exception:',['../interface_spil.html#a362962be43d605cf10a2eef29298f5c1',1,'Spil::trackError:message:exception:()'],['../protocol_spil_tracker-p.html#a29ed732c1ad608080f4a16571e72d39f',1,'SpilTracker-p::trackError:message:exception:()']]],
+  ['trackevent_3a',['trackEvent:',['../interface_spil.html#aa992d90ea32615731b7db2702fa34242',1,'Spil']]],
+  ['trackevent_3aaction_3alabel_3avalue_3a',['trackEvent:action:label:value:',['../interface_spil.html#a77b52b6205dd8530b6ef85488c386176',1,'Spil']]],
+  ['trackevent_3aaction_3alabel_3avalue_3awithparameters_3a',['trackEvent:action:label:value:withParameters:',['../protocol_spil_tracker-p.html#a272a839d55856ba65b8c8d677357ad03',1,'SpilTracker-p']]],
+  ['trackevent_3awithparams_3a',['trackEvent:withParams:',['../interface_spil.html#abe68036c8899b044becc47c65520990a',1,'Spil::trackEvent:withParams:()'],['../protocol_spil_tracker-p.html#a7bc300197e672617283248f88ff5838a',1,'SpilTracker-p::trackEvent:withParams:()']]],
+  ['trackextendeddidstart',['trackExtendedDidStart',['../protocol_tracking_extended_delegate-p.html#a140144db6978c693f50b7abb97c10da0',1,'TrackingExtendedDelegate-p']]],
+  ['trackextendeddidstop',['trackExtendedDidStop',['../protocol_tracking_extended_delegate-p.html#abdf0171c6eb0a002b5bb275381d2358c',1,'TrackingExtendedDelegate-p']]],
+  ['trackgender_3a',['trackGender:',['../interface_spil.html#aa64949bb8e583c03af5cc695e0de0928',1,'Spil::trackGender:()'],['../protocol_spil_tracker-p.html#a1df38134a12b03cf480cb606c04a648f',1,'SpilTracker-p::trackGender:()']]],
+  ['tracklatitude_3alongitude_3ahorizontalaccuracy_3averticalaccuracy_3a',['trackLatitude:longitude:horizontalAccuracy:verticalAccuracy:',['../interface_spil.html#a3fd33c0c2b992b3c6d0883da768aee2f',1,'Spil::trackLatitude:longitude:horizontalAccuracy:verticalAccuracy:()'],['../protocol_spil_tracker-p.html#aec3fd4f5d06d4a679b501c123b471c57',1,'SpilTracker-p::trackLatitude:longitude:horizontalAccuracy:verticalAccuracy:()']]],
+  ['trackpage_3a',['trackPage:',['../interface_spil.html#a972eb6f83e3bbbc7a0106f0dd165749a',1,'Spil::trackPage:()'],['../protocol_spil_tracker-p.html#a176886f15929ca7215c1d0682157738d',1,'SpilTracker-p::trackPage:()']]],
+  ['trackstartgesturescreen_3a',['trackStartGestureScreen:',['../interface_spil.html#a787ec80bdbf34272861e440185fa0fae',1,'Spil']]],
+  ['trackstopgesturescreen',['trackStopGestureScreen',['../interface_spil.html#a6121a9585c6edc6bdd890ce654699b46',1,'Spil']]],
+  ['tracktimedevent_3a',['trackTimedEvent:',['../interface_spil.html#af98a63609a5d9fee0efeb535b4455dc8',1,'Spil::trackTimedEvent:()'],['../protocol_spil_tracker-p.html#a8cbeab617506ffb43c42274ae4f2fc6f',1,'SpilTracker-p::trackTimedEvent:()']]],
+  ['trackuserid_3a',['trackUserID:',['../interface_spil.html#af8eaa4df1dc1fd99ffd695cce6dd940f',1,'Spil::trackUserID:()'],['../protocol_spil_tracker-p.html#a841ba3e364e4aa4ef47c0cf2bf25720f',1,'SpilTracker-p::trackUserID:()']]]
+];

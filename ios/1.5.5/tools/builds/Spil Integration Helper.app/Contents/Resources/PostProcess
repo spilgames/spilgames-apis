@@ -1,0 +1,74 @@
+#!/usr/bin/python
+from mod_pbxproj import XcodeProject
+import sys
+import os
+
+if __name__ == '__main__':
+	#copy the base part of the prime31 file
+	proj = XcodeProject.Load(sys.argv[1] + '/project.pbxproj')
+	
+	#saving a backup
+	proj.saveFormat3_2(file_name=sys.argv[1]+"/project.pbxproj.backup")
+	
+	dependencies = [
+	('usr/lib/libsqlite3.0.dylib',False), 
+	('System/Library/Frameworks/CFNetwork.framework',False),
+	('System/Library/Frameworks/CoreTelephony.framework',False),
+	('System/Library/Frameworks/Foundation.framework',False),
+	('System/Library/Frameworks/QuartzCore.framework',False),
+	('System/Library/Frameworks/SystemConfiguration.framework',False),
+	('System/Library/Frameworks/UIKit.framework',False),
+	('System/Library/Frameworks/CoreGraphics.framework',False),
+	('System/Library/Frameworks/CoreMedia.framework',False),
+	('System/Library/Frameworks/CoreVideo.framework',False),
+	('System/Library/Frameworks/AVFoundation.framework',False),
+	('System/Library/Frameworks/AssetsLibrary.framework',False),
+	('System/Library/Frameworks/MobileCoreServices.framework',False),
+	('System/Library/Frameworks/StoreKit.framework',True),
+	('System/Library/Frameworks/AdSupport.framework',True),
+	('System/Library/Frameworks/CoreLocation.framework',True),
+	('System/Library/Frameworks/CoreData.framework',True)]
+	
+	#add dependencies 
+	frameworks = proj.get_or_create_group('Frameworks')
+	for dep in dependencies:
+		proj.add_file_if_doesnt_exist(dep[0], tree='SDKROOT', parent=frameworks, create_build_files=True, weak=dep[1])
+	
+	#check the parameters received in the script to see which paths can be used.
+	extraFiles = [
+	(sys.argv[2]+'/Spil.framework',''),
+	(sys.argv[2]+'/Spil.bundle',''),
+	(sys.argv[2]+'/spilgames_default_settings.json','')
+	]
+	
+	#create group spil and add resources (bundle, framework and default json file)
+	spil = proj.get_or_create_group('Spil')
+	for file in extraFiles:
+		path = file[0] #os.path.join(os.getcwd(), file[0])
+		
+		#try to fix the file with the indicated symlink, if after that it fails, then the file actually doesn't exist.
+		if(not os.path.exists(path) and file[1]!=''):
+			os.symlink(file[1], path);
+			
+		if(os.path.exists(path)):
+			proj.check_and_repair_framework(path) #fix the problem with the framework inside the unitypackage.
+			proj.add_file_if_doesnt_exist(path, parent=spil)
+		else:
+			print "Warning: file '"+path+"' wasn't added because it doesn't exists!"
+	
+	#remove some problematic flags:
+	flagsToRemove = [
+	'-all_load' #-all_load, causes duplicate symbols when multiple static libs happen to use the same libs build in (SBJSON a common guilty)
+	]
+	for flag in flagsToRemove:
+		proj.remove_other_ldflags(flag)
+	
+	#add flags 
+	flagsToAdd = [
+	'-fobjc-arc' #-fobj_arc enables compatibility between the arc libs (framework) and no-arc apps (unity build)
+	]
+	for flag in flagsToAdd:
+		proj.add_other_ldflags(flag)
+    
+	proj.saveFormat3_2()
+	print "Done!";

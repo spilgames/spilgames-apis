@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['getabtest_3a',['getABTest:',['../interface_spil.html#a010e079039beeef8322fe6ac99fd044c',1,'Spil']]],
+  ['getads_3a',['getAds:',['../interface_spil.html#ac7cc7d2ab7ff0a0c8afa4586e0376e3b',1,'Spil']]],
+  ['getappname',['getAppName',['../interface_spil_helpers.html#a83ce222e7edbdd5b4846318d17238c4e',1,'SpilHelpers']]],
+  ['getappversion',['getAppVersion',['../interface_spil_helpers.html#aa20e59cc60327022e54164d962aea965',1,'SpilHelpers']]],
+  ['getcountrycode',['getCountryCode',['../interface_spil_helpers.html#a8a01c3a771327d5cdee04378db039149',1,'SpilHelpers']]],
+  ['getdevicemodel',['getDeviceModel',['../interface_spil_helpers.html#aa52fc9361fbe63561245ad8a2ed9ddd5',1,'SpilHelpers']]],
+  ['getdeviceplatform',['getDevicePlatform',['../interface_spil_helpers.html#a248e28309828e74932ecf3700075c3f1',1,'SpilHelpers']]],
+  ['getextendedtracking_3a',['getExtendedTracking:',['../interface_spil.html#a250407ed6dbe423d43a87e66ffb1922d',1,'Spil']]],
+  ['getlanguage',['getLanguage',['../interface_spil_helpers.html#ab9fcc243bd45084ce0c2a7fe9f9a3560',1,'SpilHelpers']]],
+  ['getmacaddress',['getMacAddress',['../interface_spil_helpers.html#a9431793feb23a3f0646db032345772d7',1,'SpilHelpers']]],
+  ['getosversion',['getOSVersion',['../interface_spil_helpers.html#acf0260a9b0d8029fdc9b8a7727240b37',1,'SpilHelpers']]],
+  ['getpixelratio',['getPixelRatio',['../interface_spil_helpers.html#a9a4b7957cab2bacecc22a0fd0b3abb4b',1,'SpilHelpers']]],
+  ['getscreenheight',['getScreenHeight',['../interface_spil_helpers.html#ab89cc95ecb4499403321ac7c185a1e41',1,'SpilHelpers']]],
+  ['getscreenwidth',['getScreenWidth',['../interface_spil_helpers.html#a3556fd181b5d1ce4798169682884f1f2',1,'SpilHelpers']]],
+  ['getsettings_3a',['getSettings:',['../interface_spil.html#a5646eb0ec297280ea44ca91ee2e2a66e',1,'Spil']]],
+  ['getudid',['getUDID',['../interface_spil_helpers.html#aae3e7b1362e398a982c8e5985919415f',1,'SpilHelpers']]]
+];
