@@ -4,4 +4,4 @@ iOS:
 - CRITICAL: Updated all tracking clients.
 - IMPROVEMENT: Added QA events to ease the integration process
 - IMPROVEMENT: improved performance of the more games screen
-- IMPROVEMENT: Slighted reduced the foot print.
+- IMPROVEMENT: Slightly reduced the footprint.
