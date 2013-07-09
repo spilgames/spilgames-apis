@@ -1,0 +1,5 @@
+var interfacecom_1_1spilgames_1_1framework_1_1data_1_1managers_1_1_configurations_manager =
+[
+    [ "ConfigurationManagerListener", "interfacecom_1_1spilgames_1_1framework_1_1data_1_1managers_1_1_configurations_manager_1_1_configuration_manager_listener.html", "interfacecom_1_1spilgames_1_1framework_1_1data_1_1managers_1_1_configurations_manager_1_1_configuration_manager_listener" ],
+    [ "getConfigurations", "interfacecom_1_1spilgames_1_1framework_1_1data_1_1managers_1_1_configurations_manager.html#a5e88cc8297fd705995e18be3f0afeadf", null ]
+];
