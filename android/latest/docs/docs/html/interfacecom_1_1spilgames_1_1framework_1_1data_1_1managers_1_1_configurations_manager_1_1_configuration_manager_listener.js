@@ -1,0 +1,4 @@
+var interfacecom_1_1spilgames_1_1framework_1_1data_1_1managers_1_1_configurations_manager_1_1_configuration_manager_listener =
+[
+    [ "onConfigurationsRetreived", "interfacecom_1_1spilgames_1_1framework_1_1data_1_1managers_1_1_configurations_manager_1_1_configuration_manager_listener.html#a47789df095102146c7c70340324d0ccc", null ]
+];

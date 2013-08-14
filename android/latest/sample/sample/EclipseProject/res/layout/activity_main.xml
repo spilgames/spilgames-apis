@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/pageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Track Page" />
+
+    <Button
+        android:id="@+id/eventButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Track Event" />
+
+    <Button
+        android:id="@+id/timeEventStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Track Time Event Start" />
+
+    <Button
+        android:id="@+id/timeEventEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Track Time Event Stop" />
+
+    <Button
+        android:id="@+id/errorButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Track Error" />
+    
+    <Button
+        android:id="@+id/userButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Track User" />
+    
+    <Button
+        android:id="@+id/ageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Track Age" />
+    
+    <Button
+        android:id="@+id/genderButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Track Gender" />
+
+    <Button
+        android:id="@+id/newScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Screen" />
+
+</LinearLayout>
