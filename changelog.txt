@@ -1,3 +1,7 @@
+Changelog 1.5.7:
+iOS:
+- CRITICAL: Updated Flurry client to version 4.2.3
+	
 Changelog 1.5.5:
 iOS: 
 - CRITICAL: Removed calls to get the MAC address on iOS, preventing issues for the coming ios7
