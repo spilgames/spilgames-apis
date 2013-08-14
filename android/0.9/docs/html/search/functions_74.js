@@ -1,9 +1,0 @@
-var searchData=
-[
-  ['trackendtimedevent',['trackEndTimedEvent',['../classcom_1_1spilgames_1_1framework_1_1_spil.html#a27a023e70b700df1ccf0d25406e54528',1,'com.spilgames.framework.Spil.trackEndTimedEvent(String event)'],['../classcom_1_1spilgames_1_1framework_1_1_spil.html#a38adb067d964e3d547803e3ed5dbd12f',1,'com.spilgames.framework.Spil.trackEndTimedEvent(String event, Map&lt; String, String &gt; params)']]],
-  ['trackerror',['trackError',['../classcom_1_1spilgames_1_1framework_1_1_spil.html#a72d16f8d326d87efab2de84d1e988283',1,'com::spilgames::framework::Spil']]],
-  ['trackevent',['trackEvent',['../classcom_1_1spilgames_1_1framework_1_1_spil.html#a5387c3cdb8fa098aeb69e02f9334632d',1,'com.spilgames.framework.Spil.trackEvent(String event)'],['../classcom_1_1spilgames_1_1framework_1_1_spil.html#a56a697ac33039ee3d070dc401b911329',1,'com.spilgames.framework.Spil.trackEvent(String category, String action, String label, long value)'],['../classcom_1_1spilgames_1_1framework_1_1_spil.html#a79422f463a5ca054f03b43bee7bd439c',1,'com.spilgames.framework.Spil.trackEvent(String category, String action, String label, long value, Map&lt; String, String &gt; params)'],['../classcom_1_1spilgames_1_1framework_1_1_spil.html#ab8f46a94a7b287ddd05e0d5621571eae',1,'com.spilgames.framework.Spil.trackEvent(String event, Map&lt; String, String &gt; params)']]],
-  ['trackpage',['trackPage',['../classcom_1_1spilgames_1_1framework_1_1_spil.html#a0f1c56766325ea664b22af3d8606c543',1,'com::spilgames::framework::Spil']]],
-  ['tracktimedevent',['trackTimedEvent',['../classcom_1_1spilgames_1_1framework_1_1_spil.html#a4531373535e8a2a6b6005f9dddebd36d',1,'com::spilgames::framework::Spil']]],
-  ['trackuserid',['trackUserId',['../classcom_1_1spilgames_1_1framework_1_1_spil.html#a1893d2586f46201e3de50a28b2eebe10',1,'com::spilgames::framework::Spil']]]
-];
