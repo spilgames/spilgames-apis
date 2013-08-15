@@ -1,6 +1,12 @@
 Changelog 1.5.7:
 iOS:
 - CRITICAL: Updated Flurry client to version 4.2.3
+
+Android:
+- Added Android framework
+- Google Analytics, Flurry and SET for Events tracking
+- Charboost and Distimo for Tracking installs
+- SpilLoader implemented 
 	
 Changelog 1.5.5:
 iOS: 
