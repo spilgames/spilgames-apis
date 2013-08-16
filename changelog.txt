@@ -1,3 +1,7 @@
+Changelog 1.5.8:
+iOS:
+- CRITICAL: More Games screen failed randomly if the rootViewController wasn't set on the keyWindow
+
 Changelog 1.5.7:
 iOS:
 - CRITICAL: Updated Flurry client to version 4.2.3
