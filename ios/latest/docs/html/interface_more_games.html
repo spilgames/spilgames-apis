@@ -107,16 +107,91 @@ $(document).ready(function(){initNavTree('interface_more_games.html','');});
 <div class="title">MoreGames Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#import &lt;<a class="el" href="_more_games_8h_source.html">MoreGames.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa18e26a367d9701b92d88ba716bc1e2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa18e26a367d9701b92d88ba716bc1e2a"></a>
-(id)&#160;</td><td class="memItemRight" valign="bottom">- <b>initWithContainer:andTracker:</b></td></tr>
-<tr class="memitem:a9c22bf8733b2bba4e25537f2194fd785"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c22bf8733b2bba4e25537f2194fd785"></a>
-(void)&#160;</td><td class="memItemRight" valign="bottom">- <b>showMoreGames</b></td></tr>
-<tr class="memitem:a95e3e2af39f00c885b91735f344d8789"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95e3e2af39f00c885b91735f344d8789"></a>
-(void)&#160;</td><td class="memItemRight" valign="bottom">- <b>setDelegate:</b></td></tr>
+<tr class="memitem:aa18e26a367d9701b92d88ba716bc1e2a"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_more_games.html#aa18e26a367d9701b92d88ba716bc1e2a">initWithContainer:andTracker:</a></td></tr>
+<tr class="memitem:a9c22bf8733b2bba4e25537f2194fd785"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_more_games.html#a9c22bf8733b2bba4e25537f2194fd785">showMoreGames</a></td></tr>
+<tr class="memitem:a95e3e2af39f00c885b91735f344d8789"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_more_games.html#a95e3e2af39f00c885b91735f344d8789">setDelegate:</a></td></tr>
 </table>
+<a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Class to display and handle the More Games functionality. </p>
+</div><h2>Member Function Documentation</h2>
+<a class="anchor" id="aa18e26a367d9701b92d88ba716bc1e2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initWithContainer: </td>
+          <td></td>
+          <td class="paramtype">(UIViewController *)&#160;</td>
+          <td class="paramname"><em>container</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andTracker:</td>
+          <td></td>
+          <td class="paramtype">(Tracking *)&#160;</td>
+          <td class="paramname"><em>tracker</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize the <a class="el" href="interface_more_games.html">MoreGames</a> subsytem with the container for the webview. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">container</td><td>A UIViewController to trigger the transitions of the UIWebView screen. </td></tr>
+    <tr><td class="paramname">tracker</td><td>The tracking system to use for the internal tracking calls. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a95e3e2af39f00c885b91735f344d8789"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setDelegate: </td>
+          <td></td>
+          <td class="paramtype">(id&lt; <a class="el" href="protocol_ads_delegate-p.html">AdsDelegate</a> &gt;)&#160;</td>
+          <td class="paramname"><em>delegate</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the <a class="el" href="protocol_ads_delegate-p.html">AdsDelegate</a> to notify about the more games' events. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delegate</td><td><a class="el" href="protocol_ads_delegate-p.html">AdsDelegate</a> implementation to notify about the more games' events </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9c22bf8733b2bba4e25537f2194fd785"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) showMoreGames </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Shows the webview at the top of the view's stack </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/Users/ignacio/Documents/native-unity-plugin/libs/ios-api/src/Classes/ads/moregames/<a class="el" href="_more_games_8h_source.html">MoreGames.h</a></li>
 </ul>

@@ -42,7 +42,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li>
@@ -90,7 +89,7 @@ $(document).ready(function(){initNavTree('class_spil_unity.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -118,13 +117,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>OnApplicationQuit</b>
 <tr class="memitem:afbf4d6f4c13a80184e85c4db448a0b6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#afbf4d6f4c13a80184e85c4db448a0b6c">Initialize</a> (string appID, string authToken, <a class="el" href="struct_spil_1_1_spil_settings.html">SpilSettings</a> configs)</td></tr>
 <tr class="memitem:a5cf96e4b6475cb65639c7401d67042bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a5cf96e4b6475cb65639c7401d67042bb">GetSettings</a> (<a class="el" href="interface_spil_1_1_spil_app_settings_listener.html">SpilAppSettingsListener</a> listener)</td></tr>
 <tr class="memitem:a90e7f5daf25b9ab20156ec87b34a4b03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a90e7f5daf25b9ab20156ec87b34a4b03">StartAds</a> (<a class="el" href="interface_spil_1_1_spil_ads_listener.html">SpilAdsListener</a> listener)</td></tr>
-<tr class="memitem:a944b63d1feb17470eba3ee48ca2c9e7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a944b63d1feb17470eba3ee48ca2c9e7f">ShowNextAd</a> ()</td></tr>
-<tr class="memitem:a4e5df004917727ee8d3de3a0d52321e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a4e5df004917727ee8d3de3a0d52321e8">AdsNextIntersitial</a> ()</td></tr>
-<tr class="memitem:aafcb9ee9a60fb46242dd2d03c39362f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#aafcb9ee9a60fb46242dd2d03c39362f0">ShowMoreGames</a> ()</td></tr>
+<tr class="memitem:ad78e2730bc0a582fa63cbb83d7ceb67a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#ad78e2730bc0a582fa63cbb83d7ceb67a">AdsNextInterstitial</a> ()</td></tr>
 <tr class="memitem:a11d4a63321136f796857c600e018e447"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a11d4a63321136f796857c600e018e447">AdsShowMoreGames</a> ()</td></tr>
-<tr class="memitem:a5bf58cfbbef9d9862573fb8d1b91056f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a5bf58cfbbef9d9862573fb8d1b91056f">EnableAds</a> (bool state)</td></tr>
 <tr class="memitem:a3168850e9743d25dd9c60a018dd294f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a3168850e9743d25dd9c60a018dd294f6">AdsEnabled</a> (bool state)</td></tr>
-<tr class="memitem:ab369dbabbc63a0d7bfc6cbb9c1c2fb70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#ab369dbabbc63a0d7bfc6cbb9c1c2fb70">AdsCacheNextIntersitial</a> ()</td></tr>
+<tr class="memitem:a7815767fc730325b937d0c1cecdbd6ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a7815767fc730325b937d0c1cecdbd6ed">AdsCacheNextInterstitial</a> ()</td></tr>
+<tr class="memitem:a3b51ff9e8e22957e054dd164e0e73f4e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b51ff9e8e22957e054dd164e0e73f4e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>AdsPlaceAdAtPosition</b> (float x, float y, float w, float h)</td></tr>
 <tr class="memitem:a65c02eb6987761e9b143ea5b6cbe57fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a65c02eb6987761e9b143ea5b6cbe57fc">GetTrackExtended</a> (<a class="el" href="interface_spil_1_1_spil_tracking_extended_listener.html">SpilTrackingExtendedListener</a> listener)</td></tr>
 <tr class="memitem:a0170c30cbd321b2fa25d3e0d32bbcb7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a0170c30cbd321b2fa25d3e0d32bbcb7b">TrackPage</a> (string page)</td></tr>
 <tr class="memitem:a982e1610d0e7eaf2251fe327ed768345"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a982e1610d0e7eaf2251fe327ed768345"></a>
@@ -316,7 +314,7 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
 
 </div>
 </div>
-<a class="anchor" id="ab369dbabbc63a0d7bfc6cbb9c1c2fb70"></a>
+<a class="anchor" id="a7815767fc730325b937d0c1cecdbd6ed"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -324,7 +322,7 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void SpilUnity.AdsCacheNextIntersitial </td>
+          <td class="memname">void SpilUnity.AdsCacheNextInterstitial </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -371,7 +369,7 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
 
 </div>
 </div>
-<a class="anchor" id="a4e5df004917727ee8d3de3a0d52321e8"></a>
+<a class="anchor" id="ad78e2730bc0a582fa63cbb83d7ceb67a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -379,7 +377,7 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void SpilUnity.AdsNextIntersitial </td>
+          <td class="memname">void SpilUnity.AdsNextInterstitial </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -416,39 +414,6 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
 </table>
 </div><div class="memdoc">
 <p>Force to show the More Games screen. </p>
-
-</div>
-</div>
-<a class="anchor" id="a5bf58cfbbef9d9862573fb8d1b91056f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SpilUnity.EnableAds </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>In favor of better naming conventions.</dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_spil_unity.html#a3168850e9743d25dd9c60a018dd294f6">AdsEnabled</a><br/>
- Turn on/off if the ads should be displayed. The ads are displayed by default. For gameplay screens should be turned off. After return to the menus should be turned on again. </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">state</td><td>Indicates if the ads should be displayed or not. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -585,58 +550,6 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="aafcb9ee9a60fb46242dd2d03c39362f0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SpilUnity.ShowMoreGames </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>In favor of better naming conventions.</dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_spil_unity.html#a11d4a63321136f796857c600e018e447">AdsShowMoreGames</a><br/>
- Force to show the More Games screen. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a944b63d1feb17470eba3ee48ca2c9e7f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SpilUnity.ShowNextAd </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>In favor of better naming conventions.</dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_spil_unity.html#a4e5df004917727ee8d3de3a0d52321e8">AdsNextIntersitial</a><br/>
- The ads are displayed based on a timer, this method force the ad to be shown right away, and the timer is reset. </dd></dl>
 
 </div>
 </div>

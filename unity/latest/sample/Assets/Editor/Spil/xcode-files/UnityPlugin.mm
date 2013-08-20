@@ -81,16 +81,23 @@ extern "C" {
 		}
 	}	
 	
-	void adsNextIntersitial(){
+	void adsNextInterstitial(){
 		if(spil != nil){
-			[spil adsNextIntersitial];
+			[spil adsNextInterstitial];
 		}
 	}
 	
-	void adsCacheNextIntersitial(){
+	void adsCacheNextInterstitial(){
 		if(spil != nil){
-			[spil adsCacheNextIntersitial];
+			[spil adsCacheNextInterstitial];
 		}
+	}
+	
+	int adsPlaceAdAt(float x, float y, float w, float h){
+		if(spil != nil){
+			return [spil adsPlaceAdOn:[UIApplication sharedApplication].keyWindow.rootViewController.view at:CGRectMake(x,y,w,h)];
+		}
+		return 0;
 	}
 		
 #pragma mark - Wrapper functions: Tracking	

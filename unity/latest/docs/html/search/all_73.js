@@ -5,8 +5,6 @@ var searchData=
   ['sg_5fenvironment_5fsettings_5furl_5fget',['SG_ENVIRONMENT_SETTINGS_URL_GET',['../struct_spil_1_1_spil_settings.html#a5ec943d70fbe35b5804cf191a9cf77d4',1,'Spil::SpilSettings']]],
   ['sg_5ftracking_5fid_5fkey',['SG_TRACKING_ID_KEY',['../struct_spil_1_1_spil_settings.html#a4585567f358bb7a4818bf72b7a2a26bb',1,'Spil::SpilSettings']]],
   ['sghelpers',['SGHelpers',['../class_spil_1_1_s_g_helpers.html',1,'Spil']]],
-  ['showmoregames',['ShowMoreGames',['../class_spil_unity.html#aafcb9ee9a60fb46242dd2d03c39362f0',1,'SpilUnity']]],
-  ['shownextad',['ShowNextAd',['../class_spil_unity.html#a944b63d1feb17470eba3ee48ca2c9e7f',1,'SpilUnity']]],
   ['spil',['Spil',['../namespace_spil.html',1,'']]],
   ['spilabtestlistener',['SpilABTestListener',['../interface_spil_1_1_spil_a_b_test_listener.html',1,'Spil']]],
   ['spiladslistener',['SpilAdsListener',['../interface_spil_1_1_spil_ads_listener.html',1,'Spil']]],

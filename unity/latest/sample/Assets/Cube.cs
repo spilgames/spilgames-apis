@@ -57,6 +57,9 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 	
 	public void AdDidStart(){
 		Debug.Log("started adds");
+		instance.AdsPlaceAdAtPosition(0,0,100,200);
+		
+		instance.AdsPlaceAdAtPosition(100,0,200,100);
 	}
 	public void AdDidFailToStart(string error){
 		Debug.LogError(error);
@@ -86,7 +89,7 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 	}
 	public void AdMoreGamesDidDismiss(){
 		Debug.Log("more games was dismissed");
-		instance.AdsNextIntersitial();
+		instance.AdsNextInterstitial();
 	}
 	
 	public void ABTestSessionDidStart(){

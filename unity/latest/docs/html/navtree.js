@@ -1,7 +1,6 @@
 var NAVTREE =
 [
   [ "Spil Unity Plugin", "index.html", [
-    [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [

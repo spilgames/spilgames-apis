@@ -198,7 +198,7 @@ public class SpilUnity : MonoBehaviour {
 	private static extern void getSettings();
 	
 	[DllImport ("__Internal")]
-	private static extern void adsNextIntersitial();
+	private static extern void adsNextInterstitial();
 	
 	[DllImport ("__Internal")]
 	private static extern void adsShowMoreGames();
@@ -207,7 +207,10 @@ public class SpilUnity : MonoBehaviour {
 	private static extern void adsEnabled(bool state);
 	
 	[DllImport ("__Internal")]
-	private static extern void adsCacheNextIntersitial();
+	private static extern void adsCacheNextInterstitial();
+	
+	[DllImport ("__Internal")]
+	private static extern int adsPlaceAdAt(float x, float y, float w, float h);
 	
 	[DllImport ("__Internal")]
 	private static extern void startAds();
@@ -354,34 +357,16 @@ public class SpilUnity : MonoBehaviour {
 		}else{
 		}	
 	}
-	
-	/**
-	 * @deprecated In favor of better naming conventions. @see AdsNextIntersitial<br/>
-	 * The ads are displayed based on a timer, this method force the ad to be shown right
-	 * away, and the timer is reset.
-	 */
-	public void ShowNextAd(){
-		this.AdsNextIntersitial();
-	}
-	
+		
 	/**
 	 * The ads are displayed based on a timer, this method force the ad to be shown right
 	 * away, and the timer is reset.
 	 */
-	public void AdsNextIntersitial(){
+	public void AdsNextInterstitial(){
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			adsNextIntersitial();
+			adsNextInterstitial();
 		}else{
 		}
-	}
-	
-	
-	/**
-	 * @deprecated In favor of better naming conventions. @see AdsShowMoreGames<br/>
-	 * Force to show the More Games screen.
-	 */
-	public void ShowMoreGames(){
-		this.AdsShowMoreGames();
 	}
 	
 	/**
@@ -392,16 +377,6 @@ public class SpilUnity : MonoBehaviour {
 			adsShowMoreGames();
 		}else{
 		}
-	}
-	
-	/**
-	 * @deprecated In favor of better naming conventions. @see AdsEnabled<br/>
-	 * Turn on/off if the ads should be displayed. The ads are displayed by default. For gameplay screens should be turned off.
-	 * After return to the menus should be turned on again.
-	 * @param	state	Indicates if the ads should be displayed or not.
-	 */
-	public void EnableAds(bool state){
-		this.AdsEnabled(state);
 	}
 	
 	/**
@@ -419,11 +394,19 @@ public class SpilUnity : MonoBehaviour {
 	/**
 	 * Cache the next intersitial ad.
 	 */
-	public void AdsCacheNextIntersitial(){
+	public void AdsCacheNextInterstitial(){
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			adsCacheNextIntersitial();
+			adsCacheNextInterstitial();
 		}else{
 		}
+	}
+	
+	public bool AdsPlaceAdAtPosition(float x, float y, float w, float h){
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			return adsPlaceAdAt(x,y,w,h) != 0;
+		}else{
+		}
+		return false;
 	}
 	
 	/**
