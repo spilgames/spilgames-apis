@@ -121,8 +121,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>OnApplicationQuit</b>
 <tr class="memitem:a11d4a63321136f796857c600e018e447"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a11d4a63321136f796857c600e018e447">AdsShowMoreGames</a> ()</td></tr>
 <tr class="memitem:a3168850e9743d25dd9c60a018dd294f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a3168850e9743d25dd9c60a018dd294f6">AdsEnabled</a> (bool state)</td></tr>
 <tr class="memitem:a7815767fc730325b937d0c1cecdbd6ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a7815767fc730325b937d0c1cecdbd6ed">AdsCacheNextInterstitial</a> ()</td></tr>
-<tr class="memitem:a3b51ff9e8e22957e054dd164e0e73f4e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b51ff9e8e22957e054dd164e0e73f4e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>AdsPlaceAdAtPosition</b> (float x, float y, float w, float h)</td></tr>
+<tr class="memitem:a3b51ff9e8e22957e054dd164e0e73f4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a3b51ff9e8e22957e054dd164e0e73f4e">AdsPlaceAdAtPosition</a> (float x, float y, float w, float h)</td></tr>
+<tr class="memitem:a0cd243e29fb31f5607d0c54f3214c821"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a0cd243e29fb31f5607d0c54f3214c821">AdsRemovePlacedAds</a> ()</td></tr>
 <tr class="memitem:a65c02eb6987761e9b143ea5b6cbe57fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a65c02eb6987761e9b143ea5b6cbe57fc">GetTrackExtended</a> (<a class="el" href="interface_spil_1_1_spil_tracking_extended_listener.html">SpilTrackingExtendedListener</a> listener)</td></tr>
 <tr class="memitem:a0170c30cbd321b2fa25d3e0d32bbcb7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a0170c30cbd321b2fa25d3e0d32bbcb7b">TrackPage</a> (string page)</td></tr>
 <tr class="memitem:a982e1610d0e7eaf2251fe327ed768345"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a982e1610d0e7eaf2251fe327ed768345"></a>
@@ -390,6 +390,87 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
 </table>
 </div><div class="memdoc">
 <p>The ads are displayed based on a timer, this method force the ad to be shown right away, and the timer is reset. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3b51ff9e8e22957e054dd164e0e73f4e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SpilUnity.AdsPlaceAdAtPosition </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Place one of the interstitial assets over the container filling the area specified. The area specifies the relative position to the container position and the dimensions of the space to be filled. If the area falls outside the container area, nothing will be shown and a message will be printed on the console. The area can be equal to the area of the container view. This method returns immediately, although, the image can be applied later due to the asynchronous nature of chartboost. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The x position on the screen. </td></tr>
+    <tr><td class="paramname">y</td><td>The y position on the screen. </td></tr>
+    <tr><td class="paramname">w</td><td>The max desired width of the ad. </td></tr>
+    <tr><td class="paramname">h</td><td>The max desired height of the ad. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>false if any of the conditions are not met, true otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0cd243e29fb31f5607d0c54f3214c821"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpilUnity.AdsRemovePlacedAds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Remove the advertisements from their superviews. </p>
 
 </div>
 </div>

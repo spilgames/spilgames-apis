@@ -213,6 +213,9 @@ public class SpilUnity : MonoBehaviour {
 	private static extern int adsPlaceAdAt(float x, float y, float w, float h);
 	
 	[DllImport ("__Internal")]
+	private static extern void adsRemovePlacedAds();
+	
+	[DllImport ("__Internal")]
 	private static extern void startAds();
 	
 	[DllImport ("__Internal")]
@@ -350,12 +353,7 @@ public class SpilUnity : MonoBehaviour {
 		adsListener = listener;
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
 			startAds();
-		}else if(Application.platform == RuntimePlatform.Android){
-			#if UNITY_ANDROID
-			
-			#endif
-		}else{
-		}	
+		}
 	}
 		
 	/**
@@ -365,6 +363,10 @@ public class SpilUnity : MonoBehaviour {
 	public void AdsNextInterstitial(){
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
 			adsNextInterstitial();
+		}else if(Application.platform == RuntimePlatform.Android){
+			#if UNITY_ANDROID
+			spilAndroid.AdsNextInterstitial();
+			#endif
 		}else{
 		}
 	}
@@ -401,12 +403,34 @@ public class SpilUnity : MonoBehaviour {
 		}
 	}
 	
+	/**
+	 * Place one of the interstitial assets over the container filling the area specified. The area specifies the
+	 * relative position to the container position and the dimensions of the space to be filled.
+	 * If the area falls outside the container area, nothing will be shown and a message will be printed on the console.
+	 * The area can be equal to the area of the container view.
+	 * This method returns immediately, although, the image can be applied later due to the asynchronous nature of chartboost.
+	 * @param	x	The x position on the screen.
+	 * @param	y	The y position on the screen.
+	 * @param	w	The max desired width of the ad.
+	 * @param	h	The max desired height of the ad.
+	 * @return	false	if any of the conditions are not met, true otherwise.
+	 */
 	public bool AdsPlaceAdAtPosition(float x, float y, float w, float h){
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
 			return adsPlaceAdAt(x,y,w,h) != 0;
 		}else{
 		}
 		return false;
+	}
+	
+	/**
+	 * Remove the advertisements from their superviews.
+	 */
+	public void AdsRemovePlacedAds(){
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			adsRemovePlacedAds();
+		}else{
+		}
 	}
 	
 	/**

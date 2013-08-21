@@ -9,6 +9,7 @@ var class_spil_unity =
     [ "AdsEnabled", "class_spil_unity.html#a3168850e9743d25dd9c60a018dd294f6", null ],
     [ "AdsNextInterstitial", "class_spil_unity.html#ad78e2730bc0a582fa63cbb83d7ceb67a", null ],
     [ "AdsPlaceAdAtPosition", "class_spil_unity.html#a3b51ff9e8e22957e054dd164e0e73f4e", null ],
+    [ "AdsRemovePlacedAds", "class_spil_unity.html#a0cd243e29fb31f5607d0c54f3214c821", null ],
     [ "AdsShowMoreGames", "class_spil_unity.html#a11d4a63321136f796857c600e018e447", null ],
     [ "Awake", "class_spil_unity.html#abc305077f2a1495ac1555a4b702384a0", null ],
     [ "GetABTest", "class_spil_unity.html#a662f5d7dcc9d9341baf38d9ed42581a3", null ],

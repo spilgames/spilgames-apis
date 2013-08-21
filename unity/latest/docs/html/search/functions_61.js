@@ -20,6 +20,8 @@ var searchData=
   ['adscachenextinterstitial',['AdsCacheNextInterstitial',['../class_spil_unity.html#a7815767fc730325b937d0c1cecdbd6ed',1,'SpilUnity']]],
   ['adsenabled',['AdsEnabled',['../class_spil_unity.html#a3168850e9743d25dd9c60a018dd294f6',1,'SpilUnity']]],
   ['adsnextinterstitial',['AdsNextInterstitial',['../class_spil_unity.html#ad78e2730bc0a582fa63cbb83d7ceb67a',1,'SpilUnity']]],
+  ['adsplaceadatposition',['AdsPlaceAdAtPosition',['../class_spil_unity.html#a3b51ff9e8e22957e054dd164e0e73f4e',1,'SpilUnity']]],
+  ['adsremoveplacedads',['AdsRemovePlacedAds',['../class_spil_unity.html#a0cd243e29fb31f5607d0c54f3214c821',1,'SpilUnity']]],
   ['adsshowmoregames',['AdsShowMoreGames',['../class_spil_unity.html#a11d4a63321136f796857c600e018e447',1,'SpilUnity']]],
   ['adwillappear',['AdWillAppear',['../interface_spil_1_1_spil_ads_listener.html#ac2460f8e95784724e4848e751d374677',1,'Spil::SpilAdsListener']]],
   ['appsettingsdidfailwitherror',['AppSettingsDidFailWithError',['../interface_spil_1_1_spil_app_settings_listener.html#a522655bcca3e0021d136aeff20f1ca0b',1,'Spil::SpilAppSettingsListener']]],

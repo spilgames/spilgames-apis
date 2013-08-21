@@ -99,6 +99,12 @@ extern "C" {
 		}
 		return 0;
 	}
+	
+	void adsRemovePlacedAds(){
+		if(spil != nil){
+			[spil adsRemovePlacedAds];
+		}
+	}
 		
 #pragma mark - Wrapper functions: Tracking	
 	

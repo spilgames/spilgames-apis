@@ -87,6 +87,11 @@ public class SpilAndroid
 		instance.Call ("trackUserId", userId);	
 	}
 	
+	public void AdsNextInterstitial ()
+	{
+		instance.Call ("showInterstitial");	
+	}
+	
 	
 	public void StartAdsSession ()
 	{
