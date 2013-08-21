@@ -90,6 +90,11 @@
  */
 -(BOOL) adsPlaceAdOn:(UIView*)container at:(CGRect)area;
 
+/**
+ * Remove the advertisements from their superviews.
+ */
+-(void) adsRemovePlacedAds;
+
 #pragma mark - Tracking methods
 
 /**

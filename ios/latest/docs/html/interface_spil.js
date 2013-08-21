@@ -9,6 +9,7 @@ var interface_spil =
     [ "adsEnabled:", "interface_spil.html#a4665f243ecab228bfa050ea5b4c26dd7", null ],
     [ "adsNextInterstitial", "interface_spil.html#aec717903766064910fe29994d3ba815f", null ],
     [ "adsPlaceAdOn:at:", "interface_spil.html#a5b1f0e77f21ddc660faf4c0c568a8ef3", null ],
+    [ "adsRemovePlacedAds", "interface_spil.html#a61d64904ad8fa92bda6391c498a2d5cb", null ],
     [ "adsShowMoreGames", "interface_spil.html#ad9f961650f9a341600d7079c1878755e", null ],
     [ "getABTest:", "interface_spil.html#a010e079039beeef8322fe6ac99fd044c", null ],
     [ "getAds:", "interface_spil.html#ac7cc7d2ab7ff0a0c8afa4586e0376e3b", null ],
