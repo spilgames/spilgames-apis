@@ -24,7 +24,6 @@
 		4FA1B3E416B7F95A00D5B6CF /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA1B3E016B7F95A00D5B6CF /* ViewController_iPhone.xib */; };
 		4FDEB39417B5243C00F856C7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDEB39217B5243100F856C7 /* Security.framework */; };
 		4FDEB3C317B535A800F856C7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDEB3C217B535A800F856C7 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		4FDEB3C517B5362700F856C7 /* FiksuConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB3C417B5362700F856C7 /* FiksuConfiguration.plist */; };
 		4FE7025416637BAD00A69429 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FE7025316637BAD00A69429 /* Default-568h@2x.png */; };
 		508F483C8B44AD4332CBD45B /* Spil.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5786404AAEA5E1FCBB5E83A4 /* Spil.bundle */; };
 		5BD64DC3AD903D2C6472BB52 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E54C6394345ED492F9FBB2 /* CoreMedia.framework */; };
@@ -59,7 +58,6 @@
 		4FA1B3E116B7F95A00D5B6CF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		4FDEB39217B5243100F856C7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4FDEB3C217B535A800F856C7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		4FDEB3C417B5362700F856C7 /* FiksuConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FiksuConfiguration.plist; sourceTree = "<group>"; };
 		4FE7025316637BAD00A69429 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		558E42FD8E3CE9AD94ABA66D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		5786404AAEA5E1FCBB5E83A4 /* Spil.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Spil.bundle; path = "Native-Sample/Spil.bundle"; sourceTree = SOURCE_ROOT; };
@@ -168,7 +166,6 @@
 		4F12BBEB15BE99E200FFD718 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4FDEB3C417B5362700F856C7 /* FiksuConfiguration.plist */,
 				4FA1B3DC16B7F95A00D5B6CF /* InfoPlist.strings */,
 				4FA1B3DE16B7F95A00D5B6CF /* ViewController_iPad.xib */,
 				4FA1B3E016B7F95A00D5B6CF /* ViewController_iPhone.xib */,
@@ -245,7 +242,6 @@
 				4FA1B3E216B7F95A00D5B6CF /* InfoPlist.strings in Resources */,
 				4FA1B3E316B7F95A00D5B6CF /* ViewController_iPad.xib in Resources */,
 				4FA1B3E416B7F95A00D5B6CF /* ViewController_iPhone.xib in Resources */,
-				4FDEB3C517B5362700F856C7 /* FiksuConfiguration.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

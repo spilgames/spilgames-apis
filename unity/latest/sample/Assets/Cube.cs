@@ -32,9 +32,19 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 		instance.GetABTest(this);
 	}
 	
+	int clickCount = 0;
 	// Update is called once per frame
 	void Update () {
 		gameObject.transform.Rotate(rotation);
+		
+		if(Input.touchCount != 0 && Input.GetTouch(0).phase == UnityEngine.TouchPhase.Ended){
+			clickCount++;
+			
+			if(clickCount%2==0)
+				instance.AdsRemovePlacedAds();
+			else
+				instance.AdsPlaceAdAtPosition(100,100,300,200);
+		}
 	}
 	
 	//have to be implemented by the developers
@@ -57,6 +67,10 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 	
 	public void AdDidStart(){
 		Debug.Log("started adds");
+		instance.AdsNextInterstitial();
+		instance.AdsPlaceAdAtPosition(0,0,100,200);
+		
+		instance.AdsPlaceAdAtPosition(100,0,200,100);
 	}
 	public void AdDidFailToStart(string error){
 		Debug.LogError(error);
@@ -86,7 +100,7 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 	}
 	public void AdMoreGamesDidDismiss(){
 		Debug.Log("more games was dismissed");
-		instance.AdsNextIntersitial();
+		instance.AdsNextInterstitial();
 	}
 	
 	public void ABTestSessionDidStart(){

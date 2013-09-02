@@ -138,7 +138,7 @@
 }
 -(void) adMoreGamesDidDismiss{
 	NSLog(@"more games was dismissed");
-	[[Spil sharedInstance] adsNextIntersitial];
+	[[Spil sharedInstance] adsNextInterstitial];
 	[[Spil sharedInstance] trackEvent:@"core.moregames.diddismiss"];
 }
 

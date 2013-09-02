@@ -1,3 +1,7 @@
+Changelog 1.5.9:
+iOS:
+- ADDED: Support for Chartboost ingame ads (non-invasive)
+
 Changelog 1.5.8:
 iOS:
 - CRITICAL: More Games screen failed randomly if the rootViewController wasn't set on the keyWindow

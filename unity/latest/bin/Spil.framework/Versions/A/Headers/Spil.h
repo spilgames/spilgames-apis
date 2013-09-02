@@ -55,30 +55,6 @@
 -(void) getAds:(id<AdsDelegate>)delegate;
 
 /**
- * @deprecated In favor of better naming conventions.
- * Turn on/off if the ads should be displayed. The ads are displayed by default. For gameplay screens should be turned off.
- * After return to the menus should be turned on again.
- * @param	state	Indicates if the ads should be displayed or not.
- * @see adsEnabled:
- */
--(void) enableAds:(BOOL)state;
-
-/**
- * @deprecated In favor of better naming conventions. 
- * The ads are displayed based on a timer, this method force the ad to be shown right
- * away, and the timer is reset.
- * @see adsNextIntersitial
- */
--(void) showNextAd;
-
-/**
- * @deprecated In favor of better naming conventions. 
- * Force to show the More Games screen.
- * @see adsShowMoreGames
- */
--(void) showMoreGames;
-
-/**
  * Turn on/off if the ads should be displayed. The ads are displayed by default. For gameplay screens should be turned off.
  * After return to the menus should be turned on again.
  * @param	state	Indicates if the ads should be displayed or not.
@@ -92,14 +68,32 @@
 
 /**
  * The ads are displayed based on a timer, this method force the ad to be shown right
- * away, and the timer is reset.
+ * away.
  */
--(void) adsNextIntersitial;
+-(void) adsNextInterstitial;
 
 /**
- * Cache the next intersitial image to speed up the load time.
+ * Cache the next interstitial image to speed up the load time.
  */
--(void) adsCacheNextIntersitial;
+-(void) adsCacheNextInterstitial;
+
+/**
+ * Place one of the interstitial assets over the provided container filling the area specified. The area specifies the
+ * relative position to the container position and the dimensions of the space to be filled.
+ * If the area falls outside the container area, nothing will be shown and a message will be printed on the console.
+ * If the container is nil, nothing will be shown and a message will be printed on the console.
+ * The area can be equal to the area of the container view.
+ * This method returns immediately, although, the image can be applied later due to the asynchronous nature of chartboost.
+ * @param	container	A view that will contain the advert
+ * @param	area	The rectangle where the advert will be shown inside the view.
+ * @return	NO	if any of the conditions are not met, YES otherwise.
+ */
+-(BOOL) adsPlaceAdOn:(UIView*)container at:(CGRect)area;
+
+/**
+ * Remove the advertisements from their superviews.
+ */
+-(void) adsRemovePlacedAds;
 
 #pragma mark - Tracking methods
 

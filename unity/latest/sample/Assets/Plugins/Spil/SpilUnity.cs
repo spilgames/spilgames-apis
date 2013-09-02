@@ -198,7 +198,7 @@ public class SpilUnity : MonoBehaviour {
 	private static extern void getSettings();
 	
 	[DllImport ("__Internal")]
-	private static extern void adsNextIntersitial();
+	private static extern void adsNextInterstitial();
 	
 	[DllImport ("__Internal")]
 	private static extern void adsShowMoreGames();
@@ -207,7 +207,13 @@ public class SpilUnity : MonoBehaviour {
 	private static extern void adsEnabled(bool state);
 	
 	[DllImport ("__Internal")]
-	private static extern void adsCacheNextIntersitial();
+	private static extern void adsCacheNextInterstitial();
+	
+	[DllImport ("__Internal")]
+	private static extern int adsPlaceAdAt(float x, float y, float w, float h);
+	
+	[DllImport ("__Internal")]
+	private static extern void adsRemovePlacedAds();
 	
 	[DllImport ("__Internal")]
 	private static extern void startAds();
@@ -347,41 +353,22 @@ public class SpilUnity : MonoBehaviour {
 		adsListener = listener;
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
 			startAds();
-		}else if(Application.platform == RuntimePlatform.Android){
-			#if UNITY_ANDROID
-			
-			#endif
-		}else{
-		}	
-	}
-	
-	/**
-	 * @deprecated In favor of better naming conventions. @see AdsNextIntersitial<br/>
-	 * The ads are displayed based on a timer, this method force the ad to be shown right
-	 * away, and the timer is reset.
-	 */
-	public void ShowNextAd(){
-		this.AdsNextIntersitial();
-	}
-	
-	/**
-	 * The ads are displayed based on a timer, this method force the ad to be shown right
-	 * away, and the timer is reset.
-	 */
-	public void AdsNextIntersitial(){
-		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			adsNextIntersitial();
-		}else{
 		}
 	}
-	
-	
+		
 	/**
-	 * @deprecated In favor of better naming conventions. @see AdsShowMoreGames<br/>
-	 * Force to show the More Games screen.
+	 * The ads are displayed based on a timer, this method force the ad to be shown right
+	 * away, and the timer is reset.
 	 */
-	public void ShowMoreGames(){
-		this.AdsShowMoreGames();
+	public void AdsNextInterstitial(){
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			adsNextInterstitial();
+		}else if(Application.platform == RuntimePlatform.Android){
+			#if UNITY_ANDROID
+			spilAndroid.AdsNextInterstitial();
+			#endif
+		}else{
+		}
 	}
 	
 	/**
@@ -392,16 +379,6 @@ public class SpilUnity : MonoBehaviour {
 			adsShowMoreGames();
 		}else{
 		}
-	}
-	
-	/**
-	 * @deprecated In favor of better naming conventions. @see AdsEnabled<br/>
-	 * Turn on/off if the ads should be displayed. The ads are displayed by default. For gameplay screens should be turned off.
-	 * After return to the menus should be turned on again.
-	 * @param	state	Indicates if the ads should be displayed or not.
-	 */
-	public void EnableAds(bool state){
-		this.AdsEnabled(state);
 	}
 	
 	/**
@@ -419,9 +396,39 @@ public class SpilUnity : MonoBehaviour {
 	/**
 	 * Cache the next intersitial ad.
 	 */
-	public void AdsCacheNextIntersitial(){
+	public void AdsCacheNextInterstitial(){
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			adsCacheNextIntersitial();
+			adsCacheNextInterstitial();
+		}else{
+		}
+	}
+	
+	/**
+	 * Place one of the interstitial assets over the container filling the area specified. The area specifies the
+	 * relative position to the container position and the dimensions of the space to be filled.
+	 * If the area falls outside the container area, nothing will be shown and a message will be printed on the console.
+	 * The area can be equal to the area of the container view.
+	 * This method returns immediately, although, the image can be applied later due to the asynchronous nature of chartboost.
+	 * @param	x	The x position on the screen.
+	 * @param	y	The y position on the screen.
+	 * @param	w	The max desired width of the ad.
+	 * @param	h	The max desired height of the ad.
+	 * @return	false	if any of the conditions are not met, true otherwise.
+	 */
+	public bool AdsPlaceAdAtPosition(float x, float y, float w, float h){
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			return adsPlaceAdAt(x,y,w,h) != 0;
+		}else{
+		}
+		return false;
+	}
+	
+	/**
+	 * Remove the advertisements from their superviews.
+	 */
+	public void AdsRemovePlacedAds(){
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			adsRemovePlacedAds();
 		}else{
 		}
 	}
