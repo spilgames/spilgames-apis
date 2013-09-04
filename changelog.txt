@@ -1,3 +1,10 @@
+Changelog 1.5.10:
+iOS:
+- IMPROVED: Support for Chartboost ingame ads (non-invasive)
+
+Android:
+- ADDED: Support for Chartboost ingame ads (non-invasive)
+
 Changelog 1.5.9:
 iOS:
 - ADDED: Support for Chartboost ingame ads (non-invasive)
