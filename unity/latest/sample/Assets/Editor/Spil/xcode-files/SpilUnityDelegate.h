@@ -19,6 +19,6 @@
  * 4. The delegate receives the call in the Native System and pass it to the Unity through a message.
  * 5. In the Unity part have to implement as many "listeners" (delegates counterparts) as functionalities they want to access.
  */
-@interface SpilUnityDelegate : NSObject <AppSettingsDelegate, AdsDelegate, ABTestDelegate, TrackingExtendedDelegate> {
+@interface SpilUnityDelegate : NSObject <AppSettingsDelegate, AdsDelegate, ABTestDelegate, TrackingExtendedDelegate, InGameAdsDelegate> {
 }
 @end

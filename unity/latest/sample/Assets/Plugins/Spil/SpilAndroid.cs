@@ -92,6 +92,26 @@ public class SpilAndroid
 		instance.Call ("showInterstitial");	
 	}
 	
+	public void AdsNextInterstitial (string location)
+	{
+		instance.Call ("showInterstitial", location);	
+	}
+	
+	public void AdsRequestInGameAssetWithLocation (Orientation orient, string location)
+	{
+		instance.Call ("requestInGameAd", orient.ToString(), location);	
+	}
+	
+	public void AdsRequestInGameAsset (Orientation orient)
+	{
+		instance.Call ("requestInGameAd", orient.ToString());	
+	}
+	
+	public void NotifyInGameAd (string adId)
+	{
+		instance.Call ("notifyIngameAd", adId);	
+	}
+	
 	
 	public void StartAdsSession ()
 	{
@@ -100,19 +120,6 @@ public class SpilAndroid
 		instance.Call ("onAdsStart", activity);	
 	}
 	
-	public void StartTracking ()
-	{
-		AndroidJavaClass jc = new AndroidJavaClass ("com.unity3d.player.UnityPlayer"); 
-		AndroidJavaObject activity = jc.GetStatic<AndroidJavaObject> ("currentActivity"); 
-		instance.Call ("onStartTracking", activity);			
-	}
-	
-	public void StopTracking ()
-	{
-		AndroidJavaClass jc = new AndroidJavaClass ("com.unity3d.player.UnityPlayer"); 
-		AndroidJavaObject activity = jc.GetStatic<AndroidJavaObject> ("currentActivity"); 
-		instance.Call ("onStopTracking", activity);			
-	}
 	
 	private AndroidJavaObject DictionaryToHashMap (Dictionary<string, string> dictionary)
 	{

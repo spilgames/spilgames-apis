@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Native-Sample/AppDelegate.m"
-         timestampString = "398765304.7455"
+         timestampString = "399893927.542818"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "71"
-         endingLineNumber = "71"
+         startingLineNumber = "73"
+         endingLineNumber = "73"
          landmarkName = "-abtestSessionDidStart"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,12 +21,64 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Native-Sample/AppDelegate.m"
-         timestampString = "398765311.104113"
+         timestampString = "399893927.542818"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "91"
-         endingLineNumber = "91"
+         startingLineNumber = "94"
+         endingLineNumber = "94"
          landmarkName = "-appSettingsDidFailWithError:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../src/Classes/ads/ingame/InGameAds.m"
+         timestampString = "399817474.630084"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "65"
+         endingLineNumber = "65"
+         landmarkName = "-requestInGameAdAsset:atLocation:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../src/Classes/ads/ingame/InGameAds.m"
+         timestampString = "399817474.630084"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "139"
+         endingLineNumber = "139"
+         landmarkName = "-createView:size:atLocation:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../src/Classes/ads/Ads.m"
+         timestampString = "399817474.630084"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "135"
+         endingLineNumber = "135"
+         landmarkName = "-setInGameAdsDelegate:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../src/Classes/ads/Ads.m"
+         timestampString = "399817474.630084"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "143"
+         endingLineNumber = "143"
+         landmarkName = "-requestInGameAd:atLocation:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

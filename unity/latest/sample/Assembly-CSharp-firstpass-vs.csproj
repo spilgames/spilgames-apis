@@ -44,8 +44,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Plugins\Spil\Resources\IgaPanel.cs" />
      <Compile Include="Assets\Plugins\Spil\SGHelpers.cs" />
+     <Compile Include="Assets\Plugins\Spil\SpilABTestListener.cs" />
+     <Compile Include="Assets\Plugins\Spil\SpilAdsListener.cs" />
      <Compile Include="Assets\Plugins\Spil\SpilAndroid.cs" />
+     <Compile Include="Assets\Plugins\Spil\SpilAppSettingsListener.cs" />
+     <Compile Include="Assets\Plugins\Spil\SpilInGameAdsListener.cs" />
+     <Compile Include="Assets\Plugins\Spil\SpilTrackingExtendedListener.cs" />
      <Compile Include="Assets\Plugins\Spil\SpilUnity.cs" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
  <Reference Include="Assets\Plugins\Spil\libs\LitJson">

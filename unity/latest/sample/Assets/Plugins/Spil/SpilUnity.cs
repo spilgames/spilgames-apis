@@ -16,165 +16,35 @@ namespace Spil{
 	/**
 	 * Type of environment supported in the configurations
 	 */
-	public enum enviroment{
+	public enum Enviroment{
 		SG_ENVIRONMENT_DEV_VALUE=0,
 		SG_ENVIRONMENT_LIVE_VALUE
 	};
 	
+	public enum Orientation {
+		SG_LANDSCAPE = 0,
+		SG_PORTRAIT
+	}
+	
 	/**
-	 * 
 	 * Number of stores supported in the configurations
 	 */
-	public enum store{
+	public enum Store{
 		SG_STORE_IOS,
 		SG_STORE_AMAZON,
 		SG_STORE_GOOGLE_PLAY
 	}
 	
-	
 	/**
 	 * Settings to pass to the native application
 	 */
 	public struct SpilSettings{
-		public enviroment SG_ENVIRONMENT_KEY; /**< Type of enviroment to use */
+		public Enviroment SG_ENVIRONMENT_KEY; /**< Type of enviroment to use */
 		public string SG_ENVIRONMENT_SETTINGS_URL_GET; /**< URL to get the app settings file. Required if SG_ENVIRONMENT_KEY is set to SG_ENVIRONMENT_DEV_VALUE. */
 		public float SG_APP_SETTINGS_POLL_TIME_KEY; /**< Time in seconds to scan for the default settings. Only is used if SG_ENVIRONMENT_KEY is set to SG_ENVIRONMENT_DEV_VALUE.*/
 		public string SG_TRACKING_ID_KEY;/**< Application ID in the tracking system. */
-		public store SG_STORE_ID;
+		public Store SG_STORE_ID;
 	};
-	
-	/**
-	 * Interface to listen the responses from the App Settings subsystem
-	 */
-	public interface SpilAppSettingsListener {
-		/**
-		 * Method to call back when the settings are finally loaded.
-		 * This methods will receive the settings loaded in the form of a JSON object.
-		 * The developers should know the structure of the object since they created the default settings file.
-		 * @param	data	The settings loaded. The format and the values are defined by the developer of the app.
-		 */
-		void AppSettingsDidLoad(JsonData data);
-		
-		/**
-		 * Method to call back in case the settings couldn't be loaded.
-		 * Usually the reasons to call this method will be:
-		 * - if there is any parsing error in the remote settings and in the local settings.
-		 * - if there is a connection error, and the file of the defaults can be found locally.
-		 * @param	error	Error describing what was wrong.
-		 */
-		void AppSettingsDidFailWithError(string error);
-		
-		/**
-		 * Method to call back when the download of the settings has been started.
-		 */
-		void AppSettingsDidStartDownload();
-	}
-	
-	/**
-	 * Interface to listen the events triggered by the Ads subsystem.
-	 */
-	public interface SpilAdsListener {
-		/**
-		 * Method to call back after the ad subsystem is successfully started.
-		 */
-		void AdDidStart();
-		
-		/**
-		 * Method to call back after if the ad subsystem couldn't be started due to any reason.
-		 * @param	error	The reason why the ad subsystem failed to start.
-		 */
-		void AdDidFailToStart(string error);
-		
-		/**
-		 * Method to call back before the next ad is going to be displayed. This method is called
-		 * every time the timer reach 0, regardless if the ad should be shown or not (enableAds is set to NO).
-		 */
-		void AdWillAppear();
-		
-		/**
-		 * Method to call back after the ad is displayed. This method is only called if the ads are enabled to 
-		 * be displayed (enableAds:YES).
-		 */
-		void AdDidAppear();
-		
-		/**
-		 * Method to call back if the ad couldn't be displayed due to any reason.
-		 * @param	error	The reason why the ad failed to be displayed.
-		 */
-		void AdDidFailToAppear(string error);
-		
-		/**
-		 * Method to call back before the next more games' screen is going to be shown.
-		 */
-		void AdMoreGamesWillAppear();
-		
-		/**
-		 * Method to call back after the more games' screen is displayed.
-		 */
-		void AdMoreGamesDidAppear();
-		
-		/**
-		 * Method to call back if the more games' screen couldn't be displayed due to any reason.
-		 * @param	error	The reason why the more games' screen failed to be displayed.
-		 */
-		void AdMoreGamesDidFailToAppear(string error);
-		
-		/**
-		 * Method to call back if the more games' screen was dismissed.
-		 */
-		void AdMoreGamesDidDismiss();
-		
-		/**
-		 * Method to call back if the ad' popup was dismissed.
-		 */
-		void AdPopupDidDismiss();
-	}
-	
-	/** Interface to listen the events trigerred by the A/B Testing subsystem */
-	public interface SpilABTestListener{
-		/**
-		 * Method to call back after the a/b test subsystem is successfully started.
-		 */
-		void ABTestSessionDidStart();
-		
-		/**
-		 * Method to call back after the a/b test subsystem is successfully ended.
-		 */
-		void ABTestSessionDidEnd();
-		
-		/**
-		 * Method to call back after the a/b test subsystem receive the differences to apply over the original version.
-		 * The differences come expressed as an array of objects. These objects are represented as dictionaries, where,
-		 * always are defined the following keys:
-		 * <ul>
-		 *	<li><b>uid</b>: an ID for this resource to test. A resource can contain many elements to test. Details in the next entry. </li>
-		 *	<li><b>diff</b>: a dictionary with all the changes to apply to this resource. In this resource, many elements could be changed,
-		 *	for each element, an entry will appear in this dictionary. Each of this entry will contain a dictionary with exactly 2 keys:
-		 *	"new" and "old", refering to the original and value to replace with.</li>
-		 *	<li><b>item_class</b>: unused for the moment.</li>
-		 * </ul>
-		 */
-		void ABTestSessionDiffReceived(JsonData diffs);
-	}
-	
-	/**
-	 * Interface to listen the responses from the Extended Tracking subsystem
-	 */
-	public interface SpilTrackingExtendedListener{
-		/**
-		 * Method to call back when the any of the extended trackers are started.
-		 * If the camera tracker is set up this method is called after the confirmation pop up is done, and 
-		 * if there is at least one tracker active. When the camera tracker is not set up, this method is
-		 * called when any of the other are activated.
-		 */
-		void TrackExtendedDidStart();
-		
-		/**
-		 * Method to call back when ALL the extended trackers are stopped.
-		 * This is an informative call.
-		 */
-		void TrackExtendedDidStop();
-	}
 }
 
 public class SpilUnity : MonoBehaviour {
@@ -190,15 +60,19 @@ public class SpilUnity : MonoBehaviour {
 	private SpilAdsListener adsListener;
 	private SpilABTestListener abtestListener;
 	private SpilTrackingExtendedListener trackExtendedListener;
-		
+	private SpilInGameAdsListener inGameAdListener;
+	
 	[DllImport ("__Internal")]
 	private static extern void initialize(string objectname, string appID, string authToken, SpilSettings configs);
 	
 	[DllImport ("__Internal")]
-	private static extern void getSettings();
+	private static extern void setAppSettingsDelegate();
 	
 	[DllImport ("__Internal")]
 	private static extern void adsNextInterstitial();
+	
+	[DllImport ("__Internal")]
+	private static extern void adsNextInterstitialWithLocation(string location);
 	
 	[DllImport ("__Internal")]
 	private static extern void adsShowMoreGames();
@@ -210,16 +84,25 @@ public class SpilUnity : MonoBehaviour {
 	private static extern void adsCacheNextInterstitial();
 	
 	[DllImport ("__Internal")]
-	private static extern int adsPlaceAdAt(float x, float y, float w, float h);
+	private static extern void adsCacheNextInterstitialWithLocation(string location);
 	
 	[DllImport ("__Internal")]
-	private static extern void adsRemovePlacedAds();
+	private static extern void adsRequestInGameAdAssetWithLocation(int orientation, string location);
 	
 	[DllImport ("__Internal")]
-	private static extern void startAds();
+	private static extern void adsRequestInGameAdAsset(int orientation);
 	
 	[DllImport ("__Internal")]
-	private static extern void getExtendedTracking();
+	private static extern void adsMarkInGameAdAsShown(string adId);
+	
+	[DllImport ("__Internal")]
+	private static extern void setAdsDelegate();
+	
+	[DllImport ("__Internal")]
+	private static extern void setInGameAdsDelegate();
+	
+	[DllImport ("__Internal")]
+	private static extern void setExtendedTrackingDelegate();
 	
 	[DllImport ("__Internal")]
 	private static extern void trackPage(string page);
@@ -264,7 +147,7 @@ public class SpilUnity : MonoBehaviour {
 	private static extern void trackStopGestureScreen();
 	
 	[DllImport ("__Internal")]
-	private static extern void getABTest();
+	private static extern void setABTestDelegate();
 	
 	[DllImport ("__Internal")]
 	private static extern void abtestUpdateUserInfo();
@@ -281,7 +164,7 @@ public class SpilUnity : MonoBehaviour {
 	[DllImport ("__Internal")]
 	private static extern void abtestMarkSucceedTest(string name, string[] keys, string[] values, int size);
 	
-	private SpilUnity(){
+	protected SpilUnity(){
 	}
 	
 	public static SpilUnity Instance {
@@ -328,15 +211,21 @@ public class SpilUnity : MonoBehaviour {
 		initialized = true;
 	}
 	
+	/** @deprecated */
+	public void GetSettings(SpilAppSettingsListener listener){
+		SetAppSettingsListener(listener);
+		Debug.LogWarning("This method is deprecated please switch to: SetAppSettingsListener");
+	}
+	
 	/**
 	 * Method to retrieve the AppSettings for this app. A delegate is required in order to deliver the settings downloaded from 
 	 * the server or loaded from the default files.
 	 * @param	listener	The listener to handle the response of the AppSettings subsystem.
 	 */
-	public void GetSettings(SpilAppSettingsListener listener){
+	public void SetAppSettingsListener(SpilAppSettingsListener listener){
 		appSettingsListener = listener;
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			getSettings();
+			setAppSettingsDelegate();
 		}else{
 			//Simulates some default results. The defaults will be readed from the default settings file in the folder "Spil/Resources".
 			//No live changes in the editor are available.
@@ -345,17 +234,23 @@ public class SpilUnity : MonoBehaviour {
 		}
 	}
 	
+	/** @deprecated */
+	public void StartAds(SpilAdsListener listener){
+		SetAdsListener(listener);
+		Debug.LogWarning("This method is deprecated please switch to: SetAdsListener");
+	}
+	
 	/**
 	 * Method to set the SpilAdsListener and receive the proper notifications from it.
 	 * @param	listener The listener to handle the events generated by the Ads subsystem.
 	 */
-	public void StartAds(SpilAdsListener listener){
+	public void SetAdsListener(SpilAdsListener listener){
 		adsListener = listener;
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			startAds();
+			setAdsDelegate();
 		}
 	}
-		
+	
 	/**
 	 * The ads are displayed based on a timer, this method force the ad to be shown right
 	 * away, and the timer is reset.
@@ -368,6 +263,24 @@ public class SpilUnity : MonoBehaviour {
 			spilAndroid.AdsNextInterstitial();
 			#endif
 		}else{
+
+		}
+	}
+	
+	/**
+	 * The ads are displayed based on a timer, this method force the ad to be shown right
+	 * away, and the timer is reset.
+	 * @param	location	Location to show the ad on chartboost.
+	 */
+	public void AdsNextInterstitial(string location){
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			adsNextInterstitialWithLocation(location);
+		}else if(Application.platform == RuntimePlatform.Android){
+			#if UNITY_ANDROID
+			spilAndroid.AdsNextInterstitial(location);
+			#endif
+		}else{
+
 		}
 	}
 	
@@ -404,32 +317,44 @@ public class SpilUnity : MonoBehaviour {
 	}
 	
 	/**
-	 * Place one of the interstitial assets over the container filling the area specified. The area specifies the
-	 * relative position to the container position and the dimensions of the space to be filled.
-	 * If the area falls outside the container area, nothing will be shown and a message will be printed on the console.
-	 * The area can be equal to the area of the container view.
-	 * This method returns immediately, although, the image can be applied later due to the asynchronous nature of chartboost.
-	 * @param	x	The x position on the screen.
-	 * @param	y	The y position on the screen.
-	 * @param	w	The max desired width of the ad.
-	 * @param	h	The max desired height of the ad.
-	 * @return	false	if any of the conditions are not met, true otherwise.
+	 * Cache the next intersitial ad.
+	 * @param	location	Location to show the ad on chartboost.
 	 */
-	public bool AdsPlaceAdAtPosition(float x, float y, float w, float h){
+	public void AdsCacheNextInterstitial(string location){
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			return adsPlaceAdAt(x,y,w,h) != 0;
+			adsCacheNextInterstitialWithLocation(location);
 		}else{
 		}
-		return false;
 	}
 	
 	/**
-	 * Remove the advertisements from their superviews.
+	 * Method to set the SpilInGameAdsListener and receive the proper notifications from it.
+	 * @param	listener The listener to handle the events generated by the Ads subsystem.
 	 */
-	public void AdsRemovePlacedAds(){
+	public void SetInGameAdListener(SpilInGameAdsListener listener){
+		inGameAdListener = listener;
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			adsRemovePlacedAds();
+			setInGameAdsDelegate();
+		}
+	}
+	
+	public void AdsRequestIngameAsset(Orientation orient){
+		if(Application.platform == RuntimePlatform.Android){
+			#if UNITY_ANDROID
+			spilAndroid.AdsRequestInGameAsset(orient);
+			#endif
 		}else{
+			adsRequestInGameAdAsset((int)orient);
+		}
+	}
+	
+	public void AdsRequestIngameAsset(Orientation orient, string location){
+		if(Application.platform == RuntimePlatform.Android){
+			#if UNITY_ANDROID
+			spilAndroid.AdsRequestInGameAssetWithLocation(orient, location);
+			#endif
+		}else{
+			adsRequestInGameAdAssetWithLocation((int)orient, location);
 		}
 	}
 	
@@ -438,10 +363,10 @@ public class SpilUnity : MonoBehaviour {
 	 * but its usage it's encouraged since this will guarantee the calls made are actually efective and not
 	 * dropped because the extended tracking wasn't started yet.
 	 */
-	public void GetTrackExtended(SpilTrackingExtendedListener listener){
+	public void SetExtendedTrackingListener(SpilTrackingExtendedListener listener){
 		trackExtendedListener=listener;
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			getExtendedTracking();
+			setExtendedTrackingDelegate();
 		}else{
 		}
 	}
@@ -457,26 +382,6 @@ public class SpilUnity : MonoBehaviour {
 		}else if(Application.platform == RuntimePlatform.Android){
 			#if UNITY_ANDROID
 			spilAndroid.TrackPage(page);
-			#endif
-		}else{
-			//TODO: simulate some default results.
-		}	
-	}
-	
-	public void StartTracking(){
-		if(Application.platform == RuntimePlatform.Android){
-			#if UNITY_ANDROID
-			spilAndroid.StartTracking();
-			#endif
-		}else{
-			//TODO: simulate some default results.
-		}	
-	}
-	
-	public void StopTracking(){
-		if(Application.platform == RuntimePlatform.Android){
-			#if UNITY_ANDROID
-			spilAndroid.StopTracking();
 			#endif
 		}else{
 			//TODO: simulate some default results.
@@ -697,14 +602,20 @@ public class SpilUnity : MonoBehaviour {
 		}
 	}
 	
+	/** @deprecated */
+	public void GetABTest(SpilABTestListener listener){
+		SetABTestListener(listener);
+		Debug.LogWarning("This method is deprecated please switch to: SetABTestListener");
+	}
+	
 	/**
 	 * Method to set the ABTestListener and receive the proper notifications from it.
 	 * @param	delegate The delegate to handle the events generated by the A/B test subsystem.
 	 */
-	public void GetABTest(SpilABTestListener listener){
+	public void SetABTestListener(SpilABTestListener listener){
 		abtestListener = listener;
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			getABTest();
+			setABTestDelegate();
 		}else{
 		}
 	}
@@ -849,6 +760,20 @@ public class SpilUnity : MonoBehaviour {
 			adsListener.AdMoreGamesDidDismiss();
 	}
 	
+	private void _AdDidLoadIngameAsset(string json){
+		if(inGameAdListener != null){
+			JsonData data = JsonMapper.ToObject(json);
+			
+			WWW www = new WWW((string)data["url"]);
+	        StartCoroutine(_downloadCallback(www, (string)data["adId"], (string)data["link"]));
+		}
+ 	}
+ 
+	private void _AdDidFailIngameAsset(string error){
+		if(inGameAdListener != null)
+			inGameAdListener.AdDidFailIngameAsset(error);
+	}
+	
 	private void _ABTestSessionDidStart(){
 		if(abtestListener != null)
 			abtestListener.ABTestSessionDidStart();
@@ -890,4 +815,42 @@ public class SpilUnity : MonoBehaviour {
 			i++;
 		}
 	}
+	
+	private IEnumerator _downloadCallback(WWW www, string adId, string link){
+		 yield return www;
+ 
+        // check for errors
+        if (www.error == null) {
+            Texture2D tex = new Texture2D(1,1); 
+			tex.LoadImage(www.bytes);
+			
+			GameObject prefab = Resources.Load("IngameAsset", typeof(GameObject)) as GameObject;
+			GameObject obj = (GameObject)Instantiate(prefab);
+			IgaPanel behaviour = (IgaPanel)obj.GetComponent<IgaPanel>();
+			behaviour.spilUnity = this;
+			behaviour.texture = tex;
+			behaviour.link = link;
+			behaviour.adId = adId;
+			
+			if(inGameAdListener != null)
+				inGameAdListener.AdDidLoadIngameAsset(obj);
+        } else {
+            if(inGameAdListener != null)
+				inGameAdListener.AdDidFailIngameAsset(www.error);
+        }    
+
+	}
+	
+	protected internal void _AdMarkAsShown(string adId){
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			adsMarkInGameAdAsShown(adId);
+		}else if(Application.platform == RuntimePlatform.Android){
+			#if UNITY_ANDROID
+			spilAndroid.NotifyInGameAd(adId);
+			#endif
+		}else{
+			Debug.Log("Ad marked as shown!");
+		}	
+	}
+		
 }

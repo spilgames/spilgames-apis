@@ -66,6 +66,15 @@ extern "C" {
 	UnitySendMessage(getObjectName(), "_AdMoreGamesDidDismiss", "");
 }
 
+-(void) adDidGetInGameAd:(UIView*)image{
+	//this is an abuse of notation, the parameter received here is not actually an UIView but a NSDictionary
+	UnitySendMessage(getObjectName(), "_AdDidLoadIngameAsset", [[[SBJSON new] stringWithObject:image] UTF8String]); //serialize the object as an string.
+}
+
+-(void) adDidFailToGetInGameAd:(NSError*)error{
+	UnitySendMessage(getObjectName(), "_AdDidFailIngameAsset", [[error description] UTF8String]); //serialize the object as an string.
+}
+
 #pragma mark - ABTestDelegate methods
 
 -(void) abtestSessionDidStart{

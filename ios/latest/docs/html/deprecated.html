@@ -98,7 +98,15 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_deprecated000001"></a>Member <a class="el" href="interface_spil_helpers.html#a9431793feb23a3f0646db032345772d7">[SpilHelpers getMacAddress]</a>  </dt>
+<dt><a class="anchor" id="_deprecated000004"></a>Member <a class="el" href="interface_spil.html#a010e079039beeef8322fe6ac99fd044c">[Spil getABTest:]</a>  </dt>
+<dd>- In favor of better name conventions Method to set the <a class="el" href="protocol_a_b_test_delegate-p.html">ABTestDelegate</a> and receive the proper notifications from it.  </dd>
+<dt><a class="anchor" id="_deprecated000002"></a>Member <a class="el" href="interface_spil.html#ac7cc7d2ab7ff0a0c8afa4586e0376e3b">[Spil getAds:]</a>  </dt>
+<dd>- In favor of better name conventions Method to set the <a class="el" href="protocol_ads_delegate-p.html">AdsDelegate</a> and receive the proper notifications from it. Also allows to receive the push notifications.  </dd>
+<dt><a class="anchor" id="_deprecated000003"></a>Member <a class="el" href="interface_spil.html#a250407ed6dbe423d43a87e66ffb1922d">[Spil getExtendedTracking:]</a>  </dt>
+<dd>- In favor of better name conventions Method to set up the delegate for the extended tracking events. This delegate is optional, but its usage it's encouraged since this will guarantee the calls made are actually efective and not dropped because the extended tracking wasn't started yet.  </dd>
+<dt><a class="anchor" id="_deprecated000001"></a>Member <a class="el" href="interface_spil.html#a5646eb0ec297280ea44ca91ee2e2a66e">[Spil getSettings:]</a>  </dt>
+<dd>- In favor of better name conventions Method to retrieve the AppSettings for this app. A delegate is required in order to deliver the settings downloaded from the server or loaded from the default files.  </dd>
+<dt><a class="anchor" id="_deprecated000005"></a>Member <a class="el" href="interface_spil_helpers.html#a9431793feb23a3f0646db032345772d7">[SpilHelpers getMacAddress]</a>  </dt>
 <dd>Gets the MAC address of this device. The address is returned as a upper case hex string without spaces or colons </dd>
 </dl>
 </div></div><!-- contents -->

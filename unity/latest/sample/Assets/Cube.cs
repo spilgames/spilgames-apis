@@ -6,7 +6,7 @@ using System.Threading;
 using Spil;
 using LitJson;
 
-public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilABTestListener,SpilTrackingExtendedListener {
+public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilABTestListener,SpilTrackingExtendedListener,SpilInGameAdsListener {
 	SpilUnity instance;
 	Vector3 rotation = Vector3.zero;
 	// Use this for initialization
@@ -39,11 +39,6 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 		
 		if(Input.touchCount != 0 && Input.GetTouch(0).phase == UnityEngine.TouchPhase.Ended){
 			clickCount++;
-			
-			if(clickCount%2==0)
-				instance.AdsRemovePlacedAds();
-			else
-				instance.AdsPlaceAdAtPosition(100,100,300,200);
 		}
 	}
 	
@@ -68,9 +63,7 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 	public void AdDidStart(){
 		Debug.Log("started adds");
 		instance.AdsNextInterstitial();
-		instance.AdsPlaceAdAtPosition(0,0,100,200);
-		
-		instance.AdsPlaceAdAtPosition(100,0,200,100);
+		instance.AdsRequestIngameAsset(Orientation.SG_LANDSCAPE);
 	}
 	public void AdDidFailToStart(string error){
 		Debug.LogError(error);
@@ -111,6 +104,13 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 	public void ABTestSessionDidEnd(){
 		
 	}
+	
+	public void AdDidLoadIngameAsset(GameObject billboard){
+		billboard.transform.parent = this.gameObject.transform;
+		billboard.transform.position = new Vector3(0,0,0);
+	}
+	  
+	public void AdDidFailIngameAsset(string error){}
 	
 	public void ABTestSessionDiffReceived(JsonData diffs){
 		if(diffs.Count == 0){

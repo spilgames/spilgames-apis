@@ -88,6 +88,7 @@
 
 -(void) appSettingsDidLoad:(NSDictionary*)as{
 	NSLog(@"%@",as);
+	[[Spil sharedInstance] adsNextInterstitial];
 }
 -(void) appSettingsDidFailWithError:(NSError*)error{
 	NSLog(@"error!: %@", error);
@@ -99,7 +100,8 @@
 
 -(void) adDidStart{
 	NSLog(@"ads system started");
-	[[Spil sharedInstance] adsShowMoreGames];
+	//[[Spil sharedInstance] adsShowMoreGames];
+	[[Spil sharedInstance] adsRequestInGameAd:CGSizeMake(300,200) atLocation:@"testing"];
 	[[Spil sharedInstance] trackEvent:@"core.ads.started"];
 }
 -(void) adDidFailToStart:(NSError*)error{
@@ -140,6 +142,18 @@
 	NSLog(@"more games was dismissed");
 	[[Spil sharedInstance] adsNextInterstitial];
 	[[Spil sharedInstance] trackEvent:@"core.moregames.diddismiss"];
+}
+
+#pragma mark - InGameAdsDelegate
+
+-(void) adDidGetInGameAd:(UIView*)image{
+	[image setFrame:CGRectMake(0, 400, image.frame.size.width, image.frame.size.height)];
+	[[UIApplication sharedApplication].keyWindow.rootViewController.view addSubview:image];
+	[[Spil sharedInstance] trackEvent:@"core.ads.didgetingamead"];
+}
+
+-(void) adDidFailToGetInGameAd:(NSError*)error{
+	[[Spil sharedInstance] trackEvent:@"core.ads.didfailtogetingamead"];
 }
 
 #pragma mark - UIApplicationDelegate methods

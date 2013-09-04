@@ -55,17 +55,17 @@ extern "C" {
 	
 #pragma mark - Wrapper functions: App Settings	
 
-	void getSettings(){
+	void setAppSettingsDelegate(){
 		if(spil != nil){
-			[spil getSettings:objDelegate];
+			[spil setAppSettingsDelegate:objDelegate];
 		}
 	}
 
 #pragma mark - Wrapper functions: Ads	
 	
-	void startAds(){
+	void setAdsDelegate(){
 		if(spil != nil){
-			[spil getAds:objDelegate];
+			[spil setAdsDelegate:objDelegate];
 		}
 	}
 	
@@ -86,31 +86,75 @@ extern "C" {
 			[spil adsNextInterstitial];
 		}
 	}
-	
+
+	void adsNextInterstitialWithLocation(const char* location){
+		if(spil != nil){
+			[spil adsNextInterstitial:[NSString stringWithCString:location encoding:NSUTF8StringEncoding]];
+		}
+	}
+
 	void adsCacheNextInterstitial(){
 		if(spil != nil){
 			[spil adsCacheNextInterstitial];
 		}
 	}
 	
-	int adsPlaceAdAt(float x, float y, float w, float h){
+	void adsCacheNextInterstitialWithLocation(const char* location){
 		if(spil != nil){
-			return [spil adsPlaceAdOn:[UIApplication sharedApplication].keyWindow.rootViewController.view at:CGRectMake(x,y,w,h)];
-		}
-		return 0;
-	}
-	
-	void adsRemovePlacedAds(){
-		if(spil != nil){
-			[spil adsRemovePlacedAds];
+			[spil adsCacheNextInterstitial:[NSString stringWithCString:location encoding:NSUTF8StringEncoding]];
 		}
 	}
-		
-#pragma mark - Wrapper functions: Tracking	
 	
-	void getExtendedTracking(){
+	void setInGameAdsDelegate(){
+		if(spil != nil){
+			[spil setInGameAdsDelegate:objDelegate];
+		}
+	}
+	
+	void adsRequestInGameAdAssetWithLocation(int orientation, const char* location){
+		if(spil != nil){
+			[spil adsRequestInGameAdAsset:^(NSDictionary* data, NSError* error) {
+					if(data != nil){
+						NSString* url = nil;
+						if(orientation == 0){
+							url = data[@"urlLandscape"];
+						}else{
+							url = data[@"urlPortrait"];
+						}
+					
+						if(url == nil){
+							[objDelegate adDidFailToGetInGameAd:[NSError errorWithDomain:@"Ad doesn't contain an asset in the orientation requested" code:404 userInfo:nil]];
+						}else{
+							[objDelegate adDidGetInGameAd:(UIView*)@{@"url":url, @"adId":data[@"adId"], @"link":data[@"link"]}];
+						}
+					}
+				
+					if(error != nil){
+						[objDelegate adDidFailToGetInGameAd:error];
+					}
+				}
+			 atLocation:[NSString stringWithCString:location encoding:NSUTF8StringEncoding]];
+		}
+	}
+	
+	void adsRequestInGameAdAsset(int orientation){
+		if(spil != nil){
+			adsRequestInGameAdAssetWithLocation(orientation, "default");
+		}
+	}
+	
+	void adsMarkInGameAdAsShown(const char* adId){
+		if(spil != nil){
+			[spil adsMarkInGameAdAsShown:[NSString stringWithCString:adId encoding:NSUTF8StringEncoding]];
+		}
+	}
+	
+			
+#pragma mark - Wrapper functions: Tracking
+	
+	void setExtendedTrackingDelegate(){
 		if(spil!=nil)
-			[spil getExtendedTracking:objDelegate];
+			[spil setExtendedTrackingDelegate:objDelegate];
 	}
 	
 	void trackPage(const char* page){
@@ -214,9 +258,9 @@ extern "C" {
 	
 #pragma mark - Wrapper functions: A/B Test
 	
-	void getABTest(){
+	void setABTestDelegate(){
 		if(spil!=nil)
-			[spil getABTest:objDelegate];
+			[spil setABTestDelegate:objDelegate];
 	}
 	
 	void abtestUpdateUserInfo(){

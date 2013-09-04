@@ -1,28 +1,11 @@
 var NAVTREE =
 [
-  [ "Spil Unity Plugin", "index.html", [
-    [ "Namespaces", null, [
-      [ "Namespace List", "namespaces.html", "namespaces" ],
-      [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Enumerations", "namespacemembers_enum.html", null ]
-      ] ]
-    ] ],
-    [ "Classes", null, [
-      [ "Class List", "annotated.html", "annotated" ],
-      [ "Class Index", "classes.html", null ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
-      ] ]
-    ] ]
-  ] ]
+  [ "Spil Unity Plugin", "index.html", ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"index.html"
 ];
 
 var navTreeSubIndices = new Array();
