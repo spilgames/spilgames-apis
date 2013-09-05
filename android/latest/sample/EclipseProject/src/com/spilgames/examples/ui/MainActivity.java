@@ -118,5 +118,4 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		// TODO Auto-generated method stub
 		
 	}
-
 }

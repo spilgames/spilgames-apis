@@ -67,6 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -132,8 +133,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aae8d97a58bb682e896e1357a37fa3cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71fc6657a71133af726ee9e4d625c456"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a71fc6657a71133af726ee9e4d625c456">showInterstitial</a> ()</td></tr>
 <tr class="separator:a71fc6657a71133af726ee9e4d625c456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adffa17e52071a27e85a85e65aae828e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#adffa17e52071a27e85a85e65aae828e1">showInterstitial</a> (String location)</td></tr>
+<tr class="separator:adffa17e52071a27e85a85e65aae828e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10c6759ad1a64350f5e33e4f15e1e032"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a10c6759ad1a64350f5e33e4f15e1e032">setAdsListener</a> (<a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_ads_listener.html">AdsListener</a> adsListener)</td></tr>
 <tr class="separator:a10c6759ad1a64350f5e33e4f15e1e032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dc6bbd18f01ce094fe997bc3235dbd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a0dc6bbd18f01ce094fe997bc3235dbd4">setInGameAdsListener</a> (<a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_in_game_ad_listener.html">InGameAdListener</a> inPlaceAdsListener)</td></tr>
+<tr class="separator:a0dc6bbd18f01ce094fe997bc3235dbd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af560ac139e3a79d1fff8ddb1496631ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#af560ac139e3a79d1fff8ddb1496631ec">requestInGameAd</a> (String orientation)</td></tr>
+<tr class="separator:af560ac139e3a79d1fff8ddb1496631ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20fb6c31eda33f5628ac9916134bc524"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a20fb6c31eda33f5628ac9916134bc524">requestInGameAd</a> (String orientation, String location)</td></tr>
+<tr class="separator:a20fb6c31eda33f5628ac9916134bc524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955adeb349cb7865ed39ccb7954d9a88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a955adeb349cb7865ed39ccb7954d9a88"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyIngameAd</b> (String adId)</td></tr>
+<tr class="separator:a955adeb349cb7865ed39ccb7954d9a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a877454c856a8a733a4386b97bd02fc91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a877454c856a8a733a4386b97bd02fc91"></a>
 <a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html">SpilInterface</a>&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> (Context context, String applicationID, String authToken, Map&lt; String, String &gt; configs)</td></tr>
 <tr class="separator:a877454c856a8a733a4386b97bd02fc91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,6 +166,63 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>onAdsStop</b> (Activi
 <tr class="separator:ad78396cd8990190c60d7bb2769e34f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af560ac139e3a79d1fff8ddb1496631ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.spilgames.framework.SpilInterface.requestInGameAd </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>orientation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Request and InGameAd with the Default location </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orientation</td><td>String with the orientation of the Ad to retrieve </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a20fb6c31eda33f5628ac9916134bc524"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.spilgames.framework.SpilInterface.requestInGameAd </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>orientation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>location</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Request and InGameAd with a given location. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orientation</td><td>String with the orientation of the Ad to retrieve </td></tr>
+    <tr><td class="paramname">location</td><td>The location of the InGameAd. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a10c6759ad1a64350f5e33e4f15e1e032"></a>
 <div class="memitem">
 <div class="memproto">
@@ -177,6 +246,29 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>onAdsStop</b> (Activi
 
 </div>
 </div>
+<a class="anchor" id="a0dc6bbd18f01ce094fe997bc3235dbd4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.spilgames.framework.SpilInterface.setInGameAdsListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_in_game_ad_listener.html">InGameAdListener</a>&#160;</td>
+          <td class="paramname"><em>inPlaceAdsListener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Method to set the InGameceAds and receive the proper notifications from it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inPlaceAdsListener</td><td>The listener to handle the events generated by the Ads subsystem. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a71fc6657a71133af726ee9e4d625c456"></a>
 <div class="memitem">
 <div class="memproto">
@@ -190,6 +282,29 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>onAdsStop</b> (Activi
       </table>
 </div><div class="memdoc">
 <p>The ads are displayed based on a timer, this method force the ad to be shown right away, and the timer is reset. </p>
+
+</div>
+</div>
+<a class="anchor" id="adffa17e52071a27e85a85e65aae828e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.spilgames.framework.SpilInterface.showInterstitial </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The ads are displayed based on a timer and a location provided by the developer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td>a location provided for the ad </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -531,7 +646,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>onAdsStop</b> (Activi
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>com</b></li><li class="navelem"><b>spilgames</b></li><li class="navelem"><b>framework</b></li><li class="navelem"><a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html">SpilInterface</a></li>
-    <li class="footer">Generated on Mon Aug 19 2013 09:32:39 for Spil Android Framework by
+    <li class="footer">Generated on Thu Sep 5 2013 08:56:48 for Spil Android Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

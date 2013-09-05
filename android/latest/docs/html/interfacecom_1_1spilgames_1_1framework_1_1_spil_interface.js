@@ -1,12 +1,17 @@
 var interfacecom_1_1spilgames_1_1framework_1_1_spil_interface =
 [
+    [ "notifyIngameAd", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a955adeb349cb7865ed39ccb7954d9a88", null ],
     [ "onAdsDestroy", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a93635f92bbad2bb3e19d1afed5c0917d", null ],
     [ "onAdsStart", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#ab766193f7df06259e33050da1a741f20", null ],
     [ "onAdsStop", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#ad78396cd8990190c60d7bb2769e34f55", null ],
     [ "onStartTracking", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a797262e1dd90c089a5fe20819d9a1b34", null ],
     [ "onStopTracking", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#ad3639f8ca79bd77c748ec51dd9e1d2eb", null ],
+    [ "requestInGameAd", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#af560ac139e3a79d1fff8ddb1496631ec", null ],
+    [ "requestInGameAd", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a20fb6c31eda33f5628ac9916134bc524", null ],
     [ "setAdsListener", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a10c6759ad1a64350f5e33e4f15e1e032", null ],
+    [ "setInGameAdsListener", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a0dc6bbd18f01ce094fe997bc3235dbd4", null ],
     [ "showInterstitial", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a71fc6657a71133af726ee9e4d625c456", null ],
+    [ "showInterstitial", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#adffa17e52071a27e85a85e65aae828e1", null ],
     [ "start", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a877454c856a8a733a4386b97bd02fc91", null ],
     [ "trackEndTimedEvent", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a39ebb5cad25cd07d5d29404c47ebc6f3", null ],
     [ "trackEndTimedEvent", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a74dd4dbd6931062a5def531188ac2af1", null ],
