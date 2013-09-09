@@ -1,0 +1,31 @@
+{
+  "switch":{
+    "value":"false",
+    "type":"bool"
+  },
+  "label":{
+    "value":"String",
+    "type":"string"
+  },
+  "count":{
+    "value":"11.03434",
+    "type":"number"
+  },
+  "settings":{
+    "value":{
+      "key1":{
+        "value":"newstring",
+        "type":"string"
+      },
+      "key2":{
+        "value":"1222",
+        "type":"number"
+      },
+      "key3":{
+        "value":"true",
+        "type":"bool"
+      }
+    },
+    "type":"array"
+  }
+}

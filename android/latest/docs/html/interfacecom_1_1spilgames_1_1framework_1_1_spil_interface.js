@@ -10,6 +10,7 @@ var interfacecom_1_1spilgames_1_1framework_1_1_spil_interface =
     [ "requestInGameAd", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a20fb6c31eda33f5628ac9916134bc524", null ],
     [ "setAdsListener", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a10c6759ad1a64350f5e33e4f15e1e032", null ],
     [ "setInGameAdsListener", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a0dc6bbd18f01ce094fe997bc3235dbd4", null ],
+    [ "setSettingsListener", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#aaa65773843de198bf7e187847348b414", null ],
     [ "showInterstitial", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a71fc6657a71133af726ee9e4d625c456", null ],
     [ "showInterstitial", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#adffa17e52071a27e85a85e65aae828e1", null ],
     [ "start", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html#a877454c856a8a733a4386b97bd02fc91", null ],
