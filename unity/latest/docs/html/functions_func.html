@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li>
@@ -105,7 +106,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -145,11 +146,17 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>AdDidAppear()
 : <a class="el" href="interface_spil_1_1_spil_ads_listener.html#aa8d6f816321b2b5faa6c3d99c0c63a19">Spil.SpilAdsListener</a>
 </li>
+<li>AdDidFailIngameAsset()
+: <a class="el" href="interface_spil_1_1_spil_in_game_ads_listener.html#aa906525454fda1b7ce96d08ed917e7e1">Spil.SpilInGameAdsListener</a>
+</li>
 <li>AdDidFailToAppear()
 : <a class="el" href="interface_spil_1_1_spil_ads_listener.html#a542479228204984ab606d17a211ea62d">Spil.SpilAdsListener</a>
 </li>
 <li>AdDidFailToStart()
 : <a class="el" href="interface_spil_1_1_spil_ads_listener.html#a89d0efa793e1f8825b15ba18cdcfe20a">Spil.SpilAdsListener</a>
+</li>
+<li>AdDidLoadIngameAsset()
+: <a class="el" href="interface_spil_1_1_spil_in_game_ads_listener.html#a08413c788b914b7fd71fdf1e78e70053">Spil.SpilInGameAdsListener</a>
 </li>
 <li>AdDidStart()
 : <a class="el" href="interface_spil_1_1_spil_ads_listener.html#a77aaadfa2713a16d3c1c46beda8968a9">Spil.SpilAdsListener</a>
@@ -170,19 +177,13 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="interface_spil_1_1_spil_ads_listener.html#adf06a4aff1c987c48e450f4b4ef60d4e">Spil.SpilAdsListener</a>
 </li>
 <li>AdsCacheNextInterstitial()
-: <a class="el" href="class_spil_unity.html#a7815767fc730325b937d0c1cecdbd6ed">SpilUnity</a>
+: <a class="el" href="class_spil_unity.html#a522258807ad09c5dbeec835bd0885657">SpilUnity</a>
 </li>
 <li>AdsEnabled()
 : <a class="el" href="class_spil_unity.html#a3168850e9743d25dd9c60a018dd294f6">SpilUnity</a>
 </li>
 <li>AdsNextInterstitial()
 : <a class="el" href="class_spil_unity.html#ad78e2730bc0a582fa63cbb83d7ceb67a">SpilUnity</a>
-</li>
-<li>AdsPlaceAdAtPosition()
-: <a class="el" href="class_spil_unity.html#a3b51ff9e8e22957e054dd164e0e73f4e">SpilUnity</a>
-</li>
-<li>AdsRemovePlacedAds()
-: <a class="el" href="class_spil_unity.html#a0cd243e29fb31f5607d0c54f3214c821">SpilUnity</a>
 </li>
 <li>AdsShowMoreGames()
 : <a class="el" href="class_spil_unity.html#a11d4a63321136f796857c600e018e447">SpilUnity</a>
@@ -215,9 +216,6 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>GetSettings()
 : <a class="el" href="class_spil_unity.html#a5cf96e4b6475cb65639c7401d67042bb">SpilUnity</a>
 </li>
-<li>GetTrackExtended()
-: <a class="el" href="class_spil_unity.html#a65c02eb6987761e9b143ea5b6cbe57fc">SpilUnity</a>
-</li>
 <li>GetUDID()
 : <a class="el" href="class_spil_1_1_s_g_helpers.html#a74c2c11d807c62a1e4f638821d9b2837">Spil.SGHelpers</a>
 </li>
@@ -232,6 +230,21 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>SetABTestListener()
+: <a class="el" href="class_spil_unity.html#aa19aadb60034dbb39d0a405606df2f68">SpilUnity</a>
+</li>
+<li>SetAdsListener()
+: <a class="el" href="class_spil_unity.html#a567fee7ab5b8ac0be08717e9c1943124">SpilUnity</a>
+</li>
+<li>SetAppSettingsListener()
+: <a class="el" href="class_spil_unity.html#a80932bdfa5eb18749d7557bb5a97140e">SpilUnity</a>
+</li>
+<li>SetExtendedTrackingListener()
+: <a class="el" href="class_spil_unity.html#a3fa8624b845a35e6c7de14d5ec0b7805">SpilUnity</a>
+</li>
+<li>SetInGameAdListener()
+: <a class="el" href="class_spil_unity.html#a3be45636bee2526da3597a38918ad06c">SpilUnity</a>
+</li>
 <li>StartAds()
 : <a class="el" href="class_spil_unity.html#a90e7f5daf25b9ab20156ec87b34a4b03">SpilUnity</a>
 </li>

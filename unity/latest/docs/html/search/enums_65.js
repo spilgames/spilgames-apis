@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enviroment',['enviroment',['../namespace_spil.html#a402e62e4c83b34dcb06dd599fcd2a039',1,'Spil']]]
+  ['enviroment',['Enviroment',['../namespace_spil.html#aea7c3ebf6a7bf24367672edb2fdc6b23',1,'Spil']]]
 ];

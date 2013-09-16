@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['store',['store',['../namespace_spil.html#ac1235df14db564ddaa2a72cbf2ca1832',1,'Spil']]]
+  ['store',['Store',['../namespace_spil.html#a409029a0f49d36d286e2dd35a5dfdb8c',1,'Spil']]]
 ];

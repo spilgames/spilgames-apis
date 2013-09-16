@@ -112,6 +112,11 @@ public class SpilAndroid
 		instance.Call ("notifyIngameAd", adId);	
 	}
 	
+	public void ShowMoreGames ()
+	{
+		instance.Call ("showMoreGames");	
+	}
+	
 	
 	public void StartAdsSession ()
 	{

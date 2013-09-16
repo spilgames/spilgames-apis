@@ -20,16 +20,28 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 		configs.SG_ENVIRONMENT_SETTINGS_URL_GET = "http://localhost/defaultsettings.json";
 		configs.SG_TRACKING_ID_KEY="<tracking-app-ids>";
 		
+		#if UNITY_IPHONE
+		configs.SG_STORE_ID = Store.SG_STORE_IOS;		
+		#endif			
+		#if UNITY_ANDROID
+		configs.SG_STORE_ID = Store.SG_STORE_IOS;		
+		#endif
+		
 		instance.Initialize("<spil-app-id>", "<spil-auth-token>", configs);
 		
 		//start app settings
-		instance.GetSettings(this);
+		instance.SetAppSettingsListener(this);
 		
 		//start ads
-		instance.StartAds(this);
+		instance.SetAdsListener(this);
 		
 		//start A/B test
-		instance.GetABTest(this);
+		instance.SetABTestListener(this);
+		
+		//start InGameAds 
+		instance.SetInGameAdListener(this);
+		
+
 	}
 	
 	int clickCount = 0;
@@ -44,12 +56,7 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 	
 	//have to be implemented by the developers
 	public void AppSettingsDidLoad(JsonData data){
-		renderer.material.color = new Color((((int)data["color"]>>16)&0x000000ff)/255.0f,
-											(((int)data["color"]>>8)&0x000000ff)/255.0f,
-											(((int)data["color"])&0x000000ff)/255.0f);
-		rotation = new Vector3(	(int)data["rotation"]["x"],
-								(int)data["rotation"]["y"],
-								(int)data["rotation"]["z"]);
+		Debug.Log(data.ToString());
 	}
 	
 	public void AppSettingsDidFailWithError(string error){
@@ -62,8 +69,7 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 	
 	public void AdDidStart(){
 		Debug.Log("started adds");
-		instance.AdsNextInterstitial();
-		instance.AdsRequestIngameAsset(Orientation.SG_LANDSCAPE);
+		instance.AdsShowMoreGames();
 	}
 	public void AdDidFailToStart(string error){
 		Debug.LogError(error);
@@ -93,12 +99,12 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 	}
 	public void AdMoreGamesDidDismiss(){
 		Debug.Log("more games was dismissed");
-		instance.AdsNextInterstitial();
+		//instance.AdsNextInterstitial();
 	}
 	
 	public void ABTestSessionDidStart(){
 		Debug.Log("starting abtest session");
-		instance.ABTestGetTestDiffForUser("B065BD21CC401");
+		//instance.ABTestGetTestDiffForUser("B065BD21CC401");
 	}
 	
 	public void ABTestSessionDidEnd(){

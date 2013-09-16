@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li>
@@ -89,7 +90,7 @@ $(document).ready(function(){initNavTree('class_spil_unity.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -116,19 +117,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Awake</b> ()</td></tr
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnApplicationQuit</b> ()</td></tr>
 <tr class="memitem:afbf4d6f4c13a80184e85c4db448a0b6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#afbf4d6f4c13a80184e85c4db448a0b6c">Initialize</a> (string appID, string authToken, <a class="el" href="struct_spil_1_1_spil_settings.html">SpilSettings</a> configs)</td></tr>
 <tr class="memitem:a5cf96e4b6475cb65639c7401d67042bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a5cf96e4b6475cb65639c7401d67042bb">GetSettings</a> (<a class="el" href="interface_spil_1_1_spil_app_settings_listener.html">SpilAppSettingsListener</a> listener)</td></tr>
+<tr class="memitem:a80932bdfa5eb18749d7557bb5a97140e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a80932bdfa5eb18749d7557bb5a97140e">SetAppSettingsListener</a> (<a class="el" href="interface_spil_1_1_spil_app_settings_listener.html">SpilAppSettingsListener</a> listener)</td></tr>
 <tr class="memitem:a90e7f5daf25b9ab20156ec87b34a4b03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a90e7f5daf25b9ab20156ec87b34a4b03">StartAds</a> (<a class="el" href="interface_spil_1_1_spil_ads_listener.html">SpilAdsListener</a> listener)</td></tr>
+<tr class="memitem:a567fee7ab5b8ac0be08717e9c1943124"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a567fee7ab5b8ac0be08717e9c1943124">SetAdsListener</a> (<a class="el" href="interface_spil_1_1_spil_ads_listener.html">SpilAdsListener</a> listener)</td></tr>
 <tr class="memitem:ad78e2730bc0a582fa63cbb83d7ceb67a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#ad78e2730bc0a582fa63cbb83d7ceb67a">AdsNextInterstitial</a> ()</td></tr>
+<tr class="memitem:a3ff89fa1565e12c77a54155b2f7a0c32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a3ff89fa1565e12c77a54155b2f7a0c32">AdsNextInterstitial</a> (string location)</td></tr>
 <tr class="memitem:a11d4a63321136f796857c600e018e447"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a11d4a63321136f796857c600e018e447">AdsShowMoreGames</a> ()</td></tr>
 <tr class="memitem:a3168850e9743d25dd9c60a018dd294f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a3168850e9743d25dd9c60a018dd294f6">AdsEnabled</a> (bool state)</td></tr>
 <tr class="memitem:a7815767fc730325b937d0c1cecdbd6ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a7815767fc730325b937d0c1cecdbd6ed">AdsCacheNextInterstitial</a> ()</td></tr>
-<tr class="memitem:a3b51ff9e8e22957e054dd164e0e73f4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a3b51ff9e8e22957e054dd164e0e73f4e">AdsPlaceAdAtPosition</a> (float x, float y, float w, float h)</td></tr>
-<tr class="memitem:a0cd243e29fb31f5607d0c54f3214c821"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a0cd243e29fb31f5607d0c54f3214c821">AdsRemovePlacedAds</a> ()</td></tr>
-<tr class="memitem:a65c02eb6987761e9b143ea5b6cbe57fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a65c02eb6987761e9b143ea5b6cbe57fc">GetTrackExtended</a> (<a class="el" href="interface_spil_1_1_spil_tracking_extended_listener.html">SpilTrackingExtendedListener</a> listener)</td></tr>
+<tr class="memitem:a522258807ad09c5dbeec835bd0885657"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a522258807ad09c5dbeec835bd0885657">AdsCacheNextInterstitial</a> (string location)</td></tr>
+<tr class="memitem:a3be45636bee2526da3597a38918ad06c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a3be45636bee2526da3597a38918ad06c">SetInGameAdListener</a> (<a class="el" href="interface_spil_1_1_spil_in_game_ads_listener.html">SpilInGameAdsListener</a> listener)</td></tr>
+<tr class="memitem:aba9f183c62d29e33fe642c8b5d611abf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba9f183c62d29e33fe642c8b5d611abf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AdsRequestIngameAsset</b> (Orientation orient)</td></tr>
+<tr class="memitem:ae2d5a9d025c8dac5b33bb2a3ddd7a316"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2d5a9d025c8dac5b33bb2a3ddd7a316"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AdsRequestIngameAsset</b> (Orientation orient, string location)</td></tr>
+<tr class="memitem:a3fa8624b845a35e6c7de14d5ec0b7805"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a3fa8624b845a35e6c7de14d5ec0b7805">SetExtendedTrackingListener</a> (<a class="el" href="interface_spil_1_1_spil_tracking_extended_listener.html">SpilTrackingExtendedListener</a> listener)</td></tr>
 <tr class="memitem:a0170c30cbd321b2fa25d3e0d32bbcb7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a0170c30cbd321b2fa25d3e0d32bbcb7b">TrackPage</a> (string page)</td></tr>
-<tr class="memitem:a982e1610d0e7eaf2251fe327ed768345"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a982e1610d0e7eaf2251fe327ed768345"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>StartTracking</b> ()</td></tr>
-<tr class="memitem:a8a83c58ef9c2559ca2cdaad35a5092fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a83c58ef9c2559ca2cdaad35a5092fa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>StopTracking</b> ()</td></tr>
 <tr class="memitem:a51c73c059725576e3b1bcea8b6bb3eab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a51c73c059725576e3b1bcea8b6bb3eab">TrackEvent</a> (string evt)</td></tr>
 <tr class="memitem:a35625088869f9490979888a36ee9e42a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a35625088869f9490979888a36ee9e42a">TrackEventDetailed</a> (string category, string action, string label, int val)</td></tr>
 <tr class="memitem:a06e641c9e7e290efeb94462ea4ad48d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a06e641c9e7e290efeb94462ea4ad48d4">TrackEventWithParameters</a> (string evt, Dictionary&lt; string, string &gt; parameters)</td></tr>
@@ -143,6 +147,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>StopTracking</b> ()</
 <tr class="memitem:a8ef34cbbec00124b07d04aaf6fed3daa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a8ef34cbbec00124b07d04aaf6fed3daa">TrackStartGestureScreen</a> (string screenName)</td></tr>
 <tr class="memitem:a8758c77aa66feeace3405d6db71ad3db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a8758c77aa66feeace3405d6db71ad3db">TrackStopGestureScreen</a> ()</td></tr>
 <tr class="memitem:a662f5d7dcc9d9341baf38d9ed42581a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#a662f5d7dcc9d9341baf38d9ed42581a3">GetABTest</a> (<a class="el" href="interface_spil_1_1_spil_a_b_test_listener.html">SpilABTestListener</a> listener)</td></tr>
+<tr class="memitem:aa19aadb60034dbb39d0a405606df2f68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#aa19aadb60034dbb39d0a405606df2f68">SetABTestListener</a> (<a class="el" href="interface_spil_1_1_spil_a_b_test_listener.html">SpilABTestListener</a> listener)</td></tr>
 <tr class="memitem:aede6e45fd4726d936519a511778963a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#aede6e45fd4726d936519a511778963a4">ABTestUpdateUserInfo</a> ()</td></tr>
 <tr class="memitem:aeec7b56b11356ec57547428bc732f2fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#aeec7b56b11356ec57547428bc732f2fd">ABTestUpdateUserInfoWith</a> (Dictionary&lt; string, string &gt;info)</td></tr>
 <tr class="memitem:ab7082a0e8f7e6ad1b21f0b0ec66c7c86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spil_unity.html#ab7082a0e8f7e6ad1b21f0b0ec66c7c86">ABTestGetTestDiff</a> ()</td></tr>
@@ -338,6 +343,37 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
 
 </div>
 </div>
+<a class="anchor" id="a522258807ad09c5dbeec835bd0885657"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpilUnity.AdsCacheNextInterstitial </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Cache the next intersitial ad. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td>Location to show the ad on chartboost. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a3168850e9743d25dd9c60a018dd294f6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -393,7 +429,7 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
 
 </div>
 </div>
-<a class="anchor" id="a3b51ff9e8e22957e054dd164e0e73f4e"></a>
+<a class="anchor" id="a3ff89fa1565e12c77a54155b2f7a0c32"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -401,33 +437,11 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool SpilUnity.AdsPlaceAdAtPosition </td>
+          <td class="memname">void SpilUnity.AdsNextInterstitial </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -436,41 +450,13 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Place one of the interstitial assets over the container filling the area specified. The area specifies the relative position to the container position and the dimensions of the space to be filled. If the area falls outside the container area, nothing will be shown and a message will be printed on the console. The area can be equal to the area of the container view. This method returns immediately, although, the image can be applied later due to the asynchronous nature of chartboost. </p>
+<p>The ads are displayed based on a timer, this method force the ad to be shown right away, and the timer is reset. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>The x position on the screen. </td></tr>
-    <tr><td class="paramname">y</td><td>The y position on the screen. </td></tr>
-    <tr><td class="paramname">w</td><td>The max desired width of the ad. </td></tr>
-    <tr><td class="paramname">h</td><td>The max desired height of the ad. </td></tr>
+    <tr><td class="paramname">location</td><td>Location to show the ad on chartboost. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>false if any of the conditions are not met, true otherwise. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a0cd243e29fb31f5607d0c54f3214c821"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SpilUnity.AdsRemovePlacedAds </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Remove the advertisements from their superviews. </p>
 
 </div>
 </div>
@@ -519,13 +505,7 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Method to set the ABTestListener and receive the proper notifications from it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">delegate</td><td>The delegate to handle the events generated by the A/B test subsystem. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd></dd></dl>
 
 </div>
 </div>
@@ -550,38 +530,7 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Method to retrieve the AppSettings for this app. A delegate is required in order to deliver the settings downloaded from the server or loaded from the default files. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">listener</td><td>The listener to handle the response of the AppSettings subsystem. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a65c02eb6987761e9b143ea5b6cbe57fc"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SpilUnity.GetTrackExtended </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="interface_spil_1_1_spil_tracking_extended_listener.html">SpilTrackingExtendedListener</a>&#160;</td>
-          <td class="paramname"><em>listener</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Method to set up the SpilTrackingExtendedListener for the extended tracking events. This listener is optional, but its usage it's encouraged since this will guarantee the calls made are actually efective and not dropped because the extended tracking wasn't started yet. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd></dd></dl>
 
 </div>
 </div>
@@ -634,6 +583,155 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
 
 </div>
 </div>
+<a class="anchor" id="aa19aadb60034dbb39d0a405606df2f68"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpilUnity.SetABTestListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_spil_1_1_spil_a_b_test_listener.html">SpilABTestListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method to set the ABTestListener and receive the proper notifications from it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delegate</td><td>The delegate to handle the events generated by the A/B test subsystem. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a567fee7ab5b8ac0be08717e9c1943124"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpilUnity.SetAdsListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_spil_1_1_spil_ads_listener.html">SpilAdsListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method to set the SpilAdsListener and receive the proper notifications from it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>The listener to handle the events generated by the Ads subsystem. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a80932bdfa5eb18749d7557bb5a97140e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpilUnity.SetAppSettingsListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_spil_1_1_spil_app_settings_listener.html">SpilAppSettingsListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method to retrieve the AppSettings for this app. A delegate is required in order to deliver the settings downloaded from the server or loaded from the default files. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>The listener to handle the response of the AppSettings subsystem. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3fa8624b845a35e6c7de14d5ec0b7805"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpilUnity.SetExtendedTrackingListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_spil_1_1_spil_tracking_extended_listener.html">SpilTrackingExtendedListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method to set up the SpilTrackingExtendedListener for the extended tracking events. This listener is optional, but its usage it's encouraged since this will guarantee the calls made are actually efective and not dropped because the extended tracking wasn't started yet. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3be45636bee2526da3597a38918ad06c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpilUnity.SetInGameAdListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_spil_1_1_spil_in_game_ads_listener.html">SpilInGameAdsListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method to set the SpilInGameAdsListener and receive the proper notifications from it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>The listener to handle the events generated by the Ads subsystem. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a90e7f5daf25b9ab20156ec87b34a4b03"></a>
 <div class="memitem">
 <div class="memproto">
@@ -655,13 +753,7 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Method to set the SpilAdsListener and receive the proper notifications from it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">listener</td><td>The listener to handle the events generated by the Ads subsystem. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd></dd></dl>
 
 </div>
 </div>
@@ -1190,7 +1282,7 @@ static <a class="el" href="class_spil_unity.html">SpilUnity</a>&#160;</td><td cl
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/ignacio/Documents/native-unity-plugin/src/Assets/Plugins/Spil/SpilUnity.cs</li>
+<li>/Users/ignacio/Documents/native-unity-plugin/demos/sample/Assets/Plugins/Spil/SpilUnity.cs</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

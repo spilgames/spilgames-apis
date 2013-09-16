@@ -227,10 +227,12 @@ public class SpilUnity : MonoBehaviour {
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
 			setAppSettingsDelegate();
 		}else{
+			#if UNITY_EDITOR
 			//Simulates some default results. The defaults will be readed from the default settings file in the folder "Spil/Resources".
 			//No live changes in the editor are available.
 			TextAsset defaults = Resources.Load("spilgames_default_settings") as TextAsset;
 			_AppSettingsDidLoad(defaults.text);
+			#endif
 		}
 	}
 	
@@ -290,7 +292,12 @@ public class SpilUnity : MonoBehaviour {
 	public void AdsShowMoreGames(){
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
 			adsShowMoreGames();
+		}else if(Application.platform == RuntimePlatform.Android){
+			#if UNITY_ANDROID
+			spilAndroid.ShowMoreGames();
+			#endif
 		}else{
+
 		}
 	}
 	
