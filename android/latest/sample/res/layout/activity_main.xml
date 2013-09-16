@@ -48,10 +48,10 @@
         android:text="Track Age" />
     
     <Button
-        android:id="@+id/genderButton"
+        android:id="@+id/moreGamesButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Track Gender" />
+        android:text="More Games" />
 
     <Button
         android:id="@+id/newScreen"

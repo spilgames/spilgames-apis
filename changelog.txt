@@ -2,6 +2,11 @@ Changelog 1.5.11:
 iOS:
 - ADDED: Support for ComScore
 
+Android:
+- ADDED: Support for ComScore
+- ADDED: More Games screen
+- ADDED: App Settings 
+
 Changelog 1.5.10:
 iOS:
 - IMPROVED: Support for Chartboost ingame ads (non-invasive)

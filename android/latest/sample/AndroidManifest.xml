@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:name="com.spilgames.framework.SpilApplication"
@@ -31,7 +32,6 @@
             android:name="com.spilgames.examples.ui.SecondActivity"
             android:label="@string/title_activity_second" >
         </activity>
-
         <receiver
             android:name="com.spilgames.framework.core.receivers.SpilInstallReferrerReciever"
             android:exported="true" >
@@ -39,18 +39,19 @@
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
         </receiver>
-        
-<!--          <receiver -->
-<!--             android:name="com.fiksu.asotracking.InstallTracking" -->
-<!--             android:exported="true" > -->
-<!--             <intent-filter> -->
-<!--                 <action android:name="com.android.vending.INSTALL_REFERRER" /> -->
-<!--             </intent-filter> -->
 
-<!--             <meta-data -->
-<!--                 android:name="forward.1" -->
-<!--                 android:value="com.spilgames.framework.core.receivers.SpilInstallReferrerReciever" /> -->
-<!--         </receiver> -->
+        <!-- <receiver -->
+        <!-- android:name="com.fiksu.asotracking.InstallTracking" -->
+        <!-- android:exported="true" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.android.vending.INSTALL_REFERRER" /> -->
+        <!-- </intent-filter> -->
+
+
+        <!-- <meta-data -->
+        <!-- android:name="forward.1" -->
+        <!-- android:value="com.spilgames.framework.core.receivers.SpilInstallReferrerReciever" /> -->
+        <!-- </receiver> -->
     </application>
 
 </manifest>

@@ -115,8 +115,87 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9f16bdb7304700415f87801df495d5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a885145e7e91a52250dc5f59670de9491"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_ads_listener.html#a885145e7e91a52250dc5f59670de9491">onAdsFailedToLoad</a> (String cause)</td></tr>
 <tr class="separator:a885145e7e91a52250dc5f59670de9491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb68b042ac4df917b049d1c3f0cddc7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_ads_listener.html#abb68b042ac4df917b049d1c3f0cddc7b">adMoreGamesWillAppear</a> ()</td></tr>
+<tr class="separator:abb68b042ac4df917b049d1c3f0cddc7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa47994ba67ead7b512847def87787246"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_ads_listener.html#aa47994ba67ead7b512847def87787246">adMoreGamesDidAppear</a> ()</td></tr>
+<tr class="separator:aa47994ba67ead7b512847def87787246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9aa14ccb2537c3de76066ebedba418a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_ads_listener.html#ad9aa14ccb2537c3de76066ebedba418a">adMoreGamesDidFailToAppear</a> (String error)</td></tr>
+<tr class="separator:ad9aa14ccb2537c3de76066ebedba418a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327955346dc18299c9dd967647982390"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_ads_listener.html#a327955346dc18299c9dd967647982390">adMoreGamesDidDismiss</a> ()</td></tr>
+<tr class="separator:a327955346dc18299c9dd967647982390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aa47994ba67ead7b512847def87787246"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.spilgames.framework.listeners.AdsListener.adMoreGamesDidAppear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Method to call back after the more games' screen is displayed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a327955346dc18299c9dd967647982390"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.spilgames.framework.listeners.AdsListener.adMoreGamesDidDismiss </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Method to call back if the more games popup showed was dismissed. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad9aa14ccb2537c3de76066ebedba418a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.spilgames.framework.listeners.AdsListener.adMoreGamesDidFailToAppear </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>error</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Method to call back if the more games' screen couldn't be displayed due to any reason. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error</td><td>The reason why the more games' screen failed to be displayed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abb68b042ac4df917b049d1c3f0cddc7b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.spilgames.framework.listeners.AdsListener.adMoreGamesWillAppear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Method to call back before the next more games' screen is going to be shown. </p>
+
+</div>
+</div>
 <a class="anchor" id="a885145e7e91a52250dc5f59670de9491"></a>
 <div class="memitem">
 <div class="memproto">
@@ -165,7 +244,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>com</b></li><li class="navelem"><b>spilgames</b></li><li class="navelem"><b>framework</b></li><li class="navelem"><b>listeners</b></li><li class="navelem"><a class="el" href="interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_ads_listener.html">AdsListener</a></li>
-    <li class="footer">Generated on Mon Sep 9 2013 09:35:21 for Spil Android Framework by
+    <li class="footer">Generated on Mon Sep 16 2013 17:37:05 for Spil Android Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

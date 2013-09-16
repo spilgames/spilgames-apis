@@ -33,7 +33,7 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 	Button trackTimeEnds;
 	Button trackErrorButton;
 	Button trackUserButton;
-	Button trackGenderButton;
+	Button moreGamesButton;
 	Button trackAgeButton;
 	Button newScreenButton;
 
@@ -46,6 +46,9 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		HashMap<String, String > configs = new HashMap<String, String>();
 		configs.put(DevEnvironment.SG_ENVIRONMENT_KEY, DevEnvironment.SG_ENVIRONMENT_STG_VALUE.getValue());
 		configs.put(DevStores.SG_STORE_ID, DevStores.SG_STORE_GOOGLE_PLAY.getValue());
+		
+//		DebugLogConfig.enable();
+		
 		spilInstance = SpilLink.spilWithAppID(getApplicationContext(),appId, authToken, configs);
 		
 		spilInstance.setAdsListener(this);
@@ -57,7 +60,7 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		trackTimeEnds = (Button) findViewById(R.id.timeEventEnd);
 		trackErrorButton = (Button) findViewById(R.id.errorButton);
 		trackUserButton = (Button) findViewById(R.id.userButton);
-		trackGenderButton = (Button) findViewById(R.id.genderButton);
+		moreGamesButton = (Button) findViewById(R.id.moreGamesButton);
 		trackAgeButton = (Button) findViewById(R.id.ageButton);
 		newScreenButton = (Button) findViewById(R.id.newScreen);
 		
@@ -67,7 +70,7 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		trackTimeEnds.setOnClickListener(this);
 		trackErrorButton.setOnClickListener(this);
 		trackUserButton.setOnClickListener(this);
-		trackGenderButton.setOnClickListener(this);
+		moreGamesButton.setOnClickListener(this);
 		trackAgeButton.setOnClickListener(this);
 		newScreenButton.setOnClickListener(this);
 
@@ -101,6 +104,9 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		case R.id.userButton:
 			spilInstance.trackUserId(TRACKING_TAG+"bea.guido");
 			break;
+		case R.id.moreGamesButton:
+			spilInstance.showMoreGames();
+			break;	
 		case R.id.newScreen:
 			Intent intent = new Intent(this, SecondActivity.class);
 			startActivity(intent);
@@ -133,6 +139,37 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 	@Override
 	public void onAppSettingsDidFailWithError(String error) {
 		System.out.println("APP SETTINGS ERROR "+error);
+		
+	}
+
+
+
+	@Override
+	public void adMoreGamesWillAppear() {
+		System.out.println("AdMore games WILL appear!!!");
+		
+	}
+
+
+
+	@Override
+	public void adMoreGamesDidAppear() {
+		System.out.println("AdMore games DID appear!!!");		
+	}
+
+
+
+	@Override
+	public void adMoreGamesDidFailToAppear(String error) {
+		System.out.println("AdMore games FAIL appear!!!" + error);
+		
+	}
+
+
+
+	@Override
+	public void adMoreGamesDidDismiss() {
+		System.out.println("AdMore games DISMISS!!!");
 		
 	}
 }
