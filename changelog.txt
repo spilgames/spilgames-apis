@@ -1,3 +1,7 @@
+Changelog 1.5.12:
+iOS:
+- REMOVED: Swrve A/B test solution. Interfaces remain, but nothing is done.
+
 Changelog 1.5.11:
 iOS:
 - ADDED: Support for ComScore

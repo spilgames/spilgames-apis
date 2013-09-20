@@ -18,7 +18,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_a_b_test_delegate_8h_source.html"
+"_a_b_test_adapter_8h_source.html"
 ];
 
 var navTreeSubIndices = new Array();

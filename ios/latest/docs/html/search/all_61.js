@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['abtestadapter',['ABTestAdapter',['../interface_a_b_test_adapter.html',1,'']]],
   ['abtestdelegate_2dp',['ABTestDelegate-p',['../protocol_a_b_test_delegate-p.html',1,'']]],
   ['abtestgettestdiff',['abtestGetTestDiff',['../interface_spil.html#adb2baf9daabe299fe66b5f4ee2f5c3be',1,'Spil']]],
   ['abtestgettestdiffforuser_3a',['abtestGetTestDiffForUser:',['../interface_spil.html#a49575b45793d6b02e56b037f1e1286a0',1,'Spil']]],

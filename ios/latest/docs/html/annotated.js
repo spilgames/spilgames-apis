@@ -1,5 +1,6 @@
 var annotated =
 [
+    [ "ABTestAdapter", "interface_a_b_test_adapter.html", "interface_a_b_test_adapter" ],
     [ "<ABTestDelegate>", "protocol_a_b_test_delegate-p.html", "protocol_a_b_test_delegate-p" ],
     [ "<AdsDelegate>", "protocol_ads_delegate-p.html", "protocol_ads_delegate-p" ],
     [ "<AppSettingsDelegate>", "protocol_app_settings_delegate-p.html", "protocol_app_settings_delegate-p" ],
