@@ -1,5 +1,6 @@
 var class_spil_unity =
 [
+    [ "AdsData", "class_spil_unity_1_1_ads_data.html", "class_spil_unity_1_1_ads_data" ],
     [ "SpilUnity", "class_spil_unity.html#a057708f2e7ec487f5a7df6ea22126598", null ],
     [ "ABTestGetTestDiff", "class_spil_unity.html#ab7082a0e8f7e6ad1b21f0b0ec66c7c86", null ],
     [ "ABTestGetTestDiffForUser", "class_spil_unity.html#ac1b9b109f1fe19e6007e8d5fb6f254ac", null ],

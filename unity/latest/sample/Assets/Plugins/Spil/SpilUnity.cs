@@ -769,14 +769,14 @@ public class SpilUnity : MonoBehaviour {
 	
 	private void _AdDidLoadIngameAsset(string json){
 		if(inGameAdListener != null){
-			JsonData data = JsonMapper.ToObject(json);
+			AdsData data = JsonMapper.ToObject<AdsData>(json);
 			
-			WWW www = new WWW((string)data["url"]);
-	        StartCoroutine(_downloadCallback(www, (string)data["adId"], (string)data["link"]));
+			WWW www = new WWW(data.url);
+			StartCoroutine(_downloadCallback(www, data.adId, data.link));
 		}
  	}
- 
-	private void _AdDidFailIngameAsset(string error){
+	
+ 	private void _AdDidFailIngameAsset(string error){
 		if(inGameAdListener != null)
 			inGameAdListener.AdDidFailIngameAsset(error);
 	}
@@ -859,5 +859,11 @@ public class SpilUnity : MonoBehaviour {
 			Debug.Log("Ad marked as shown!");
 		}	
 	}
-		
+	
+	protected class AdsData{
+		public string url;
+		public string link;
+		public string adId;
+		public string name;
+	};
 }

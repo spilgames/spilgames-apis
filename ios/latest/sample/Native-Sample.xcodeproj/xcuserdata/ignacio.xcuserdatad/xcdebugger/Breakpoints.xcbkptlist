@@ -21,7 +21,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Native-Sample/AppDelegate.m"
-         timestampString = "399893927.542818"
+         timestampString = "403096654.899726"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "94"
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../src/Classes/ads/ingame/InGameAds.m"
-         timestampString = "399817474.630084"
+         timestampString = "402585917.878099"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "65"
-         endingLineNumber = "65"
+         startingLineNumber = "67"
+         endingLineNumber = "67"
          landmarkName = "-requestInGameAdAsset:atLocation:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../src/Classes/ads/ingame/InGameAds.m"
-         timestampString = "399817474.630084"
+         timestampString = "402828956.492747"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "139"
-         endingLineNumber = "139"
+         startingLineNumber = "148"
+         endingLineNumber = "148"
          landmarkName = "-createView:size:atLocation:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -144,6 +144,32 @@
          startingLineNumber = "17"
          endingLineNumber = "17"
          landmarkName = "-initWithSecret:andCustomer:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../src/Classes/tracking/Tracking.m"
+         timestampString = "403096583.583297"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "97"
+         endingLineNumber = "97"
+         landmarkName = "-startSubsystem:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../src/Classes/tracking/trackers/GATracker.m"
+         timestampString = "403096627.161587"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "29"
+         endingLineNumber = "29"
+         landmarkName = "-trackPage:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

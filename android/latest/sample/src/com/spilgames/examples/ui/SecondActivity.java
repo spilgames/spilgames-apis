@@ -2,7 +2,6 @@ package com.spilgames.examples.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.spilgames.examples.R;
@@ -14,7 +13,7 @@ import com.spilgames.framework.listeners.InGameAdListener;
 public class SecondActivity extends Activity implements InGameAdListener{
 
 	RelativeLayout rootLayout;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -22,8 +21,8 @@ public class SecondActivity extends Activity implements InGameAdListener{
 		SpilInterface spil = SpilLink.getInstance();
 		rootLayout = (RelativeLayout) findViewById(R.id.root);
 		spil.setInGameAdsListener(this);
-		spil.requestInGameAd("PORTRAIT");
-		
+		spil.requestInGameAd("LANDSCAPE");
+
 	}
 
 	@Override
@@ -35,6 +34,7 @@ public class SecondActivity extends Activity implements InGameAdListener{
 
 	@Override
 	public void onInGameAdError(String error) {
-		// TODO Auto-generated method stub
+		System.out.println("InGameAdError" + error);
 	}
+
 }

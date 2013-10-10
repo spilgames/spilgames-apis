@@ -20,6 +20,7 @@ var searchData=
   ['admoregameswillappear',['AdMoreGamesWillAppear',['../interface_spil_1_1_spil_ads_listener.html#a3a843c5377b606a1dc7a1f1e2a4bf50e',1,'Spil::SpilAdsListener']]],
   ['adpopupdiddismiss',['AdPopupDidDismiss',['../interface_spil_1_1_spil_ads_listener.html#adf06a4aff1c987c48e450f4b4ef60d4e',1,'Spil::SpilAdsListener']]],
   ['adscachenextinterstitial',['AdsCacheNextInterstitial',['../class_spil_unity.html#a7815767fc730325b937d0c1cecdbd6ed',1,'SpilUnity.AdsCacheNextInterstitial()'],['../class_spil_unity.html#a522258807ad09c5dbeec835bd0885657',1,'SpilUnity.AdsCacheNextInterstitial(string location)']]],
+  ['adsdata',['AdsData',['../class_spil_unity_1_1_ads_data.html',1,'SpilUnity']]],
   ['adsenabled',['AdsEnabled',['../class_spil_unity.html#a3168850e9743d25dd9c60a018dd294f6',1,'SpilUnity']]],
   ['adsnextinterstitial',['AdsNextInterstitial',['../class_spil_unity.html#ad78e2730bc0a582fa63cbb83d7ceb67a',1,'SpilUnity.AdsNextInterstitial()'],['../class_spil_unity.html#a3ff89fa1565e12c77a54155b2f7a0c32',1,'SpilUnity.AdsNextInterstitial(string location)']]],
   ['adsshowmoregames',['AdsShowMoreGames',['../class_spil_unity.html#a11d4a63321136f796857c600e018e447',1,'SpilUnity']]],

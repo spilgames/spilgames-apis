@@ -69,7 +69,8 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 	
 	public void AdDidStart(){
 		Debug.Log("started adds");
-		instance.AdsShowMoreGames();
+		//instance.AdsRequestIngameAsset(Orientation.SG_LANDSCAPE);
+		instance.AdsNextInterstitial();
 	}
 	public void AdDidFailToStart(string error){
 		Debug.LogError(error);
@@ -82,7 +83,7 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 		Debug.Log("appeared");
 	}
 	public void AdDidFailToAppear(string error){
-		Debug.LogError(error);
+		Debug.LogError("ad fail to load");
 	}
 	public void AdPopupDidDismiss(){
 		Debug.Log("popup was dismissed");
@@ -112,11 +113,15 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 	}
 	
 	public void AdDidLoadIngameAsset(GameObject billboard){
+		
+		Debug.Log("AdDidLoadInGameAsset");
 		billboard.transform.parent = this.gameObject.transform;
 		billboard.transform.position = new Vector3(0,0,0);
 	}
 	  
-	public void AdDidFailIngameAsset(string error){}
+	public void AdDidFailIngameAsset(string error){
+		Debug.Log("ad fail "+ error);
+	}
 	
 	public void ABTestSessionDiffReceived(JsonData diffs){
 		if(diffs.Count == 0){

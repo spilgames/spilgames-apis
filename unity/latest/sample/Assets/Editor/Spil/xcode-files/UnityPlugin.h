@@ -9,20 +9,23 @@
 #ifndef Spil_UnityPlugin_h
 #define Spil_UnityPlugin_h
 
-/**
- * Struct to pass the settings from Unity to the native part. It must keep in sync with the implementation in the Unity plugin, 
- * same order and same types for the fields.
- */
-struct SpilSettings{
-	int environment;
-	const char* settingsGetURL;
-	float appSettingsPollTime;
-	//tracking related
-	const char* trackingID;
-	int store;
-};
+extern "C" {
+	/**
+	 * Struct to pass the settings from Unity to the native part. It must keep in sync with the implementation in the Unity plugin, 
+	 * same order and same types for the fields.
+	 */
+	struct SpilSettings{
+		int environment;
+		const char* settingsGetURL;
+		float appSettingsPollTime;
+		//tracking related
+		const char* trackingID;
+		int store;
+	};
 
-/** Only way to access the static fields created in the bridge between unity-objc. */
-const char* getObjectName();
+	/** Only way to access the static fields created in the bridge between unity-objc. */
+	const char* getObjectName();
+
+}
 
 #endif

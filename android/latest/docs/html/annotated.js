@@ -12,7 +12,8 @@ var annotated =
           [ "listeners", null, [
             [ "AdsListener", "interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_ads_listener.html", "interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_ads_listener" ],
             [ "AppSettingsListener", "interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_app_settings_listener.html", "interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_app_settings_listener" ],
-            [ "InGameAdListener", "interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_in_game_ad_listener.html", "interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_in_game_ad_listener" ]
+            [ "InGameAdListener", "interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_in_game_ad_listener.html", "interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_in_game_ad_listener" ],
+            [ "SpilListener", "interfacecom_1_1spilgames_1_1framework_1_1listeners_1_1_spil_listener.html", null ]
           ] ],
           [ "SpilInterface", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface.html", "interfacecom_1_1spilgames_1_1framework_1_1_spil_interface" ]
         ] ]

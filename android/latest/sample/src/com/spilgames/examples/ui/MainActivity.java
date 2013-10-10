@@ -25,7 +25,7 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 	private String appId = "13";
 	private String authToken = "6512bd43d9caa6e02c990b0a82652dca";
 
-	private static final String TRACKING_TAG = "ANDROID_TRACK:";
+	private static final String TRACKING_TAG = "JBC:";
 
 	Button trackPageButton;
 	Button trackEventButton;
@@ -46,8 +46,6 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		HashMap<String, String > configs = new HashMap<String, String>();
 		configs.put(DevEnvironment.SG_ENVIRONMENT_KEY, DevEnvironment.SG_ENVIRONMENT_STG_VALUE.getValue());
 		configs.put(DevStores.SG_STORE_ID, DevStores.SG_STORE_GOOGLE_PLAY.getValue());
-		
-//		DebugLogConfig.enable();
 		
 		spilInstance = SpilLink.spilWithAppID(getApplicationContext(),appId, authToken, configs);
 		
@@ -82,11 +80,11 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.pageButton:
-			spilInstance.trackPage(TRACKING_TAG+"New_game");
+			spilInstance.trackPage(TRACKING_TAG+"Juego_Nuevo");
 			spilInstance.showInterstitial();
 			break;
 		case R.id.eventButton:
-			spilInstance.trackEvent(TRACKING_TAG+"Help_pressed");
+			spilInstance.trackEvent(TRACKING_TAG+"Ayuda");
 			break;
 		case R.id.timeEventStart:
 			spilInstance.trackTimedEvent(TRACKING_TAG+"Level_40");
@@ -170,6 +168,18 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 	@Override
 	public void adMoreGamesDidDismiss() {
 		System.out.println("AdMore games DISMISS!!!");
+		
+	}
+
+	@Override
+	public void adInterstitialFailed(String error) {
+		System.out.println("ERROR with AD"+error);
+		
+	}
+
+	@Override
+	public void adInterstitialIsShown() {
+		System.out.println("AD OK!!!");
 		
 	}
 }
