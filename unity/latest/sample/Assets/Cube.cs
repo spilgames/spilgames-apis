@@ -14,33 +14,33 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 		Debug.Log("starting initialization");
 		instance = SpilUnity.Instance;
 		
-		SpilSettings configs;
-		configs.SG_ENVIRONMENT_KEY = enviroment.SG_ENVIRONMENT_DEV_VALUE;
+		SpilSettings configs = new SpilSettings();
+		configs.SG_ENVIRONMENT_KEY = Enviroment.SG_ENVIRONMENT_DEV_VALUE;
 		configs.SG_APP_SETTINGS_POLL_TIME_KEY = 10.0f;
 		configs.SG_ENVIRONMENT_SETTINGS_URL_GET = "http://localhost/defaultsettings.json";
 		configs.SG_TRACKING_ID_KEY="<tracking-app-ids>";
-		
+
 		#if UNITY_IPHONE
-		configs.SG_STORE_ID = Store.SG_STORE_IOS;		
-		#endif			
-		#if UNITY_ANDROID
-		configs.SG_STORE_ID = Store.SG_STORE_IOS;		
+		configs.SG_STORE_ID = Store.SG_STORE_IOS;
 		#endif
-		
+		#if UNITY_ANDROID
+		configs.SG_STORE_ID = Store.SG_STORE_GOOGLE_PLAY;
+		#endif
+
 		instance.Initialize("<spil-app-id>", "<spil-auth-token>", configs);
-		
+
 		//start app settings
 		instance.SetAppSettingsListener(this);
-		
+
 		//start ads
 		instance.SetAdsListener(this);
-		
+
 		//start A/B test
 		instance.SetABTestListener(this);
-		
-		//start InGameAds 
+
+		//start InGameAds
 		instance.SetInGameAdListener(this);
-		
+
 
 	}
 	
