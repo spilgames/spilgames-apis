@@ -44,9 +44,9 @@ extern "C" {
 			
 			if(confs.store == 0) configs[SG_STORE_ID] = @"1";
 			
-			spil = [Spil spilWithAppID:[NSString stringWithUTF8String:appID]
+			spil = [[Spil spilWithAppID:[NSString stringWithUTF8String:appID]
 								 token:[NSString stringWithUTF8String:authToken] 
-							   configs:configs];
+							   configs:configs] retain]; //has to be retained to avoid problems with side implementations of AdColony
 			
 			if(objDelegate == nil)
 				objDelegate = [[SpilUnityDelegate alloc] init];
