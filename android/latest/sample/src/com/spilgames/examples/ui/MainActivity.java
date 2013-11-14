@@ -13,11 +13,11 @@ import android.widget.Button;
 
 import com.spilgames.examples.R;
 import com.spilgames.framework.SpilInterface;
-import com.spilgames.framework.SpilLink;
+import com.spilgames.framework.core.Spil;
+import com.spilgames.framework.core.listeners.AdsListener;
+import com.spilgames.framework.core.listeners.AppSettingsListener;
 import com.spilgames.framework.environment.DevEnvironment;
 import com.spilgames.framework.environment.DevStores;
-import com.spilgames.framework.listeners.AdsListener;
-import com.spilgames.framework.listeners.AppSettingsListener;
 
 public class MainActivity extends Activity implements OnClickListener, AdsListener, AppSettingsListener {
 
@@ -47,7 +47,7 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		configs.put(DevEnvironment.SG_ENVIRONMENT_KEY, DevEnvironment.SG_ENVIRONMENT_STG_VALUE.getValue());
 		configs.put(DevStores.SG_STORE_ID, DevStores.SG_STORE_GOOGLE_PLAY.getValue());
 		
-		spilInstance = SpilLink.spilWithAppID(getApplicationContext(),appId, authToken, configs);
+		spilInstance = Spil.spilWithAppID(getApplicationContext(),appId, authToken, configs);
 		
 		spilInstance.setAdsListener(this);
 		spilInstance.setSettingsListener(this);

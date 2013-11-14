@@ -151,12 +151,7 @@ extern "C" {
 	
 			
 #pragma mark - Wrapper functions: Tracking
-	
-	void setExtendedTrackingDelegate(){
-		if(spil!=nil)
-			[spil setExtendedTrackingDelegate:objDelegate];
-	}
-	
+		
 	void trackPage(const char* page){
 		if(spil!=nil)
 			[spil trackPage:[NSString stringWithUTF8String:page]];
@@ -222,40 +217,7 @@ extern "C" {
 					 message:[NSString stringWithUTF8String:message] 
 				   exception:[NSException exceptionWithName:@"exception" reason:[NSString stringWithUTF8String:exception] userInfo:nil]];
 	}
-	
-	void trackUserID(const char* userID){
-		if(spil!=nil)
-			[spil trackUserID:[NSString stringWithUTF8String:userID]];
-	}
-	
-	void trackAge(int age){
-		if(spil!=nil)
-			[spil trackAge:age];
-	}
-	
-	void trackGender(BOOL male){
-		if(spil!=nil)
-			[spil trackGender:male];
-	}
-	
-	void trackLatitude(double latitude,double longitude,double horizontalAccuracy,double verticalAccuracy){
-		if(spil!=nil)
-			[spil trackLatitude:latitude
-					  longitude:longitude
-			 horizontalAccuracy:horizontalAccuracy 
-			   verticalAccuracy:verticalAccuracy];
-	}
-	
-	void trackStartGestureScreen(const char* screenName){
-		if(spil != nil)
-			[spil trackStartGestureScreen:[NSString stringWithUTF8String:screenName]];
-	}
-	
-	void trackStopGestureScreen(){
-		if(spil != nil)
-			[spil trackStopGestureScreen];
-	}
-	
+		
 #pragma mark - Wrapper functions: A/B Test
 	
 	void setABTestDelegate(){

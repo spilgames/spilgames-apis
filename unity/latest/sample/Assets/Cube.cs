@@ -6,7 +6,7 @@ using System.Threading;
 using Spil;
 using LitJson;
 
-public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilABTestListener,SpilTrackingExtendedListener,SpilInGameAdsListener {
+public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilABTestListener,SpilInGameAdsListener {
 	SpilUnity instance;
 	Vector3 rotation = Vector3.zero;
 	// Use this for initialization
@@ -141,14 +141,5 @@ public class Cube : MonoBehaviour,SpilAppSettingsListener,SpilAdsListener,SpilAB
 				Debug.Log(uid+" "+variant+" vs "+control);
 			}
 		}
-	}
-	
-	public void TrackExtendedDidStart(){
-		Debug.Log("starting screen");
-		instance.TrackStartGestureScreen("main");
-	}
-	
-	public void TrackExtendedDidStop(){
-		Debug.Log("stop screen");
 	}
 }

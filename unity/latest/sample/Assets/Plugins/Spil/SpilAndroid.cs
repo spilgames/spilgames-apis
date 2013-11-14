@@ -22,7 +22,7 @@ public class SpilAndroid
 		AndroidJavaObject activity = jc.GetStatic<AndroidJavaObject> ("currentActivity"); 
 		
 		using (AndroidJavaObject obj_HashMap = DictionaryToHashMap(parameters)){
-			using (var pluginClass = new AndroidJavaClass( "com.spilgames.framework.SpilLink" ))
+			using (var pluginClass = new AndroidJavaClass( "com.spilgames.framework.core.Spil" ))
 				
 				instance = pluginClass.CallStatic<AndroidJavaObject> ("spilWithAppID",activity, appID, authToken, obj_HashMap);
 				instance.Call ("setUnityObjectName", objectName);

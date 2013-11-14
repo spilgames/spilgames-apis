@@ -8,7 +8,8 @@ if __name__ == '__main__':
 	proj = XcodeProject.Load(sys.argv[1] + '/Unity-iPhone.xcodeproj/project.pbxproj')
 	
 	dependencies = [
-	('usr/lib/libsqlite3.0.dylib',False), 
+	('usr/lib/libsqlite3.0.dylib',False),
+	('usr/lib/libz.dylib',False),
 	('System/Library/Frameworks/CFNetwork.framework',False),
 	('System/Library/Frameworks/CoreTelephony.framework',False),
 	('System/Library/Frameworks/Foundation.framework',False),
@@ -16,10 +17,6 @@ if __name__ == '__main__':
 	('System/Library/Frameworks/SystemConfiguration.framework',False),
 	('System/Library/Frameworks/UIKit.framework',False),
 	('System/Library/Frameworks/CoreGraphics.framework',False),
-	('System/Library/Frameworks/CoreMedia.framework',False),
-	('System/Library/Frameworks/CoreVideo.framework',False),
-	('System/Library/Frameworks/AVFoundation.framework',False),
-	('System/Library/Frameworks/AssetsLibrary.framework',False),
 	('System/Library/Frameworks/MobileCoreServices.framework',False),
 	('System/Library/Frameworks/StoreKit.framework',True),
 	('System/Library/Frameworks/AdSupport.framework',True),
@@ -62,6 +59,7 @@ if __name__ == '__main__':
 	
 	#remove some problematic flags:
 	flagsToRemove = [
+	'-ObjC',
 	'-all_load' #-all_load, causes duplicate symbols when multiple static libs happen to use the same libs build in (SBJSON a common guilty)
 	]
 	for flag in flagsToRemove:

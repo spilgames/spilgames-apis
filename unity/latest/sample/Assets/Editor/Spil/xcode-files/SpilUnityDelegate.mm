@@ -89,16 +89,6 @@ extern "C" {
 	UnitySendMessage(getObjectName(), "_ABTestSessionDiffReceived", [[[SBJSON new] stringWithObject:diffs] UTF8String]);
 }
 
-#pragma mark - TrackingExtendedDelegate methods
-
--(void) trackExtendedDidStop{
-	UnitySendMessage(getObjectName(), "_TrackExtendedDidStop", "");
-}
-
--(void) trackExtendedDidStart{
-	UnitySendMessage(getObjectName(), "_TrackExtendedDidStart", "");
-}
-
 #pragma mark - Other delegates
 /*
  useful links: 

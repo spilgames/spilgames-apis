@@ -8,6 +8,7 @@
         android:minSdkVersion="15"
         android:targetSdkVersion="17" />
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -40,28 +41,28 @@
             android:label="@string/title_activity_second" >
         </activity>
 
-        <receiver
-            android:name="com.spilgames.framework.receivers.SpilInstallReferrerReciever" >
+        <receiver android:name="com.spilgames.framework.core.receivers.SpilInstallReferrerReceiver" >
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
         </receiver>
+        <receiver android:name="com.spilgames.framework.core.receivers.NotificationsBooted">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
         <receiver
-            android:name="com.spilgames.framework.receivers.NotificationsReceiver"
+            android:name="com.spilgames.framework.core.receivers.NotificationsReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-
-                <category android:name="com.spilgames.examples" />
-            </intent-filter>
-        </receiver>
-        <receiver android:name="com.spilgames.framework.receivers.NotificationsReceiver" >
-            <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RETRY" />
 
                 <category android:name="com.spilgames.examples" />
             </intent-filter>
         </receiver>
+        <service android:name="com.spilgames.framework.core.services.TimerService"></service>
+        <service android:name="com.spilgames.framework.core.services.NotificationService"></service>
         <!-- <receiver -->
         <!-- android:name="com.fiksu.asotracking.InstallTracking" -->
         <!-- android:exported="true" > -->

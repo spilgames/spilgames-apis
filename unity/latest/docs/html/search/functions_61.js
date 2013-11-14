@@ -22,6 +22,7 @@ var searchData=
   ['adscachenextinterstitial',['AdsCacheNextInterstitial',['../class_spil_unity.html#a7815767fc730325b937d0c1cecdbd6ed',1,'SpilUnity.AdsCacheNextInterstitial()'],['../class_spil_unity.html#a522258807ad09c5dbeec835bd0885657',1,'SpilUnity.AdsCacheNextInterstitial(string location)']]],
   ['adsenabled',['AdsEnabled',['../class_spil_unity.html#a3168850e9743d25dd9c60a018dd294f6',1,'SpilUnity']]],
   ['adsnextinterstitial',['AdsNextInterstitial',['../class_spil_unity.html#ad78e2730bc0a582fa63cbb83d7ceb67a',1,'SpilUnity.AdsNextInterstitial()'],['../class_spil_unity.html#a3ff89fa1565e12c77a54155b2f7a0c32',1,'SpilUnity.AdsNextInterstitial(string location)']]],
+  ['adsrequestingameasset',['AdsRequestIngameAsset',['../class_spil_unity.html#aba9f183c62d29e33fe642c8b5d611abf',1,'SpilUnity.AdsRequestIngameAsset(Orientation orient)'],['../class_spil_unity.html#ae2d5a9d025c8dac5b33bb2a3ddd7a316',1,'SpilUnity.AdsRequestIngameAsset(Orientation orient, string location)']]],
   ['adsshowmoregames',['AdsShowMoreGames',['../class_spil_unity.html#a11d4a63321136f796857c600e018e447',1,'SpilUnity']]],
   ['adwillappear',['AdWillAppear',['../interface_spil_1_1_spil_ads_listener.html#ac2460f8e95784724e4848e751d374677',1,'Spil::SpilAdsListener']]],
   ['appsettingsdidfailwitherror',['AppSettingsDidFailWithError',['../interface_spil_1_1_spil_app_settings_listener.html#a522655bcca3e0021d136aeff20f1ca0b',1,'Spil::SpilAppSettingsListener']]],
