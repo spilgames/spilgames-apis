@@ -1,3 +1,7 @@
+Changelog 1.5.15:
+iOS:
+- UPDATED: Documentation and sample application
+
 Changelog 1.5.14:
 iOS:
 - ADDED: Timed notifications
