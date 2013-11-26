@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Initialization</string>
+		<key>functions</key>
+		<array>
+			<dict>
+				<key>selector</key>
+				<string>spilInitAppID</string>
+				<key>name</key>
+				<string>spilWithAppID:token:configs:</string>
+				<key>snippet</key>
+				<string>Spil* spil = [Spil spilWithAppID:@&quot;&lt;app-id&gt;&quot;
+                           token:@&quot;&lt;token&gt;&quot;
+                         configs:@{ SG_ENVIRONMENT_KEY:SG_ENVIRONMENT_LIVE_VALUE }
+];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>sharedInstance</string>
+				<key>name</key>
+				<string>sharedInstance</string>
+				<key>snippet</key>
+				<string>Spil* instance = [Spil sharedInstance];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>fullInitSample</string>
+				<key>name</key>
+				<string>Full init example</string>
+				<key>snippet</key>
+				<string>Spil* spil = [Spil spilWithAppID:@&quot;&lt;app-id&gt;&quot;
+                           token:@&quot;&lt;app-token&gt;&quot;
+                         configs:@{
+               SG_ENVIRONMENT_KEY:SG_ENVIRONMENT_LIVE_VALUE,
+      SG_APP_SETTINGS_POLL_TIME_KEY:[NSNumber numberWithFloat:3600.0],
+              }];
+[spil setAppSettingsDelegate:self];
+[spil setAdsDelegate:self];
+[spil setInGameAdsDelegate:self];</string>
+			</dict>
+		</array>
+		<key>overview</key>
+		<string>This sections shows how to initialize the Spil instance and how to use it to call the different functionalities built-in.
+This framework relies in backend services and the singleton model. The singleton model it&apos;s useful to allow access to the framework all over your codebase and to download only once the information from our servers.
+Because of the multiple backend services, the framework&apos;s nature is completely asynchronous. Therefore, most of the subsystems you will use need a delegate that will notify you when something relevant has happened.
+For instance, AppSettings, the settings used in your game are stored in Spil&apos;s servers. When retrieved, this settings will be deliver to you via a method in the AppSettingsDelegate, with the whole information your game needs to work.</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>AppSettings</string>
+		<key>functions</key>
+		<array>
+			<dict>
+				<key>selector</key>
+				<string>setAppSettingsDelegate</string>
+				<key>name</key>
+				<string>setAppSettingsDelegate:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] setAppSettingsDelegate:self];</string>
+			</dict>
+		</array>
+		<key>overview</key>
+		<string>This section shows how to set up the app settings delegate and how to deal with the settings you are receiving on the delegate.</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ads</string>
+		<key>functions</key>
+		<array>
+			<dict>
+				<key>selector</key>
+				<string>setAdsDelegate</string>
+				<key>name</key>
+				<string>setAdsDelegate:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] setAdsDelegate:self];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>adsEnabled</string>
+				<key>name</key>
+				<string>adsEnabled:</string>
+				<key>snippet</key>
+				<string>enabled=!enabled;
+[[Spil sharedInstance] adsEnabled:enabled];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>adsShowMoreGames</string>
+				<key>name</key>
+				<string>adsShowMoreGames</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] adsShowMoreGames];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>adsCacheNextInterstitial</string>
+				<key>name</key>
+				<string>adsCacheNextInterstitial</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] adsCacheNextInterstitial];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>adsCacheNextInterstitialWithLocation</string>
+				<key>name</key>
+				<string>adsCacheNextInterstitial:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] adsCacheNextInterstitial:@&quot;mainmenu&quot;];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>adsNextInterstitial</string>
+				<key>name</key>
+				<string>adsNextInterstitial</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] adsNextInterstitial];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>adsNextInterstitialWithLocation</string>
+				<key>name</key>
+				<string>adsNextInterstitial:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] adsNextInterstitial:@&quot;mainmenu&quot;];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>setInGameAdsDelegate</string>
+				<key>name</key>
+				<string>setInGameAdsDelegate:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] setInGameAdsDelegate:self];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>adsRequestInGameAd</string>
+				<key>name</key>
+				<string>adsRequestInGameAd</string>
+				<key>snippet</key>
+				<string>if([[Spil sharedInstance] adsRequestInGameAd:CGSizeMake(200, 100)]){
+    [self showAlert:@&quot;The ad was requested&quot;];
+}else{
+    [self showAlert:@&quot;The ad cannot be requested&quot;];
+}</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>adsRequestInGameAdWithLocation</string>
+				<key>name</key>
+				<string>adsRequestInGameAd:atLocation:</string>
+				<key>snippet</key>
+				<string>if([[Spil sharedInstance] adsRequestInGameAd:CGSizeMake(200, 100)
+                                  atLocation:@&quot;mainmenu&quot;]){
+    [self showAlert:@&quot;The ad was requested&quot;];
+}else{
+    [self showAlert:@&quot;The ad cannot be requested&quot;];
+}</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>adsRequestInGameAdAsset</string>
+				<key>name</key>
+				<string>adsRequestInGameAdAsset:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] adsRequestInGameAdAsset:^(NSDictionary* data, NSError* error){
+    if(error == nil){
+        NSLog(@&quot;data: %@&quot;, data);
+        _adId = data[@&quot;adId&quot;];
+        [self showAlert:@&quot;The data was received, now download the image on the dictionary! and keep the adId&quot;];
+    }else{
+        [self showAlert:[NSString stringWithFormat:@&quot;Error: the asset could not be requested. Most likely there is no ad to show (%@)&quot;, error]];
+    }
+}];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>adsRequestInGameAdAssetWithLocation</string>
+				<key>name</key>
+				<string>adsRequestInGameAd:atLocation:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] adsRequestInGameAdAsset:^(NSDictionary* data, NSError* error){
+    if(error == nil){
+        NSLog(@&quot;data: %@&quot;, data);
+        _adId = data[@&quot;adId&quot;];
+        [self showAlert:@&quot;The data was received, now download the image on the dictionary! and keep the adId&quot;];
+    }else{
+        [self showAlert:[NSString stringWithFormat:@&quot;Error: the asset could not be requested. Most likely there is no ad to show (%@)&quot;, error]];
+    }
+} atLocation:@&quot;mainmenu&quot;];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>adsMarkInGameAdAsShown</string>
+				<key>name</key>
+				<string>adsMarkInGameAdAsShown</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] markInGameAdAsShown:_adId];</string>
+			</dict>
+		</array>
+		<key>overview</key>
+		<string>This sections shows how to deal with everything related to advertisement in game. 
+This subsystem provide the following types of advertisement activities:
+- Ads interstitials: ads that are placed modally on top of the screen.
+- In-game ads: as graphical elements of the game, like placement ads on movies.
+- More games: cross promotion screens.
+
+Spil will take care of all the settings of the campaigns and more games, you only have to place the calls in the places or situations indicated by the game producer or game owner, if you don&apos;t know where, ask them :)</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tracking</string>
+		<key>functions</key>
+		<array>
+			<dict>
+				<key>selector</key>
+				<string>trackPage</string>
+				<key>name</key>
+				<string>trackPage:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] trackPage:@&quot;mainmenu&quot;];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>trackEvent</string>
+				<key>name</key>
+				<string>trackEvent:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] trackEvent:@&quot;Store opened&quot;];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>trackEventWithAction</string>
+				<key>name</key>
+				<string>trackEvent:action:label:value:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] trackEvent:@&quot;Store&quot; action:@&quot;opened&quot; label:@&quot;500 coins preselected&quot; value:500];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>trackEventWithParams</string>
+				<key>name</key>
+				<string>trackEvent:withParams:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] trackEvent:@&quot;Level started&quot;
+                       withParams:@{
+    @&quot;try&quot;:@(_tryCount++),
+    @&quot;level&quot;:@(1)}
+];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>trackTimedEvent</string>
+				<key>name</key>
+				<string>trackTimedEvent:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] trackTimedEvent:@&quot;Store opened&quot;];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>trackEndTimedEventWithParams</string>
+				<key>name</key>
+				<string>trackEndTimedEvent:withParams:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] trackEndTimedEvent:@&quot;Store opened&quot;
+                               withParams:@{
+    @&quot;item-preselected&quot;:@(0),
+    @&quot;last-item-selected&quot;:@(2),
+    @&quot;purchase-done&quot;:@(YES),
+    @&quot;price-charged&quot;:@(0.99)
+}];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>trackEndTimedEvent</string>
+				<key>name</key>
+				<string>trackEndTimedEvent:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] trackEndTimedEvent:@&quot;Store opened&quot;];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>trackError</string>
+				<key>name</key>
+				<string>trackError:message:exception:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] trackError:@&quot;app crashed&quot;
+                          message:@&quot;invalid object&quot;
+                        exception:[NSException exceptionWithName:@&quot;something bad happened&quot;
+                                                          reason:@&quot;the object is null&quot;
+                                                        userInfo:nil]];</string>
+			</dict>
+		</array>
+		<key>overview</key>
+		<string>This section shows how to use the tracking functions, providing different mechanisms to generate events, of different forms, single named, with parameters, time-based.
+This subsystem requires the instance to be initialized before start to track anything, since every tracking backend needs its own set of credentials to place the data sent in the correct buckets and make it available through their dashboards.
+Additionally, this subsystem tracks installs through different backend services and no action is required from the developer.</string>
+	</dict>
+</array>
+</plist>

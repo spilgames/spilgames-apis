@@ -2,8 +2,8 @@
 //  main.m
 //  Native-Sample
 //
-//  Created by  on 7/24/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Ignacio Calderon on 11/8/13.
+//  Copyright (c) 2013 Spil Games. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

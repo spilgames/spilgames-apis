@@ -11,7 +11,8 @@ if __name__ == '__main__':
 	proj.saveFormat3_2(file_name=sys.argv[1]+"/project.pbxproj.backup")
 	
 	dependencies = [
-	('usr/lib/libsqlite3.0.dylib',False), 
+	('usr/lib/libsqlite3.0.dylib',False),
+	('usr/lib/libz.dylib',False),
 	('System/Library/Frameworks/CFNetwork.framework',False),
 	('System/Library/Frameworks/CoreTelephony.framework',False),
 	('System/Library/Frameworks/Foundation.framework',False),
@@ -19,10 +20,6 @@ if __name__ == '__main__':
 	('System/Library/Frameworks/SystemConfiguration.framework',False),
 	('System/Library/Frameworks/UIKit.framework',False),
 	('System/Library/Frameworks/CoreGraphics.framework',False),
-	('System/Library/Frameworks/CoreMedia.framework',False),
-	('System/Library/Frameworks/CoreVideo.framework',False),
-	('System/Library/Frameworks/AVFoundation.framework',False),
-	('System/Library/Frameworks/AssetsLibrary.framework',False),
 	('System/Library/Frameworks/MobileCoreServices.framework',False),
 	('System/Library/Frameworks/StoreKit.framework',True),
 	('System/Library/Frameworks/AdSupport.framework',True),
@@ -67,7 +64,8 @@ if __name__ == '__main__':
 	
 	#add flags 
 	flagsToAdd = [
-	'-fobjc-arc' #-fobj_arc enables compatibility between the arc libs (framework) and no-arc apps (unity build)
+                  '-ObjC', # to load the different categories of the spil class.
+                  '-fobjc-arc' #-fobj_arc enables compatibility between the arc libs (framework) and no-arc apps (unity build)
 	]
 	for flag in flagsToAdd:
 		proj.add_other_ldflags(flag)

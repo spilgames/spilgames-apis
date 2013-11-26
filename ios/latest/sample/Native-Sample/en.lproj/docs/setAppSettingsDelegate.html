@@ -1,0 +1,14 @@
+In order to receive AppSettings from the framework, you need to set an AppSettingsDelegate: implement the AppSettingsDelegate protocol in one object, as necessary, then pass the reference to AppSettingsDelegate as the single parameter this function takes.
+
+After initializing the spil object, this call performs the following actions:
+- It registers the delegate, and
+- It returns the app settings as soon they are available, or an error.
+
+Note about the app settings behavior: the framework always tries to download the settings from the server. If an error occurs or if the settings file is corrupted, the framework automatically tries to load the same settings from a local file. This file corresponds to:
+- The most recently downloaded settings file (if available), or
+- The spilgames_default_settings.json bundle file.
+Therefore, it's very important to keep the file in the bundle as up-to-date as possible.
+
+To keep the example below as simple as possible, self is used as the implementation of the protocol.
+Check the implementation of the protocol in the DetailsViewController.m file.
+Feel free to implement it as necessary.

@@ -1,0 +1,3 @@
+This method complements the low-level functionality of adsRequestInGameAdAsset*. It provides the interface for the Unity plugin. At least the method above doesn't meet your needs, stick to it.
+
+Once the ad is displayed, it should be flagged to register the ad impression. This is necessary to accurately track ad views/clicks, and to record the number of ads displayed. Without this call the user is served more ads, but they don't generate any revenue.

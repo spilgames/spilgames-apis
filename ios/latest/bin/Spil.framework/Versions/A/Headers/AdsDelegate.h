@@ -9,41 +9,54 @@
 #import <Foundation/Foundation.h>
 
 /**
- * Protocol to handle the events triggered by the ad subsystem.
+ * Protocol to handle the events triggered by the ads subsystem.
  */
 @protocol AdsDelegate <NSObject>
 
 /**
- * Method to call back after the ad subsystem is successfully started.
+ * Method to call back after the ads subsystem is successfully started.
+ * Can be used to notify the game that can request ads.
  */
 -(void) adDidStart;
 
 /**
  * Method to call back after if the ad subsystem couldn't be started due to any reason.
+ * Can be used to track the problem, or to disable the some functionalities of the game, or
+ * to use some placeholder images instead.
+ * @see Spil.trackEvent:
  * @param	error	The reason why the ad subsystem failed to start.
  */
 -(void) adDidFailToStart:(NSError*)error;
 
 /**
- * Method to call back before the next ad is going to be displayed. This method is called
- * every time the timer reach 0, regardless if the ad should be shown or not (enableAds is set to NO).
+ * Method to call back before the next ad is going to be displayed. 
+ * If there is no ad to show, this method won't be called back.
+ * Can be used to pause the game or run some other tasks.
  */
 -(void) adWillAppear;
 
 /**
  * Method to call back after the ad is displayed. This method is only called if the ads are enabled to 
- * be displayed (enableAds:YES).
+ * be displayed (adsEnabled:YES).
+ * Can be use to track some action.
+ * @see Spil.adsEnabled:
  */
 -(void) adDidAppear;
 
 /**
  * Method to call back if the ad couldn't be displayed due to any reason.
+ * Can be used to track the problem. This method will be called,
+ * if there is no ads available to show. This means the system is working fine,
+ * just that the app consumed all the ads available or there is no campaigns configured
+ * for this app yet.
+ * @see Spil.trackEvent:
  * @param	error	The reason why the ad failed to be displayed.
  */
 -(void) adDidFailToAppear:(NSError*)error;
 
 /**
  * Method to call back before the next more games' screen is going to be shown.
+ * Can be used to stop the sound or pause the game.
  */
 -(void) adMoreGamesWillAppear;
 
@@ -54,17 +67,21 @@
 
 /**
  * Method to call back if the more games' screen couldn't be displayed due to any reason.
+ * Can be used to track the problem.
+ * @see Spil.trackEvent:
  * @param	error	The reason why the more games' screen failed to be displayed.
  */
 -(void) adMoreGamesDidFailToAppear:(NSError*)error;
 
 /**
  * Method to call back if the ad popup showed was dismissed.
+ * Can be used to resume the sound or resume the game.
  */
 -(void) adPopupDidDismiss;
 
 /**
  * Method to call back if the more games popup showed was dismissed.
+ * Can be used to resume the sound or resume the game.
  */
 -(void) adMoreGamesDidDismiss;
 @end

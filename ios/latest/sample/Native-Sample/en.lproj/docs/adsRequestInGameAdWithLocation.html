@@ -1,0 +1,8 @@
+This method requests an ad from the specified location. The ad will be contained within the defined size.
+This method returns immediately; it returns YES or NO, depending on whether the ad can be requested or not.
+
+When the server returns an ad, the best fitting image with either landscape or portrait orientation is selected, based on the size value defined as a parameter. Then, a clickable UIView is returned on the InGameAdsDelegate method. You need to place this reference as necessary.
+When a location is specified, it is possible to fine-tune the Chartboost settings to show more or fewer ads, or to show specific ad types in that location.
+
+For example, on the main menu you may wish to display an ad every 24 hours, whereas on the pause menu you want to trigger an ad display every time the menu becomes available to the user. You may want to show an ad after completing a level, or every 2 hours.
+You can define these settings only if you use adsRequestInGameAdWithLocation; they are not available in the adsRequestInGameAd method.

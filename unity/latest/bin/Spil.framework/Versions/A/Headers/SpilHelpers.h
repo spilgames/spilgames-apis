@@ -1,5 +1,5 @@
 //
-//  MacAddressHelper.h
+//  SpilHelpers.h
 //  Spil
 //
 //  Created by Ignacio Calderon on 8/8/12.
@@ -12,13 +12,6 @@
  * Helper class to retrieve information about information relative to the device.
  */
 @interface SpilHelpers : NSObject
-
-/**
- * @deprecated   
- * Gets the MAC address of this device. The address is returned as a upper case hex string without spaces or colons
- * @return	The MAC address of this device.
- */
-+(NSString*) getMacAddress;
 
 /**
  * Gets a new UDID based on OpenUDID implementation

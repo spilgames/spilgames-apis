@@ -1,0 +1,11 @@
+In order to receive ads and more games from the framework, you need to set an AdsDelegate: implement the AdsDelegate protocol in one object, as necessary, then pass the reference to AdsDelegate as the single parameter this function takes.
+
+After initializing the spil object, this call performs the following actions:
+- It registers the delegate, and
+- It sends a notification as soon as the ads sub-system is ready for use.
+
+Note: you need to wait for the adDidStart delegate method to be called; otherwise, any calls are ignored.
+To keep the example below as simple as possible, self is used as the implementation of the protocol.
+
+Check the implementation of the protocol in the DetailsViewController.m file.
+Feel free to implement it as necessary.

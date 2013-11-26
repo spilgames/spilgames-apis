@@ -1,0 +1,4 @@
+This method requests an ad from the default location. The ad will be contained within the defined size.
+This method returns immediately; it returns YES or NO, depending on whether the ad can be requested or not.
+
+When the server returns an ad, the best fitting image with either landscape or portrait orientation is selected, based on the size value defined as a parameter. Then, a clickable UIView is returned on the InGameAdsDelegate method. You need to place this reference as necessary.

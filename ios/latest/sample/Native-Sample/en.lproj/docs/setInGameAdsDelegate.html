@@ -1,0 +1,14 @@
+In-game ads are less intrusive and user-friendlier than traditional advertising. Their main strength is that they generate impressions and revenue without disrupting user experience. In-game ads work like product placement in the movie industry, where a branded product is shown to viewers (think about the Audi RSQ Will Smith drives in "I, Robot"), or the brand is featured in a billboard or on the background in the movie.
+
+In-game ads rely on the Ads module. To use them, you need to:
+- Implement AdsDelegate;
+- Implement InGameAdsDelegate;
+- Set InGameAdsDelegate using the setInGameAdsDelegate method.
+This allows you to obtain the necessary info and place the ad wherever appropriate.
+
+After the spil object is initialized, this call will register the delegate and it will notify when the ads subsystem is ready to be use.
+Wait until the adDidStart delegate's method is called, otherwise, all call will be ignored.
+
+To keep the example below as simple as possible, self is used as the implementation of the protocol.
+Check the implementation of the protocol in the DetailsViewController.m file.
+Feel free to implement it as necessary.

@@ -148,7 +148,7 @@ Instance Methods</h2></td></tr>
 <p>Method to call back in case the settings couldn't be loaded. Usually the reasons to call this method will be:</p>
 <ul>
 <li>if there is any parsing error in the remote settings and in the local settings.</li>
-<li>if there is a connection error, and the file of the defaults can be found locally. <dl class="params"><dt>Parameters</dt><dd>
+<li>if there is a connection error, and the file of the defaults cannot be found locally. <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">error</td><td>Error describing what was wrong. </td></tr>
   </table>
@@ -210,12 +210,12 @@ Instance Methods</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Method to call back when the download of the settings has been started. </p>
+<p>Method to call back when the download of the settings has been started. Can be use to notify the user or do other tasks until everything is downloaded. </p>
 
 </div>
 </div>
 <hr/>The documentation for this protocol was generated from the following file:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/native-ios-framework/src/Classes/settings/<a class="el" href="_app_settings_delegate_8h_source.html">AppSettingsDelegate.h</a></li>
+<li>/Users/Shared/Jenkins/Home/workspace/native-ios-framework/src/Classes/public/delegates/<a class="el" href="_app_settings_delegate_8h_source.html">AppSettingsDelegate.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

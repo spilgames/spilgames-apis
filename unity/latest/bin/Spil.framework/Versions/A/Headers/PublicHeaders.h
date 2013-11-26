@@ -15,11 +15,9 @@
 #import "Utils.h"
 #import "ErrorCodes.h"
 
-#import "Spil.h"
 #import "AppSettingsDelegate.h"
 #import "AdsDelegate.h"
 #import "InGameAdsDelegate.h"
 #import "ABTestDelegate.h"
-#import "TrackingExtendedDelegate.h"
 
 #endif

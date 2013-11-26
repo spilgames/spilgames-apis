@@ -1,0 +1,7 @@
+This method allows you to cache an interstitial ad before showing it on the specified location.
+This reduces the waiting time for an ad to be displayed: when an ad is triggered with adsNextInterstitialWithLocation, the asset is loaded from the device cache.
+
+When a location is specified, it is possible to fine-tune the Chartboost settings to show more or fewer ads, or to show specific ad types in that location.
+
+For example, on the main menu you may wish to display an ad every 24 hours, whereas on the pause menu you want to trigger an ad display every time the menu becomes available to the user. You may want to show an ad after completing a level, or every 2 hours.
+You can define these settings only if you use adsCacheNextInterstitialWithLocation; they are not available in the adsCacheNextInterstitial method.

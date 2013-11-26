@@ -27,13 +27,14 @@
  * Method to call back in case the settings couldn't be loaded.
  * Usually the reasons to call this method will be:
  * - if there is any parsing error in the remote settings and in the local settings.
- * - if there is a connection error, and the file of the defaults can be found locally.
+ * - if there is a connection error, and the file of the defaults cannot be found locally.
  * @param	error	Error describing what was wrong.
  */
 -(void) appSettingsDidFailWithError:(NSError*)error;
 
 /**
  * Method to call back when the download of the settings has been started.
+ * Can be use to notify the user or do other tasks until everything is downloaded.
  */
 -(void) appSettingsDidStartDownload;
 @end

@@ -1,0 +1,11 @@
+This method provides the low-level functionality encapsulated in adsRequestInGameAd:atLocation:.
+It provides the interface for the Unity plugin. At least, if the method above doesn't meet your needs, stick to it.
+Asset download, error handling and image scaling, are left to the developer.
+
+The parameter received with this function will be a block that is called when the ad info is downloaded or when an error occurs.
+
+The info received by the block contains the ad identifier: adId. This property is used to flag an ad as viewed; you need to store it, otherwise the same ad will be served repeatedly.
+
+When a location is specified, it is possible to fine-tune the Chartboost settings to show more or fewer ads, or to show specific ad types in that location.
+For example, on the main menu you may wish to display an ad every 24 hours, whereas on the pause menu you want to trigger an ad display every time the menu becomes available to the user. You may want to show an ad after completing a level, or every 2 hours.
+You can define these settings only if you use adsRequestInGameAdAssetWithLocation; they are not available in the adsRequestInGameAdAsset method.

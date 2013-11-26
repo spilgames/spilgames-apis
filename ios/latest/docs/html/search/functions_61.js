@@ -1,7 +1,23 @@
 var searchData=
 [
+  ['abtestgettestdiff',['abtestGetTestDiff',['../category_spil_07_a_b_test_08.html#add2f64f209c81376be64cc50e230189d',1,'Spil(ABTest)']]],
+  ['abtestgettestdiffforuser_3a',['abtestGetTestDiffForUser:',['../category_spil_07_a_b_test_08.html#ab6d148638eaafa14028f86d402bad5cc',1,'Spil(ABTest)']]],
+  ['abtestmarksucceedtest_3awithparameters_3a',['abtestMarkSucceedTest:withParameters:',['../category_spil_07_a_b_test_08.html#a09cfb7794a5734d433b16babc53d3979',1,'Spil(ABTest)']]],
+  ['abtestupdateuserinfo',['abtestUpdateUserInfo',['../category_spil_07_a_b_test_08.html#a2bdb301d557d73f57ac0a8fd9ae5ef58',1,'Spil(ABTest)']]],
+  ['abtestupdateuserinfowith_3a',['abtestUpdateUserInfoWith:',['../category_spil_07_a_b_test_08.html#a7072161e08c8f415a820070e282e75e4',1,'Spil(ABTest)']]],
   ['addidfailtogetingamead_3a',['adDidFailToGetInGameAd:',['../protocol_in_game_ads_delegate-p.html#afe511109399847f5ac9ccf4ea16f67aa',1,'InGameAdsDelegate-p']]],
   ['addidgetingamead_3a',['adDidGetInGameAd:',['../protocol_in_game_ads_delegate-p.html#a6b0f05a54ea32abcb51dfb01ba65ecd9',1,'InGameAdsDelegate-p']]],
+  ['adscachenextinterstitial',['adsCacheNextInterstitial',['../category_spil_07_ads_08.html#ae453132674c2fc1959ac46f8ef2a6344',1,'Spil(Ads)']]],
+  ['adscachenextinterstitial_3a',['adsCacheNextInterstitial:',['../category_spil_07_ads_08.html#ad3c57ef999d4c925a07213f36b28e9f4',1,'Spil(Ads)']]],
+  ['adsenabled_3a',['adsEnabled:',['../category_spil_07_ads_08.html#ac633fa5d94b1bf556ccf2076d38110af',1,'Spil(Ads)']]],
+  ['adsmarkingameadasshown_3a',['adsMarkInGameAdAsShown:',['../category_spil_07_ads_08.html#a70f854548b1a7280c800136f1afc4d81',1,'Spil(Ads)']]],
+  ['adsnextinterstitial',['adsNextInterstitial',['../category_spil_07_ads_08.html#a4edc009c2caab10e62503c6c972e7619',1,'Spil(Ads)']]],
+  ['adsnextinterstitial_3a',['adsNextInterstitial:',['../category_spil_07_ads_08.html#a57078e2d4c5cec1ec9dc4323e9d4c4fd',1,'Spil(Ads)']]],
+  ['adsrequestingamead_3a',['adsRequestInGameAd:',['../category_spil_07_ads_08.html#a85024d8c3bc8f5ad5796d7ee9823ea31',1,'Spil(Ads)']]],
+  ['adsrequestingamead_3aatlocation_3a',['adsRequestInGameAd:atLocation:',['../category_spil_07_ads_08.html#a0fa08111a40290be2e730c24d0ac015d',1,'Spil(Ads)']]],
+  ['adsrequestingameadasset_3a',['adsRequestInGameAdAsset:',['../category_spil_07_ads_08.html#a61683c7f8edb7fcc5eface59216dfe75',1,'Spil(Ads)']]],
+  ['adsrequestingameadasset_3aatlocation_3a',['adsRequestInGameAdAsset:atLocation:',['../category_spil_07_ads_08.html#a11bf35f4031a7638c1d48066c89cae5e',1,'Spil(Ads)']]],
+  ['adsshowmoregames',['adsShowMoreGames',['../category_spil_07_ads_08.html#adc45ca9bb65ba7f78ff9dacc4e1b42fb',1,'Spil(Ads)']]],
   ['appsettingsdidfailwitherror_3a',['appSettingsDidFailWithError:',['../protocol_app_settings_delegate-p.html#a1bf31e9b88f4bc2d86c67d42bd55e694',1,'AppSettingsDelegate-p']]],
   ['appsettingsdidload_3a',['appSettingsDidLoad:',['../protocol_app_settings_delegate-p.html#a43611eb1d8e67e0d9ff6b5218c85bb46',1,'AppSettingsDelegate-p']]],
   ['appsettingsdidstartdownload',['appSettingsDidStartDownload',['../protocol_app_settings_delegate-p.html#a2d6b14da270348615580005a380d1523',1,'AppSettingsDelegate-p']]]

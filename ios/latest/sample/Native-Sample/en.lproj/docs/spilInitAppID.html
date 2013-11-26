@@ -1,0 +1,10 @@
+This method creates the instance for the first time. It should be created as soon as possible during the loading process because this method makes a call to our servers to download game configuration data like Flurry keys, Chartboost keys, AppSettings, and so on. Moreover, it initializes the sub-systems to make them available for calls as soon as possible.
+Delaying initialization prevents some tracking events and actions from being executed because the system is not completely initialized.
+
+You need to receive the following details from Spil Games to use this method:
+- appID, and
+- A token.
+These values are cross-platform: for a given app, you can use the same appID/topken pair for all three stores.
+In the configs parameter you need to specify the environment and the store you want to use.
+
+An initialization example is available below. If you click the trigger button on the top, the code given below will be executed.
