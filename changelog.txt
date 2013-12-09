@@ -1,6 +1,10 @@
 Changelog 1.5.15:
 iOS:
 - UPDATED: Documentation and sample application
+Android:
+- UPDATED: Updated Flurry client to version 3.3.0.
+- UPDATED: Clean up and removed some unused libraries.
+
 
 Changelog 1.5.14:
 iOS:
