@@ -16,6 +16,7 @@ import com.spilgames.framework.SpilInterface;
 import com.spilgames.framework.core.Spil;
 import com.spilgames.framework.core.listeners.AdsListener;
 import com.spilgames.framework.core.listeners.AppSettingsListener;
+import com.spilgames.framework.core.utils.DebugLogConfig;
 import com.spilgames.framework.environment.DevEnvironment;
 import com.spilgames.framework.environment.DevStores;
 
@@ -46,7 +47,7 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		HashMap<String, String > configs = new HashMap<String, String>();
 		configs.put(DevEnvironment.SG_ENVIRONMENT_KEY, DevEnvironment.SG_ENVIRONMENT_STG_VALUE.getValue());
 		configs.put(DevStores.SG_STORE_ID, DevStores.SG_STORE_GOOGLE_PLAY.getValue());
-		
+		DebugLogConfig.enable();
 		spilInstance = Spil.spilWithAppID(getApplicationContext(),appId, authToken, configs);
 		
 		spilInstance.setAdsListener(this);
