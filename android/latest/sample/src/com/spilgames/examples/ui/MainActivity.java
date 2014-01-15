@@ -10,17 +10,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.SpinnerAdapter;
 
 import com.spilgames.examples.R;
 import com.spilgames.framework.SpilInterface;
 import com.spilgames.framework.core.Spil;
 import com.spilgames.framework.core.listeners.AdsListener;
 import com.spilgames.framework.core.listeners.AppSettingsListener;
+import com.spilgames.framework.core.listeners.FrameworkListener;
 import com.spilgames.framework.core.utils.DebugLogConfig;
 import com.spilgames.framework.environment.DevEnvironment;
 import com.spilgames.framework.environment.DevStores;
 
-public class MainActivity extends Activity implements OnClickListener, AdsListener, AppSettingsListener {
+public class MainActivity extends Activity implements OnClickListener, AdsListener, AppSettingsListener, FrameworkListener {
 
 	SpilInterface spilInstance;
 	private String appId = "13";
@@ -47,9 +49,10 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		HashMap<String, String > configs = new HashMap<String, String>();
 		configs.put(DevEnvironment.SG_ENVIRONMENT_KEY, DevEnvironment.SG_ENVIRONMENT_STG_VALUE.getValue());
 		configs.put(DevStores.SG_STORE_ID, DevStores.SG_STORE_GOOGLE_PLAY.getValue());
-		DebugLogConfig.enable();
+//		DebugLogConfig.enable();
 		spilInstance = Spil.spilWithAppID(getApplicationContext(),appId, authToken, configs);
-		
+
+		spilInstance.setFrameworkListener(this);
 		spilInstance.setAdsListener(this);
 		spilInstance.setSettingsListener(this);
 		
@@ -181,6 +184,22 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 	@Override
 	public void adInterstitialIsShown() {
 		System.out.println("AD OK!!!");
+		
+	}
+
+
+
+	@Override
+	public void frameworkReady() {
+		System.out.println("Framework is READY!!");
+		
+	}
+
+
+
+	@Override
+	public void frameworkFail() {
+		// TODO Auto-generated method stub
 		
 	}
 }
