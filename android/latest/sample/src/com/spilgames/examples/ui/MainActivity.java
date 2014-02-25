@@ -10,17 +10,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.SpinnerAdapter;
 
 import com.spilgames.examples.R;
+import com.spilgames.framework.Spil;
 import com.spilgames.framework.SpilInterface;
-import com.spilgames.framework.core.Spil;
-import com.spilgames.framework.core.listeners.AdsListener;
-import com.spilgames.framework.core.listeners.AppSettingsListener;
-import com.spilgames.framework.core.listeners.FrameworkListener;
-import com.spilgames.framework.core.utils.DebugLogConfig;
 import com.spilgames.framework.environment.DevEnvironment;
 import com.spilgames.framework.environment.DevStores;
+import com.spilgames.framework.listeners.AdsListener;
+import com.spilgames.framework.listeners.AppSettingsListener;
+import com.spilgames.framework.listeners.FrameworkListener;
 
 public class MainActivity extends Activity implements OnClickListener, AdsListener, AppSettingsListener, FrameworkListener {
 

@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.widget.RelativeLayout;
 
 import com.spilgames.examples.R;
+import com.spilgames.framework.Spil;
 import com.spilgames.framework.SpilInterface;
-import com.spilgames.framework.core.Spil;
-import com.spilgames.framework.core.listeners.InGameAdListener;
+import com.spilgames.framework.listeners.InGameAdListener;
 import com.spilgames.framework.views.InGameAdView;
 
 public class SecondActivity extends Activity implements InGameAdListener{
