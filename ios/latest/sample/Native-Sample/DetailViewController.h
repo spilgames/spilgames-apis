@@ -13,11 +13,14 @@
 UITextViewDelegate,
 AppSettingsDelegate,
 AdsDelegate,
-InGameAdsDelegate>
+InGameAdsDelegate,
+PaymentsDelegate>
 {
     UIView* _image;
     NSString* _adId;
     int _tryCount;
+    PaymentsProduct* _product;
+    NSString* _transactionID;
 }
 
 -(void) setDescriptionText:(NSString*)text;

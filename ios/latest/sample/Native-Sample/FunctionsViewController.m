@@ -26,6 +26,7 @@
 	// initialize the _objects array to create the different sections navigation.
 	
 	self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    [self tableView:nil didSelectRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,20 +60,23 @@
 
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString* format = @"<p style='font-family: Arial; font-size:19;'>%@</p>";
 	if(indexPath.row == 0){
 		self.detailViewController.trigger.enabled = NO;
-		[self.detailViewController setDescriptionText:_overview];
+		[self.detailViewController setDescriptionText:[NSString stringWithFormat:format,
+                                                       [_overview stringByReplacingOccurrencesOfString:@"\n" withString:@"<br/>"]]];
 		self.detailViewController.snippet.text = @"";
-	}else{
+    }else{
 		int index = indexPath.row - 1;
 		self.detailViewController.trigger.enabled = _functions[index][@"snippet"] != nil;
 		self.detailViewController.snippet.text = _functions[index][@"snippet"];
         [self.detailViewController setDescriptionText:
-         [NSString stringWithContentsOfFile:
-          [[NSBundle mainBundle] pathForResource:_functions[index][@"selector"] ofType:@"html"]
-                                   encoding:NSUTF8StringEncoding
-                                      error:nil]
-         ];
+         [NSString stringWithFormat:format,
+          [[NSString stringWithContentsOfFile:
+           [[NSBundle mainBundle] pathForResource:_functions[index][@"selector"] ofType:@"html"]
+                                    encoding:NSUTF8StringEncoding
+                                       error:nil] stringByReplacingOccurrencesOfString:@"\n" withString:@"<br/>"]
+          ]];
 		self.detailViewController.snippetSelector = _functions[index][@"selector"];
 	}
 }

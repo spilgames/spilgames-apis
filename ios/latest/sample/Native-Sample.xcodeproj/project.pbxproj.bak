@@ -60,6 +60,11 @@
 		4F4C9A62182CE66900B2C62E /* Documentation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F4C9A61182CE66900B2C62E /* Documentation.plist */; };
 		4F4C9A65182CEA9D00B2C62E /* FunctionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C9A64182CEA9D00B2C62E /* FunctionsViewController.m */; };
 		4F4C9A6C182D206F00B2C62E /* spilgames_default_settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F4C9A69182D206F00B2C62E /* spilgames_default_settings.json */; };
+		4F55E05618D0A88300D1D0A9 /* paymentsFinishTransaction.html in Resources */ = {isa = PBXBuildFile; fileRef = 4F55E05318D0A88300D1D0A9 /* paymentsFinishTransaction.html */; };
+		4F55E05718D0A88300D1D0A9 /* paymentsRequestTransaction.html in Resources */ = {isa = PBXBuildFile; fileRef = 4F55E05418D0A88300D1D0A9 /* paymentsRequestTransaction.html */; };
+		4F55E05818D0A88300D1D0A9 /* setPaymentsDelegate.html in Resources */ = {isa = PBXBuildFile; fileRef = 4F55E05518D0A88300D1D0A9 /* setPaymentsDelegate.html */; };
+		4F77D5F319123961002536D5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F77D5F219123961002536D5 /* AVFoundation.framework */; };
+		4F77D5F719123996002536D5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F77D5F619123996002536D5 /* AudioToolbox.framework */; };
 		4FD4EE92183282BA00D56FDD /* Spil.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4FD4EE90183282BA00D56FDD /* Spil.bundle */; };
 		4FD4EE93183282BA00D56FDD /* Spil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD4EE91183282BA00D56FDD /* Spil.framework */; };
 /* End PBXBuildFile section */
@@ -90,7 +95,7 @@
 		4F24C8E91831356900CC2F72 /* trackEventWithParams.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = trackEventWithParams.html; sourceTree = "<group>"; };
 		4F24C8EA1831356900CC2F72 /* trackPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = trackPage.html; sourceTree = "<group>"; };
 		4F24C8EB1831356900CC2F72 /* trackTimedEvent.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = trackTimedEvent.html; sourceTree = "<group>"; };
-		4F4C9A1B182CDA3A00B2C62E /* Native-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Native-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F4C9A1B182CDA3A00B2C62E /* cowaboom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cowaboom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4C9A1E182CDA3A00B2C62E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4F4C9A20182CDA3A00B2C62E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4F4C9A22182CDA3A00B2C62E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,6 +130,12 @@
 		4F4C9A63182CEA9D00B2C62E /* FunctionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionsViewController.h; sourceTree = "<group>"; };
 		4F4C9A64182CEA9D00B2C62E /* FunctionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionsViewController.m; sourceTree = "<group>"; };
 		4F4C9A69182D206F00B2C62E /* spilgames_default_settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = spilgames_default_settings.json; path = "Native-Sample/spilgames_default_settings.json"; sourceTree = "<group>"; };
+		4F55E05318D0A88300D1D0A9 /* paymentsFinishTransaction.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = paymentsFinishTransaction.html; sourceTree = "<group>"; };
+		4F55E05418D0A88300D1D0A9 /* paymentsRequestTransaction.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = paymentsRequestTransaction.html; sourceTree = "<group>"; };
+		4F55E05518D0A88300D1D0A9 /* setPaymentsDelegate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = setPaymentsDelegate.html; sourceTree = "<group>"; };
+		4F77D5F219123961002536D5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4F77D5F419123983002536D5 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		4F77D5F619123996002536D5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4FD4EE90183282BA00D56FDD /* Spil.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Spil.bundle; path = ../../builds/Spil.bundle; sourceTree = "<group>"; };
 		4FD4EE91183282BA00D56FDD /* Spil.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spil.framework; path = ../../builds/Spil.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F77D5F719123996002536D5 /* AudioToolbox.framework in Frameworks */,
+				4F77D5F319123961002536D5 /* AVFoundation.framework in Frameworks */,
 				4F4C9A45182CDAB600B2C62E /* AdSupport.framework in Frameworks */,
 				4F4C9A47182CDABC00B2C62E /* CFNetwork.framework in Frameworks */,
 				4F4C9A49182CDAC200B2C62E /* CoreData.framework in Frameworks */,
@@ -172,9 +185,12 @@
 				4F24C8DC1831356900CC2F72 /* adsRequestInGameAdWithLocation.html */,
 				4F24C8DD1831356900CC2F72 /* adsShowMoreGames.html */,
 				4F24C8DE1831356900CC2F72 /* fullInitSample.html */,
+				4F55E05318D0A88300D1D0A9 /* paymentsFinishTransaction.html */,
+				4F55E05418D0A88300D1D0A9 /* paymentsRequestTransaction.html */,
 				4F24C8DF1831356900CC2F72 /* setAdsDelegate.html */,
 				4F24C8E01831356900CC2F72 /* setAppSettingsDelegate.html */,
 				4F24C8E11831356900CC2F72 /* setInGameAdsDelegate.html */,
+				4F55E05518D0A88300D1D0A9 /* setPaymentsDelegate.html */,
 				4F24C8E21831356900CC2F72 /* sharedInstance.html */,
 				4F24C8E31831356900CC2F72 /* spilInitAppID.html */,
 				4F24C8E41831356900CC2F72 /* trackEndTimedEvent.html */,
@@ -203,7 +219,7 @@
 		4F4C9A1C182CDA3A00B2C62E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F4C9A1B182CDA3A00B2C62E /* Native-Sample.app */,
+				4F4C9A1B182CDA3A00B2C62E /* cowaboom.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,6 +227,9 @@
 		4F4C9A1D182CDA3A00B2C62E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F77D5F619123996002536D5 /* AudioToolbox.framework */,
+				4F77D5F419123983002536D5 /* CoreAudio.framework */,
+				4F77D5F219123961002536D5 /* AVFoundation.framework */,
 				4F4C9A44182CDAB600B2C62E /* AdSupport.framework */,
 				4F4C9A46182CDABC00B2C62E /* CFNetwork.framework */,
 				4F4C9A48182CDAC200B2C62E /* CoreData.framework */,
@@ -291,7 +310,7 @@
 			);
 			name = "Native-Sample";
 			productName = "Native-Sample";
-			productReference = 4F4C9A1B182CDA3A00B2C62E /* Native-Sample.app */;
+			productReference = 4F4C9A1B182CDA3A00B2C62E /* cowaboom.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -342,7 +361,9 @@
 				4F24C8F31831356900CC2F72 /* adsRequestInGameAdAsset.html in Resources */,
 				4F24C8F41831356900CC2F72 /* adsRequestInGameAdAssetWithLocation.html in Resources */,
 				4F24C8F51831356900CC2F72 /* adsRequestInGameAdWithLocation.html in Resources */,
+				4F55E05618D0A88300D1D0A9 /* paymentsFinishTransaction.html in Resources */,
 				4F24C8F61831356900CC2F72 /* adsShowMoreGames.html in Resources */,
+				4F55E05818D0A88300D1D0A9 /* setPaymentsDelegate.html in Resources */,
 				4F24C8F71831356900CC2F72 /* fullInitSample.html in Resources */,
 				4F24C8F81831356900CC2F72 /* setAdsDelegate.html in Resources */,
 				4F24C8F91831356900CC2F72 /* setAppSettingsDelegate.html in Resources */,
@@ -354,6 +375,7 @@
 				4F24C8FF1831356900CC2F72 /* trackError.html in Resources */,
 				4F24C9001831356900CC2F72 /* trackEvent.html in Resources */,
 				4F24C9011831356900CC2F72 /* trackEventWithAction.html in Resources */,
+				4F55E05718D0A88300D1D0A9 /* paymentsRequestTransaction.html in Resources */,
 				4F24C9021831356900CC2F72 /* trackEventWithParams.html in Resources */,
 				4F24C9031831356900CC2F72 /* trackPage.html in Resources */,
 				4F24C9041831356900CC2F72 /* trackTimedEvent.html in Resources */,
@@ -474,7 +496,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Native-Sample/Native-Sample-Prefix.pch";
 				INFOPLIST_FILE = "Native-Sample/Native-Sample-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = cowaboom;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -489,7 +511,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Native-Sample/Native-Sample-Prefix.pch";
 				INFOPLIST_FILE = "Native-Sample/Native-Sample-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = cowaboom;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

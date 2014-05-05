@@ -42,10 +42,10 @@
         android:text="Track User" />
     
     <Button
-        android:id="@+id/ageButton"
+        android:id="@+id/paymentsScreen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Track Age" />
+        android:text="Got to Payments" />
     
     <Button
         android:id="@+id/moreGamesButton"

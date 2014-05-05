@@ -95,6 +95,8 @@
     [spil setAdsDelegate:self];
     
     [spil setInGameAdsDelegate:self];
+    
+    [spil setPaymentsDelegate:self];
 }
 
 
@@ -237,6 +239,20 @@ BOOL enabled = YES;
                                                             userInfo:nil]];
 }
 
+#pragma mark - Snippet selectors payments
+
+-(void) setPaymentsDelegate{
+    [[Spil sharedInstance] setPaymentsDelegate:self];
+}
+
+-(void) paymentsRequestTransaction{
+    [[Spil sharedInstance] paymentsRequestTransaction:_product quantity:1];
+}
+
+-(void) paymentsFinishTransaction{
+    [[Spil sharedInstance] paymentsFinishTransaction:_transactionID];
+}
+
 #pragma mark - AppSettingsDelegate
 
 -(void) appSettingsDidFailWithError:(NSError *)error{
@@ -312,6 +328,33 @@ BOOL enabled = YES;
 
 -(void) adDidFailToGetInGameAd:(NSError*)error{
     [self showAlert:[NSString stringWithFormat:@"Error: the in-game ad fail to download (%@)", error]];
+}
+
+#pragma mark - PaymentsDelegate
+
+-(void) paymentsDidStart{
+    [self showAlert:@"Payments started!"];
+}
+
+-(void) paymentsDidFailToStart:(NSError*)error{
+    [self showAlert:[NSString stringWithFormat:@"Error: Payments failed to start (%@)", error]];
+}
+
+-(void) paymentsDidReceiveProductList:(NSArray*)products{
+    [self showAlert:@"List of products received!, keep them to make the request later."];
+    _product = products[0];
+}
+
+-(void) paymentsTransactionDidSucceed:(NSString*)transactionID{
+    _transactionID = transactionID;
+}
+
+-(void) paymentsTransactionDidFail:(NSError*)error{
+    [self showAlert:[NSString stringWithFormat:@"Error: the transaction was rejected by apple (%@)", error]];
+}
+
+-(void) paymentsDidRestoreProduct:(PaymentsProduct*)product fromTransaction:(NSString*)transactionID{
+    
 }
 
 #pragma mark - Miscelaneous

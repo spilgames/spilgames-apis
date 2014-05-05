@@ -1,0 +1,12 @@
+In order to make payments (in-app purchases) from the framework, you need to set an PaymentsDelegate: implement the PaymentsDelegate protocol in one object, as necessary, then pass the reference to PaymentsDelegate as the single parameter this function takes.
+
+After initializing the spil object, this call performs the following actions:
+- It registers the delegate, and
+- It sends a notification as soon as the payments sub-system is ready for use.
+- It download the list of available products directly from the App Store and sends the back to the delegate,
+
+Note: you need to wait for the paymentsDidStart delegate method to be called; otherwise, any calls are ignored.
+To keep the example below as simple as possible, self is used as the implementation of the protocol.
+
+Check the implementation of the protocol in the DetailsViewController.m file.
+Feel free to implement it as necessary.

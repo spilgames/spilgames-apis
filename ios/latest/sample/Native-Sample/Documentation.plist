@@ -40,7 +40,8 @@
               }];
 [spil setAppSettingsDelegate:self];
 [spil setAdsDelegate:self];
-[spil setInGameAdsDelegate:self];</string>
+[spil setInGameAdsDelegate:self];
+[spil setPaymentsDelegate:self];</string>
 			</dict>
 		</array>
 		<key>overview</key>
@@ -299,6 +300,43 @@ Spil will take care of all the settings of the campaigns and more games, you onl
 		<string>This section shows how to use the tracking functions, providing different mechanisms to generate events, of different forms, single named, with parameters, time-based.
 This subsystem requires the instance to be initialized before start to track anything, since every tracking backend needs its own set of credentials to place the data sent in the correct buckets and make it available through their dashboards.
 Additionally, this subsystem tracks installs through different backend services and no action is required from the developer.</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>In-app purchases</string>
+		<key>functions</key>
+		<array>
+			<dict>
+				<key>selector</key>
+				<string>setPaymentsDelegate</string>
+				<key>name</key>
+				<string>setPaymentsDelegate:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] setPaymentsDelegate:self];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>paymentsRequestTransaction</string>
+				<key>name</key>
+				<string>paymentsRequestTransaction:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] paymentsRequestTransaction:product quantity:1];</string>
+			</dict>
+			<dict>
+				<key>selector</key>
+				<string>paymentsFinishTransaction</string>
+				<key>name</key>
+				<string>paymentsFinishTransaction:</string>
+				<key>snippet</key>
+				<string>[[Spil sharedInstance] paymentsFinishTransaction:@&quot;transaction ID provided&quot;];</string>
+			</dict>
+		</array>
+		<key>overview</key>
+		<string>This section shows how to use the payment (in-app purchases) functions. It provides an abstraction over the StoreKit SDK simplifyng the process and handling things automatically.
+Still the developer will be notified about relevant events that should be handled by them, for instance, once the transaction is successful, the goods have to be delivered to the user.
+In order to notify about the events happening, it's necessary a PaymentsDelegate to be implemented.
+
+In-App purchases are tied to the provisioning profile and bundle id used by the app. Double check first you have them both before start to play around with the payments functionalities.</string>
 	</dict>
 </array>
 </plist>

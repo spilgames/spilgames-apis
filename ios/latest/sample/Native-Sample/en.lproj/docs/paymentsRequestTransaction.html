@@ -1,0 +1,5 @@
+This method requests to start a transaction for a given product, previously retrieved from the PaymentsDelegate method: paymentsDidReceiveProductList:
+This method returns immediately; whether the payment can be requested or not.
+
+The app will ask for the permission and credentials to aprove the transaction, after which a method from the PaymentsDelegate will be called depending on whether the transaction was successful or not.
+In this moment it's developer's responsability to enable the product purchased, or report the error accordingly.

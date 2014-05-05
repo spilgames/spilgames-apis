@@ -20,6 +20,7 @@ import com.spilgames.framework.listeners.AdsListener;
 import com.spilgames.framework.listeners.AppSettingsListener;
 import com.spilgames.framework.listeners.FrameworkListener;
 
+
 public class MainActivity extends Activity implements OnClickListener, AdsListener, AppSettingsListener, FrameworkListener {
 
 	SpilInterface spilInstance;
@@ -35,7 +36,7 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 	Button trackErrorButton;
 	Button trackUserButton;
 	Button moreGamesButton;
-	Button trackAgeButton;
+	Button paymentsButton;
 	Button newScreenButton;
 
 
@@ -45,11 +46,11 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		setContentView(R.layout.activity_main);
 		super.onCreate(savedInstanceState);
 		HashMap<String, String > configs = new HashMap<String, String>();
-		configs.put(DevEnvironment.SG_ENVIRONMENT_KEY, DevEnvironment.SG_ENVIRONMENT_STG_VALUE.getValue());
+		configs.put(DevEnvironment.SG_ENVIRONMENT_KEY, DevEnvironment.SG_ENVIRONMENT_LIVE_VALUE.getValue());
 		configs.put(DevStores.SG_STORE_ID, DevStores.SG_STORE_GOOGLE_PLAY.getValue());
-//		DebugLogConfig.enable();
+		
 		spilInstance = Spil.spilWithAppID(getApplicationContext(),appId, authToken, configs);
-
+		
 		spilInstance.setFrameworkListener(this);
 		spilInstance.setAdsListener(this);
 		spilInstance.setSettingsListener(this);
@@ -61,7 +62,7 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		trackErrorButton = (Button) findViewById(R.id.errorButton);
 		trackUserButton = (Button) findViewById(R.id.userButton);
 		moreGamesButton = (Button) findViewById(R.id.moreGamesButton);
-		trackAgeButton = (Button) findViewById(R.id.ageButton);
+		paymentsButton = (Button) findViewById(R.id.paymentsScreen);
 		newScreenButton = (Button) findViewById(R.id.newScreen);
 		
 		trackPageButton.setOnClickListener(this);
@@ -71,7 +72,7 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		trackErrorButton.setOnClickListener(this);
 		trackUserButton.setOnClickListener(this);
 		moreGamesButton.setOnClickListener(this);
-		trackAgeButton.setOnClickListener(this);
+		paymentsButton.setOnClickListener(this);
 		newScreenButton.setOnClickListener(this);
 
 	}
@@ -107,6 +108,10 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		case R.id.moreGamesButton:
 			spilInstance.showMoreGames();
 			break;	
+		case R.id.paymentsScreen:
+			Intent paymentIntent = new Intent(this, PaymentScreen.class);
+			startActivity(paymentIntent);
+			break;		
 		case R.id.newScreen:
 			Intent intent = new Intent(this, SecondActivity.class);
 			startActivity(intent);
@@ -189,7 +194,7 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 
 	@Override
 	public void frameworkReady() {
-		System.out.println("Framework is READY!!");
+		// TODO Auto-generated method stub
 		
 	}
 

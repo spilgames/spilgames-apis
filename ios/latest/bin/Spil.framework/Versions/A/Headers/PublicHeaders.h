@@ -19,5 +19,6 @@
 #import "AdsDelegate.h"
 #import "InGameAdsDelegate.h"
 #import "ABTestDelegate.h"
+#import "PaymentsDelegate.h"
 
 #endif

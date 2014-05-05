@@ -13,6 +13,7 @@
 #import "Spil+Ads.h"
 #import "Spil+ABTest.h"
 #import "Spil+AppSettings.h"
+#import "Spil+Payments.h"
 #import "Spil+Tracking.h"
 
 #endif
