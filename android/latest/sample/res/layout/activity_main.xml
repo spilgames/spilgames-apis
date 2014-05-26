@@ -6,6 +6,12 @@
     android:orientation="vertical" >
 
     <Button
+        android:id="@+id/Button01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Screen" />
+
+    <Button
         android:id="@+id/pageButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,5 +64,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="New Screen" />
+    
+    <Button
+        android:id="@+id/showInterstitial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Interstitial" />
 
 </LinearLayout>

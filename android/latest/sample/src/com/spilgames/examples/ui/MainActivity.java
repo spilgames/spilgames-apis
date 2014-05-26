@@ -38,6 +38,7 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 	Button moreGamesButton;
 	Button paymentsButton;
 	Button newScreenButton;
+	Button showInterstitialButton;
 
 
   
@@ -64,6 +65,7 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		moreGamesButton = (Button) findViewById(R.id.moreGamesButton);
 		paymentsButton = (Button) findViewById(R.id.paymentsScreen);
 		newScreenButton = (Button) findViewById(R.id.newScreen);
+		showInterstitialButton = (Button) findViewById(R.id.showInterstitial);
 		
 		trackPageButton.setOnClickListener(this);
 		trackEventButton.setOnClickListener(this);
@@ -74,6 +76,7 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		moreGamesButton.setOnClickListener(this);
 		paymentsButton.setOnClickListener(this);
 		newScreenButton.setOnClickListener(this);
+		showInterstitialButton.setOnClickListener(this);
 
 	}
 
@@ -84,7 +87,6 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 		switch (v.getId()) {
 		case R.id.pageButton:
 			spilInstance.trackPage(TRACKING_TAG+"Juego_Nuevo");
-			spilInstance.showInterstitial();
 			break;
 		case R.id.eventButton:
 			spilInstance.trackEvent(TRACKING_TAG+"Ayuda");
@@ -116,6 +118,9 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 			Intent intent = new Intent(this, SecondActivity.class);
 			startActivity(intent);
 			break;
+		case R.id.showInterstitial:
+			spilInstance.showInterstitial();
+			break;
 		default:
 			break;
 		}
@@ -125,12 +130,11 @@ public class MainActivity extends Activity implements OnClickListener, AdsListen
 	@Override
 	public void onAdsLoaded() {
 		System.out.println("Adds loaded!!");
-		spilInstance.showInterstitial();
 	}
 
 	@Override
 	public void onAdsFailedToLoad(String cause) {
-		// TODO Auto-generated method stub
+		System.out.println("Ads Failed to load because of "+cause);
 		
 	}
 
